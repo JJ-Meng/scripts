@@ -1,0 +1,256 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:29:52 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BTRFS-RESTORE</title>
+
+</head>
+<body>
+
+<h1 align="center">BTRFS-RESTORE</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#EXIT STATUS">EXIT STATUS</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">btrfs-restore -
+try to restore files from a damaged btrfs filesystem
+image</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>btrfs
+restore</b> [options] <i>&lt;device&gt; &lt;path&gt;</i> |
+-l <i>&lt;device&gt;</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>btrfs
+restore</b></i> is used to try to salvage files from a
+damaged filesystem and restore them into <i>&lt;path&gt;</i>
+or just list the subvolume tree roots. The filesystem image
+is not modified.</p>
+
+<p style="margin-left:11%; margin-top: 1em">If the
+filesystem is damaged and cannot be repaired by the other
+tools (<b>btrfs-check</b>(8) or <b>btrfs-rescue</b>(8)),
+<b>btrfs restore</b> could be used to retrieve file data, as
+far as the metadata are readable. The checks done by restore
+are less strict and the process is usually able to get far
+enough to retrieve data from the whole filesystem. This
+comes at a cost that some data might be incomplete or from
+older versions if they&rsquo;re available.</p>
+
+<p style="margin-left:11%; margin-top: 1em">There are
+several options to attempt restoration of various file
+metadata type. You can try a dry run first to see how well
+the process goes and use further options to extend the set
+of restored metadata.</p>
+
+<p style="margin-left:11%; margin-top: 1em">For images with
+damaged tree structures, there are several options to point
+the process to some spare copy.</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+It is recommended to read the following btrfs wiki page if
+your data is not salvaged with default option:
+<b><font color="#0000FF">https://btrfs.wiki.kernel.org/index.php/Restore</font></b></p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-s|--snapshots</font></big></p>
+
+<p style="margin-left:17%;"><big><font color="#000000">get
+also snapshots that are skipped by default</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-x|--xattr</font></big></p>
+
+<p style="margin-left:17%;"><big><font color="#000000">get
+extended attributes</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-m|--metadata</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">restore
+owner, mode and times for files and
+directories</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-S|--symlinks</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">restore
+symbolic links as well as normal files</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-v|--verbose</font></big></p>
+
+<p style="margin-left:17%;"><big><font color="#000000">be
+verbose and print what is being restored</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-i|--ignore-errors</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">ignore
+errors during restoration and continue</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-o|--overwrite</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">overwrite
+directories/files in <i>&lt;path&gt;</i>, eg. for repeated
+runs</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-t
+<i>&lt;bytenr&gt;</i></font></big></p>
+
+<p style="margin-left:17%;"><big><font color="#000000">use
+<i>&lt;bytenr&gt;</i> to read the root tree</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-f
+<i>&lt;bytenr&gt;</i></font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">only
+restore files that are under specified subvolume root
+pointed by <i>&lt;bytenr&gt;</i></font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-u|--super
+<i>&lt;mirror&gt;</i></font></big></p>
+
+<p style="margin-left:17%;"><big><font color="#000000">use
+given superblock mirror identified by <i>&lt;mirror&gt;</i>,
+it can be 0,1 or 2</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-r|--root
+<i>&lt;rootid&gt;</i></font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">only
+restore files that are under a specified subvolume whose
+objectid is <i>&lt;rootid&gt;</i></font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-d</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">find
+directory</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-l|--list-roots</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">list
+subvolume tree roots, can be used as argument for
+<i>-r</i></font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-D|--dry-run</font></big></p>
+
+<p style="margin-left:17%;"><big><font color="#000000">dry
+run (only list files that would be
+recovered)</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">--path-regex
+<i>&lt;regex&gt;</i></font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">restore
+only filenames matching a regular expression
+(<b>regex</b>(7)) with a mandatory format</font></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><font color="#000000"><b>^/(|home(|/username(|/Desktop(|/.*))))$</b></font></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><font color="#000000">The
+format is not very comfortable and restores all files in the
+directories in the whole path, so this is not useful for
+restoring single file in a deep hierarchy.</font></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000">-c</font></big></p>
+
+
+<p style="margin-left:17%;"><big><font color="#000000">ignore
+case (--path-regex only)</font></big></p>
+
+<h2>EXIT STATUS
+<a name="EXIT STATUS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000"><b>btrfs
+restore</b> returns a zero exit status if it succeeds. Non
+zero is returned in case of failure.</font></big></p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000"><b>btrfs</b>
+is part of btrfs-progs. Please refer to the btrfs
+wiki</font>
+<b><font color="#0000FF">http://btrfs.wiki.kernel.org</font></b>
+<font color="#000000">for further details.</font></big></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000"><b>mkfs.btrfs</b>(8),
+<b>btrfs-rescue</b>(8),
+<b>btrfs-check</b>(8)</font></big></p>
+<hr>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{"augenrules": [2, 1], 
+"arping": [13, 7, 18, 6], 
+"auditd": [23, 2, 30, 24, 1, 4, 0, 3], 
+"badblocks": [2, 1], 
+"arptables-save": [12],
+"audispd-zos-remote": [1, 2, 8], 
+"addpart": [21, 2], 
+"ausearch": [2, 1], 
+"auditctl": [30], 
+"aureport": [2, 1], 
+"autrace": [30], 
+"arpd": [13, 12, 16],
+"arp": [12, 16], 
+"agetty": [3, 1], 
+"accton": [1, 20]}
+
+file cap dict:
+{'/usr/sbin/arping': [13, 18, 7, 6], 
+'/usr/sbin/badblocks': [2, 1], 
+'/usr/sbin/xtables-nft-multi': [12], 
+'/usr/sbin/audispd-zos-remote': [1, 2, 8], 
+'/usr/bin/addpart': [21, 2], 
+'/usr/sbin/ausearch': [1, 2], 
+'/usr/sbin/aureport': [1, 2], 
+'/usr/sbin/arpd': [13, 12, 16], 
+'/usr/sbin/arp': [12, 16], 
+'/usr/sbin/agetty': [1, 3], 
+'/usr/sbin/accton': [1, 20]}
+final cmds and cap:
+{'augenrules': [1, 2], 
+'arping': [13, 18, 7, 6], 
+'badblocks': [2, 1], 'arptables-save': [12], 'audispd-zos-remote': [1, 2, 8], 
+'addpart': [21, 2], 'ausearch': [1, 2], 'aureport': [1, 2], 'arpd': [13, 12, 16], 'arp': [12, 16], 'agetty': [1, 3], '
+accton': [1, 20]}

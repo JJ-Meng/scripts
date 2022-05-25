@@ -1,0 +1,401 @@
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+accton -V
+accton -h
+accton on
+accton off
+accton /home/test/cmdfiles/normalfile.txt
+addpart /dev/sda 0 1 1
+agetty - 9600 linux
+!timeout! cmd: agetty - 9600 linux
+agetty - 9600 linux -8
+!timeout! cmd: agetty - 9600 linux -8
+agetty - 9600 linux -a test
+!timeout! cmd: agetty - 9600 linux -a test
+agetty - 9600 linux -c
+!timeout! cmd: agetty - 9600 linux -c
+agetty - 9600 linux -E
+!timeout! cmd: agetty - 9600 linux -E
+agetty - 9600 linux -f /home/test/cmdfiles/myissue
+!timeout! cmd: agetty - 9600 linux -f /home/test/cmdfiles/myissue
+agetty - 9600 linux --show-issue
+agetty - 9600 linux -H
+agetty - 9600 linux -i
+!timeout! cmd: agetty - 9600 linux -i
+agetty - 9600 linux -I appleinit
+!timeout! cmd: agetty - 9600 linux -I appleinit
+agetty - 9600 linux -J
+!timeout! cmd: agetty - 9600 linux -J
+agetty - 9600 linux -l /bin/login
+!timeout! cmd: agetty - 9600 linux -l /bin/login
+agetty - 9600 linux -L always
+!timeout! cmd: agetty - 9600 linux -L always
+agetty - 9600 linux -m
+!timeout! cmd: agetty - 9600 linux -m
+agetty - 9600 linux --list-speeds
+agetty - 9600 linux -n
+!timeout! cmd: agetty - 9600 linux -n
+agetty - 9600 linux -N
+!timeout! cmd: agetty - 9600 linux -N
+agetty - 9600 linux -o '-h darkstar -- \u'
+!timeout! cmd: agetty - 9600 linux -o '-h darkstar -- \u'
+agetty - 9600 linux -p
+!timeout! cmd: agetty - 9600 linux -p
+agetty - 9600 linux -r /home/test/cmdfiles
+!timeout! cmd: agetty - 9600 linux -r /home/test/cmdfiles
+agetty - 9600 linux -R
+!timeout! cmd: agetty - 9600 linux -R
+agetty - 9600 linux -s
+!timeout! cmd: agetty - 9600 linux -s
+agetty - 9600 linux -t 3
+!timeout! cmd: agetty - 9600 linux -t 3
+agetty - 9600 linux -U
+!timeout! cmd: agetty - 9600 linux -U
+agetty - 9600 linux -w
+!timeout! cmd: agetty - 9600 linux -w
+agetty - 9600 linux --nohints
+!timeout! cmd: agetty - 9600 linux --nohints
+agetty - 9600 linux --nohostname
+!timeout! cmd: agetty - 9600 linux --nohostname
+agetty - 9600 linux --long-hostname
+!timeout! cmd: agetty - 9600 linux --long-hostname
+agetty - 9600 linux --erase-chars '#'
+!timeout! cmd: agetty - 9600 linux --erase-chars '#'
+agetty - 9600 linux --kill-chars '@'
+!timeout! cmd: agetty - 9600 linux --kill-chars '@'
+agetty - 9600 linux --chdir /home/test/cmdfiles
+!timeout! cmd: agetty - 9600 linux --chdir /home/test/cmdfiles
+agetty - 9600 linux --delay 1
+!timeout! cmd: agetty - 9600 linux --delay 1
+agetty - 9600 linux --nice 2
+!timeout! cmd: agetty - 9600 linux --nice 2
+agetty --reload
+agetty --help
+agetty --version
+agetty - 9600 vt100
+!timeout! cmd: agetty - 9600 vt100
+arp -vn -H ether -i eth0 -ae
+arp -vn -H ether -i eth0 -ae 127.0.0.1
+arp -s 10.0.2.200 00:b1:b2:b3:b4:b5
+arp -d 10.0.2.200
+arp -s 10.0.2.200 00:b1:b2:b3:b4:b5 pub
+arp -d 10.0.2.200 pub
+arp -vnD -H ether -f /home/test/cmdfiles/normalfile.txt
+some encoding fault!
+arpd -h
+arpd -l
+arpd -f /home/test/cmdfiles/arpdl.txt
+arpd -b myarpd.db
+arpd -k -a 1
+arpd -n 60
+arpd -n 3
+arpd -b /var/lib/arpd/arpd.db
+arpd -p 30
+arpd -p 3
+arpd -R 1
+arpd  -B 3
+arping 10.0.2.10
+!timeout! cmd: arping 10.0.2.10
+arping 10.0.2.10 -A
+!timeout! cmd: arping 10.0.2.10 -A
+arping 10.0.2.10 -b
+!timeout! cmd: arping 10.0.2.10 -b
+arping 10.0.2.10 -c 3
+!timeout! cmd: arping 10.0.2.10 -c 3
+arping 10.0.2.10 -C 3
+arping 10.0.2.10 -D
+!timeout! cmd: arping 10.0.2.10 -D
+arping 10.0.2.10 -f
+arping 10.0.2.10 -i eth0
+!timeout! cmd: arping 10.0.2.10 -i eth0
+arping -h
+arping -s
+arping 10.0.2.10 -i 2
+arping 10.0.2.10 -w 2
+arping 10.0.2.10 -W 2
+!timeout! cmd: arping 10.0.2.10 -W 2
+arping 10.0.2.10 -T
+arping 10.0.2.10 -s 52:54:00:12:34:56
+!timeout! cmd: arping 10.0.2.10 -s 52:54:00:12:34:56
+arping 10.0.2.10 -t 52:54:00:12:34:56
+!timeout! cmd: arping 10.0.2.10 -t 52:54:00:12:34:56
+arping 10.0.2.10 -S 127.0.0.1
+!timeout! cmd: arping 10.0.2.10 -S 127.0.0.1
+arping 10.0.2.10 -U
+!timeout! cmd: arping 10.0.2.10 -U
+arping -V
+arping 10.0.2.10 -q
+!timeout! cmd: arping 10.0.2.10 -q
+arping 10.0.2.10 -Q 1 -V 802.1Q
+!timeout! cmd: arping 10.0.2.10 -Q 1 -V 802.1Q
+arping 10.0.2.10 -0
+!timeout! cmd: arping 10.0.2.10 -0
+arping 10.0.2.10 -a
+!timeout! cmd: arping 10.0.2.10 -a
+arping 10.0.2.10 -d
+!timeout! cmd: arping 10.0.2.10 -d
+arping 10.0.2.10 -e
+!timeout! cmd: arping 10.0.2.10 -e
+arping 10.0.2.10 -F
+!timeout! cmd: arping 10.0.2.10 -F
+arping 10.0.2.10 -p
+!timeout! cmd: arping 10.0.2.10 -p
+arping 10.0.2.10 -P
+!timeout! cmd: arping 10.0.2.10 -P
+arping 10.0.2.10 -r
+!timeout! cmd: arping 10.0.2.10 -r
+arping 10.0.2.10 -R
+!timeout! cmd: arping 10.0.2.10 -R
+arptables-nft-save
+iptables-save -M /proc/sys/kernel/modprobe
+iptables-save -c
+iptables-save -V
+iptables-save | iptables-restore
+iptables-save > ~/ipt.tab
+iptables-restore -v ~/ipt.tab
+astraceroute -h
+astraceroute -v
+astraceroute -Z
+astraceroute -G
+astraceroute
+audispd-zos-remote
+audispd-zos-remote /etc/audit/zos-remote.conf
+audictl -b 64
+file not found! outs:  errs:
+audictl -b 30
+file not found! outs:  errs:
+audictl --backlog_wait_time 30
+file not found! outs:  errs:
+audictl --backlog_wait_time 60000
+file not found! outs:  errs:
+audictl --reset_backlog_wait_time_actual
+file not found! outs:  errs:
+audictl -c
+file not found! outs:  errs:
+audictl -d
+file not found! outs:  errs:
+audictl -f 0
+file not found! outs:  errs:
+audictl -f 1
+file not found! outs:  errs:
+audictl -h
+file not found! outs:  errs:
+audictl -i
+file not found! outs:  errs:
+audictl --loginuid-immutable
+file not found! outs:  errs:
+audictl --reset-lost
+file not found! outs:  errs:
+audictl -q /home/test/cmdfiles
+file not found! outs:  errs:
+audictl -w /home/test/cmdfiles
+file not found! outs:  errs:
+audit -W /home/test/cmdfiles
+file not found! outs:  errs:
+audictl -R rootrules
+file not found! outs:  errs:
+audictl --signal TERM
+file not found! outs:  errs:
+audictl --signal CONT
+file not found! outs:  errs:
+audictl -t
+file not found! outs:  errs:
+audictl -l
+file not found! outs:  errs:
+audictl -m hello
+file not found! outs:  errs:
+audictl -s
+file not found! outs:  errs:
+audictl -v
+file not found! outs:  errs:
+auditctl -a always,exit -F arch=b64 -S openat -F success=0
+auditctl -w /etc/ -p wa
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid
+audictl -d always,exit -S openat -F success=0
+file not found! outs:  errs:
+auditd -f
+auditd -l
+auditd -n
+auditd -s=enable
+auditd -c
+auditd -c /etc/audit
+augenrules --check
+augenrules --load
+aureport -au
+aureport -a
+aureport --comm
+aureport -c
+aureport -cr
+aureport --debug
+aureport --eoe-timeout 5
+aureport -e
+aureport --escape shell
+aureport --escape tty
+aureport -f
+aureport --failed
+aureport -h
+aureport --help
+aureport -i
+aureport -if /home/test/cmdfiles
+aureport --input-logs
+aureport --integrity
+aureport -k
+aureport -l
+aureport -m
+aureport -ma
+aureport -n
+aureport --node
+aureport --nc
+aureport -p
+aureport -r
+aureport -s
+aureport --success
+aureport --summary
+aureport -t
+aureport --tty
+aureport -te now
+aureport -tm
+aureport -ts now
+aureport -u
+aureport -v
+aureport -virt
+aureport -x
+ausearch -a 111
+ausearch --arch b64
+ausearch -c auditctl
+ausearch --debug
+ausearch --checkpoint /home/test/cmdfiles/normalfile.txt
+ausearch --eoe-timeout 3
+ausearch --escape shell
+ausearch --escape tty
+ausearch --extra-keys
+ausearch --extra-labels
+ausearch --extra-obj2
+ausearch --extra-time
+ausearch -f /home/test/cmdfiles/normalfile.txt
+ausearch --format default
+ausearch --ga 1000
+ausearch --ge 1000
+ausearch -h
+ausearch -hn www.baidu.comm
+ausearch -i
+ausearch -if /home/test/cmdfiles/normalfile.txt
+ausearch --input-logs
+ausearch --just-one
+ausearch -k hello
+ausearch -l
+ausearch -n
+ausearch -p 100
+ausearch -r
+ausearch -sc openat
+ausearch -sv yes
+ausearch -te now
+ausearch -ts now
+ausearch -ui 1000
+ausearch -v
+ausearch -w
+automount -h
+automount -p
+automount -t 10
+automount -M 3
+automount -n 30
+automount -n 60
+automount -v
+automount -d
+automount -S
+automount -f
+automount -r
+automount -m
+automount -O
+automount -V
+automount -l 3 /home/test/cmdfiles/normalfile.txt
+automount -C
+automount -F
+automount -U
+autrace -r /bin/ls
+autrace /bin/ls /tmp
+avcstat -c
+avcstat -f /sys/fs/selinux/avc/cache_stats
+avcstat
+badblocks /dev/loop0p1
+badblocks /dev/loop0p1 -b 512
+badblocks /dev/loop0p1 -b 1024
+badblocks /dev/loop0p1 -c 32
+badblocks /dev/loop0p1 -c 64
+badblocks /dev/loop0p1 -d
+badblocks /dev/loop0p1 -d 100
+badblocks /dev/loop0p1 -e 1
+badblocks /dev/loop0p1 -e 0
+badblocks /dev/loop0p1 -f
+badblocks /dev/loop0p1 -i -
+badblocks /dev/loop0p1 -N
+badblocks /dev/loop0p1 -o /home/test/cmdfiles/normalfile.txt
+badblocks /dev/loop0p1 -p 1
+badblocks /dev/loop0p1 -p 0
+badblocks /dev/loop0p1 -s
+badblocks /dev/loop0p1 -t random
+badblocks /dev/loop0p1 -v
+badblocks /dev/loop0p1 -w
+badblocks /dev/loop0p1 -B
+badblocks /dev/loop0p1 -X
+**********cmd and caps*******
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator:check cap 2 for 1 times,check cap 19 for 1 times,
+accton on:check cap 20 for 1 times,check cap 1 for 1 times,
+accton off:check cap 20 for 1 times,
+accton /home/test/cmdfiles/normalfile.txt:check cap 20 for 1 times,
+addpart /dev/sda 0 1 1:check cap 2 for 1 times,check cap 21 for 1 times,
+agetty --reload:check cap 1 for 1 times,check cap 3 for 1 times,
+arp -s 10.0.2.200 00:b1:b2:b3:b4:b5:check cap 12 for 1 times,
+arp -d 10.0.2.200:check cap 12 for 1 times,
+arp -s 10.0.2.200 00:b1:b2:b3:b4:b5 pub:check cap 12 for 1 times,
+arp -d 10.0.2.200 pub:check cap 12 for 1 times,
+arpd -l:check cap 1 for 2 times,
+arpd -f /home/test/cmdfiles/arpdl.txt:check cap 1 for 3 times,
+arpd -b myarpd.db:check cap 13 for 1 times,
+arpd -k -a 1:check cap 1 for 2 times,check cap 13 for 1 times,
+arpd -n 60:check cap 1 for 2 times,check cap 13 for 1 times,
+arpd -n 3:check cap 1 for 2 times,check cap 13 for 1 times,
+arpd -b /var/lib/arpd/arpd.db:check cap 1 for 2 times,check cap 13 for 1 times,
+arpd -p 30:check cap 1 for 2 times,check cap 13 for 1 times,
+arpd -p 3:check cap 1 for 2 times,check cap 13 for 1 times,
+arpd -R 1:check cap 1 for 2 times,check cap 13 for 1 times,
+arping 10.0.2.10 -C 3:check cap 18 for 1 times,check cap 13 for 3 times,check cap 7 for 1 times,check cap 6 for 2 times,
+arping 10.0.2.10 -w 2:check cap 18 for 1 times,check cap 13 for 3 times,check cap 7 for 1 times,check cap 6 for 2 times,
+arptables-nft-save:check cap 12 for 1 times,
+iptables-save -M /proc/sys/kernel/modprobe:check cap 1 for 1 times,check cap 2 for 1 times,
+iptables-save -c:check cap 1 for 1 times,check cap 2 for 1 times,
+audispd-zos-remote:check cap 1 for 1 times,check cap 2 for 1 times,check cap 8 for 42 times,
+audispd-zos-remote /etc/audit/zos-remote.conf:check cap 1 for 1 times,check cap 2 for 1 times,check cap 8 for 42 times,
+auditctl -a always,exit -F arch=b64 -S openat -F success=0:check cap 30 for 2 times,
+auditctl -w /etc/ -p wa:check cap 30 for 2 times,
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid:check cap 30 for 2 times,
+auditd -f:check cap 24 for 2 times,check cap 30 for 4 times,check cap 23 for 1 times,check cap 2 for 19 times,check cap 1 for 3 times,
+auditd -l:check cap 2 for 5 times,check cap 23 for 1 times,
+auditd -n:check cap 24 for 2 times,check cap 30 for 4 times,check cap 3 for 5 times,check cap 23 for 1 times,check cap 4 for 10 times,check cap 2 for 25 times,check cap 1 for 4 times,check cap 0 for 4 times,
+auditd -c /etc/audit:check cap 2 for 5 times,check cap 23 for 1 times,
+augenrules --check:check cap 1 for 1 times,check cap 2 for 1 times,
+augenrules --load:check cap 1 for 1 times,check cap 2 for 1 times,
+aureport --input-logs:check cap 1 for 1 times,check cap 2 for 8 times,
+ausearch --input-logs:check cap 1 for 1 times,check cap 2 for 8 times,
+autrace -r /bin/ls:check cap 30 for 6 times,
+autrace /bin/ls /tmp:check cap 30 for 6 times,
+*****************final results********************************
+fuzz 260 commands in total,and 40 commands are privilege
+target cmds:23  priv target cmds:17 non-priv cmds:6
+
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator:[2, 19]
+accton:[20, 1]
+addpart:[2, 21]
+agetty:[1, 3]
+arp:[12] (12,16)
+arpd:[1, 13] (12,13,16)
+arping:[18, 13, 7, 6]
+arptables-nft-save:[12]
+iptables-save:[1, 2]
+audispd-zos-remote:[1, 2, 8]
+auditctl:[30]
+auditd:[24, 30, 23, 2, 1, 3, 4, 0]
+augenrules:[1, 2]
+aureport:[1, 2]
+ausearch:[1, 2]
+autrace:[30]
+['/usr/sbin/augenrules']

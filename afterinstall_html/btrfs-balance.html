@@ -1,0 +1,702 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 06:07:36 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BTRFS-BALANCE</title>
+
+</head>
+<body>
+
+<h1 align="center">BTRFS-BALANCE</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#COMPATIBILITY">COMPATIBILITY</a><br>
+<a href="#PERFORMANCE IMPLICATIONS">PERFORMANCE IMPLICATIONS</a><br>
+<a href="#SUBCOMMAND">SUBCOMMAND</a><br>
+<a href="#FILTERS">FILTERS</a><br>
+<a href="#ENOSPC">ENOSPC</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#EXIT STATUS">EXIT STATUS</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">btrfs-balance -
+balance block groups on a btrfs filesystem</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>btrfs
+balance</b> <i>&lt;subcommand&gt; &lt;args&gt;</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The primary
+purpose of the balance feature is to spread block groups
+across all devices so they match constraints defined by the
+respective profiles. See <b>mkfs.btrfs</b>(8) section
+<i>PROFILES</i> for more details. The scope of the balancing
+process can be further tuned by use of filters that can
+select the block groups to process. Balance works only on a
+mounted filesystem.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The balance
+operation is cancellable by the user. The on-disk state of
+the filesystem is always consistent so an unexpected
+interruption (eg. system crash, reboot) does not corrupt the
+filesystem. The progress of the balance operation is
+temporarily stored as an internal state and will be resumed
+upon mount, unless the mount option <i>skip_balance</i> is
+specified.</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Warning</big></b>
+<br>
+running balance without filters will take a lot of time as
+it basically rewrites the entire filesystem and needs to
+update all block pointers.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The filters can
+be used to perform following actions:</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; convert
+block group profiles (filter <i>convert</i>)</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; make
+block group usage more compact (filter <i>usage</i>)</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; perform
+actions only on a given device (filters <i>devid</i>,
+<i>drange</i>)</p>
+
+<p style="margin-left:11%; margin-top: 1em">The filters can
+be applied to a combination of block group types (data,
+metadata, system). Note that changing <i>system</i> needs
+the force option.</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+the balance operation needs enough work space, ie. space
+that is completely unused in the filesystem, otherwise this
+may lead to ENOSPC reports. See the section <i>ENOSPC</i>
+for more details.</p>
+
+<h2>COMPATIBILITY
+<a name="COMPATIBILITY"></a>
+</h2>
+
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+The balance subcommand also exists under the <b>btrfs
+filesystem</b> namespace. This still works for backward
+compatibility but is deprecated and should not be used any
+more.</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+A short syntax <b>btrfs balance</b> <i>&lt;path&gt;</i>
+works due to backward compatibility but is deprecated and
+should not be used any more. Use <b>btrfs balance start</b>
+command instead.</p>
+
+<h2>PERFORMANCE IMPLICATIONS
+<a name="PERFORMANCE IMPLICATIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>Balancing
+operations are very IO intensive and can also be quite CPU
+intensive, impacting other ongoing filesystem operations.
+Typically large amounts of data are copied from one location
+to another, with corresponding metadata updates.</big></p>
+
+<p style="margin-left:11%; margin-top: 1em"><big>Depending
+upon the block group layout, it can also be seek heavy.
+Performance on rotational devices is noticeably worse
+compared to SSDs or fast arrays.</big></p>
+
+<h2>SUBCOMMAND
+<a name="SUBCOMMAND"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>cancel</b>
+<i>&lt;path&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>cancels a running or
+paused balance, the command will block and wait until the
+current blockgroup being processed completes</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>pause</b>
+<i>&lt;path&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>pause running balance
+operation, this will store the state of the balance progress
+and used filters to the filesystem</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>resume</b>
+<i>&lt;path&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>resume interrupted
+balance, the balance status must be stored on the filesystem
+from previous run, eg. after it was forcibly interrupted and
+mounted again with <i>skip_balance</i></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>start</b>
+[options] <i>&lt;path&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>start the balance
+operation according to the specified filters, no filters
+will rewrite the entire filesystem. The process runs in the
+foreground.</big></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><big><b><big>Note</big></b>
+<br>
+the balance command without filters will basically rewrite
+everything in the filesystem. The run time is potentially
+very long, depending on the filesystem size. To prevent
+starting a full balance by accident, the user is warned and
+has a few seconds to cancel the operation before it starts.
+The warning and delay can be skipped with
+<i>--full-balance</i> option.</big></p>
+
+<p style="margin-left:17%;"><big>Please note that the
+filters must be written together with the <i>-d</i>,
+<i>-m</i> and <i>-s</i> options, because they&rsquo;re
+optional and bare <i>-d</i> etc also work and mean no
+filters.</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><b>Options</b></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-d[<i>&lt;filters&gt;</i>]</big></big></p>
+
+<p style="margin-left:23%;"><big><big>act on data block
+groups, see <b>FILTERS</b> section for details about
+<i>filters</i></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-m[<i>&lt;filters&gt;</i>]</big></big></p>
+
+<p style="margin-left:23%;"><big><big>act on metadata
+chunks, see <b>FILTERS</b> section for details about
+<i>filters</i></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-s[<i>&lt;filters&gt;</i>]</big></big></p>
+
+<p style="margin-left:23%;"><big><big>act on system chunks
+(requires <i>-f</i>), see <b>FILTERS</b> section for details
+about <i>filters</i>.</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-v</big></big></p>
+
+<p style="margin-left:23%;"><big><big>be verbose and print
+balance filter arguments</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-f</big></big></p>
+
+<p style="margin-left:23%;"><big><big>force a reduction of
+metadata integrity, eg. when going from <i>raid1</i> to
+<i>single</i></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>--background|--bg</big></big></p>
+
+<p style="margin-left:23%;"><big><big>run the balance
+operation asynchronously in the background, uses
+<b>fork</b>(2) to start the process that calls the kernel
+ioctl</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>status</b>
+[-v] <i>&lt;path&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Show status of
+running or paused balance.</big></big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>If
+<i>-v</i> option is given, output will be
+verbose.</big></big></p>
+
+<h2>FILTERS
+<a name="FILTERS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big>From
+kernel 3.3 onwards, btrfs balance can limit its action to a
+subset of the whole filesystem, and can be used to change
+the replication configuration (e.g. moving data from single
+to RAID1). This functionality is accessed through the
+<i>-d</i>, <i>-m</i> or <i>-s</i> options to btrfs balance
+start, which filter on data, metadata and system blocks
+respectively.</big></big></p>
+
+<p style="margin-left:11%; margin-top: 1em"><big><big>A
+filter has the following structure:
+<i>type</i>[=<i>params</i>][,<i>type</i>=...]</big></big></p>
+
+<p style="margin-left:11%; margin-top: 1em"><big><big>The
+available types are:</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>profiles=</b><i>&lt;profiles&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Balances only block
+groups with the given profiles. Parameters are a list of
+profile names separated by &quot;<i>|</i>&quot;
+(pipe).</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>usage=</b><i>&lt;percent&gt;</i>,
+<b>usage=</b><i>&lt;range&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Balances only block
+groups with usage under the given percentage. The value of 0
+is allowed and will clean up completely unused block groups,
+this should not require any new work space allocated. You
+may want to use <i>usage=0</i> in case balance is returning
+ENOSPC and your filesystem is not too full.</big></big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>The
+argument may be a single value or a range. The single value
+<i>N</i> means <i>at most N percent used</i>, equivalent to
+<i>..N</i> range syntax. Kernels prior to 4.4 accept only
+the single value format. The minimum range boundary is
+inclusive, maximum is exclusive.</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>devid=</b><i>&lt;id&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Balances only block
+groups which have at least one chunk on the given device. To
+list devices with ids use <b>btrfs filesystem
+show</b>.</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>drange=</b><i>&lt;range&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Balance only block
+groups which overlap with the given byte range on any
+device. Use in conjunction with <i>devid</i> to filter on a
+specific device. The parameter is a range specified as
+<i>start..end</i>.</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>vrange=</b><i>&lt;range&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Balance only block
+groups which overlap with the given byte range in the
+filesystem&rsquo;s internal virtual address space. This is
+the address space that most reports from btrfs in the kernel
+log use. The parameter is a range specified as
+<i>start..end</i>.</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>convert=</b><i>&lt;profile&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>Convert each selected
+block group to the given profile name identified by
+parameters.</big></big></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><big><big><b><big>Note</big></b>
+<br>
+starting with kernel 4.5, the <i>data</i> chunks can be
+converted to/from the <i>DUP</i> profile on a single
+device.</big></big></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><big><big><b><big>Note</big></b>
+<br>
+starting with kernel 4.6, all profiles can be converted
+to/from <i>DUP</i> on multi-device
+filesystems.</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b><big>limit=</big></b><big><i>&lt;number&gt;</i>,
+<b>limit=</b><i>&lt;range&gt;</i></big></big></big></p>
+
+<p style="margin-left:17%;"><big><big><big>Process only
+given number of chunks, after all filters are applied. This
+can be used to specifically target a chunk in connection
+with other filters (<i>drange</i>, <i>vrange</i>) or just
+simply limit the amount of work done by a single balance
+run.</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>The
+argument may be a single value or a range. The single value
+<i>N</i> means <i>at most N chunks</i>, equivalent to
+<i>..N</i> range syntax. Kernels prior to 4.4 accept only
+the single value format. The range minimum and maximum are
+inclusive.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>stripes=</b><i>&lt;range&gt;</i></big></big></big></p>
+
+<p style="margin-left:17%;"><big><big><big>Balance only
+block groups which have the given number of stripes. The
+parameter is a range specified as <i>start..end</i>. Makes
+sense for block group profiles that utilize striping, ie.
+RAID0/10/5/6. The range minimum and maximum are
+inclusive.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>soft</b></big></big></big></p>
+
+<p style="margin-left:17%;"><big><big><big>Takes no
+parameters. Only has meaning when converting between
+profiles. When doing convert from one profile to another and
+soft mode is on, chunks that already have the target profile
+are left untouched. This is useful e.g. when half of the
+filesystem was converted earlier but got
+cancelled.</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>The
+soft mode switch is (like every other filter) per-type. For
+example, this means that we can convert metadata chunks the
+&quot;hard&quot; way while converting data chunks
+selectively with soft switch.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Profile
+names, used in <i>profiles</i> and <i>convert</i> are one
+of: <i>raid0</i>, <i>raid1</i>, <i>raid10</i>, <i>raid5</i>,
+<i>raid6</i>, <i>dup</i>, <i>single</i>. The mixed
+data/metadata profiles can be converted in the same way, but
+it&rsquo;s conversion between mixed and non-mixed is not
+implemented. For the constraints of the profiles please
+refer to <b>mkfs.btrfs</b>(8), section
+<i>PROFILES</i>.</big></big></big></p>
+
+<h2>ENOSPC
+<a name="ENOSPC"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>The
+way balance operates, it usually needs to temporarily create
+a new block group and move the old data there, before the
+old block group can be removed. For that it needs the work
+space, otherwise it fails for ENOSPC reasons. This is not
+the same ENOSPC as if the free space is exhausted. This
+refers to the space on the level of block groups, which are
+bigger parts of the filesystem that contain many file
+extents.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>The
+free work space can be calculated from the output of the
+<b>btrfs filesystem show</b> command:</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>Label:
+'BTRFS' uuid: 8a9d72cd-ead3-469d-b371-9c7203276265 <br>
+Total devices 2 FS bytes used 77.03GiB <br>
+devid 1 size 53.90GiB used 51.90GiB path /dev/sdc2 <br>
+devid 2 size 53.90GiB used 51.90GiB path
+/dev/sde1</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><i>size</i>
+- <i>used</i> = <i>free work space 53.90GiB</i> -
+<i>51.90GiB</i> = <i>2.00GiB</i></big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>An
+example of a filter that does not require workspace is
+<i>usage=0</i>. This will scan through all unused block
+groups of a given type and will reclaim the space. After
+that it might be possible to run other
+filters.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>CONVERSIONS
+ON MULTIPLE DEVICES</b></big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Conversion
+to profiles based on striping (RAID0, RAID5/6) require the
+work space on each device. An interrupted balance may leave
+partially filled block groups that consume the work
+space.</big></big></big></p>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>A
+more comprehensive example when going from one to multiple
+devices, and back, can be found in section <i>TYPICAL
+USECASES</i> of
+<b>btrfs-device</b>(8).</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>MAKING
+BLOCK GROUP LAYOUT MORE COMPACT</b> <br>
+The layout of block groups is not normally visible; most
+tools report only summarized numbers of free or used space,
+but there are still some hints
+provided.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Let&rsquo;s
+use the following real life example and start with the
+output:</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>$
+btrfs filesystem df /path <br>
+Data, single: total=75.81GiB, used=64.44GiB <br>
+System, RAID1: total=32.00MiB, used=20.00KiB <br>
+Metadata, RAID1: total=15.87GiB, used=8.84GiB <br>
+GlobalReserve, single: total=512.00MiB,
+used=0.00B</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Roughly
+calculating for data, <i>75G - 64G = 11G</i>, the used/total
+ratio is about <i>85%</i>. How can we can interpret
+that:</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>&bull;
+chunks are filled by 85% on average, ie. the <i>usage</i>
+filter with anything smaller than 85 will likely not affect
+anything</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>&bull;
+in a more realistic scenario, the space is distributed
+unevenly, we can assume there are completely used chunks and
+the remaining are partially filled</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Compacting
+the layout could be used on both. In the former case it
+would spread data of a given chunk to the others and
+removing it. Here we can estimate that roughly 850 MiB of
+data have to be moved (85% of a 1 GiB
+chunk).</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>In
+the latter case, targeting the partially used chunks will
+have to move less data and thus will be faster. A typical
+filter command would look like:</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>#
+btrfs balance start -dusage=50 /path <br>
+Done, had to relocate 2 out of 97
+chunks</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>$
+btrfs filesystem df /path <br>
+Data, single: total=74.03GiB, used=64.43GiB <br>
+System, RAID1: total=32.00MiB, used=20.00KiB <br>
+Metadata, RAID1: total=15.87GiB, used=8.84GiB <br>
+GlobalReserve, single: total=512.00MiB,
+used=0.00B</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>As
+you can see, the <i>total</i> amount of data is decreased by
+just 1 GiB, which is an expected result. Let&rsquo;s see
+what will happen when we increase the estimated usage
+filter.</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>#
+btrfs balance start -dusage=85 /path <br>
+Done, had to relocate 13 out of 95
+chunks</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>$
+btrfs filesystem df /path <br>
+Data, single: total=68.03GiB, used=64.43GiB <br>
+System, RAID1: total=32.00MiB, used=20.00KiB <br>
+Metadata, RAID1: total=15.87GiB, used=8.85GiB <br>
+GlobalReserve, single: total=512.00MiB,
+used=0.00B</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Now
+the used/total ratio is about 94% and we moved about <i>74G
+- 68G = 6G</i> of data to the remaining blockgroups, ie. the
+6GiB are now free of filesystem structures, and can be
+reused for new data or metadata block
+groups.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>We
+can do a similar exercise with the metadata block groups,
+but this should not typically be necessary, unless the
+used/total ratio is really off. Here the ratio is roughly
+50% but the difference as an absolute number is &quot;a few
+gigabytes&quot;, which can be considered normal for a
+workload with snapshots or reflinks updated
+frequently.</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>#
+btrfs balance start -musage=50 /path <br>
+Done, had to relocate 4 out of 89
+chunks</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>$
+btrfs filesystem df /path <br>
+Data, single: total=68.03GiB, used=64.43GiB <br>
+System, RAID1: total=32.00MiB, used=20.00KiB <br>
+Metadata, RAID1: total=14.87GiB, used=8.85GiB <br>
+GlobalReserve, single: total=512.00MiB,
+used=0.00B</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Just
+1 GiB decrease, which possibly means there are block groups
+with good utilization. Making the metadata layout more
+compact would in turn require updating more metadata
+structures, ie. lots of IO. As running out of metadata space
+is a more severe problem, it&rsquo;s not necessary to keep
+the utilization ratio too high. For the purpose of this
+example, let&rsquo;s see the effects of further
+compaction:</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>#
+btrfs balance start -musage=70 /path <br>
+Done, had to relocate 13 out of 88
+chunks</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>$
+btrfs filesystem df . <br>
+Data, single: total=68.03GiB, used=64.43GiB <br>
+System, RAID1: total=32.00MiB, used=20.00KiB <br>
+Metadata, RAID1: total=11.97GiB, used=8.83GiB <br>
+GlobalReserve, single: total=512.00MiB,
+used=0.00B</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>GETTING
+RID OF COMPLETELY UNUSED BLOCK GROUPS</b> <br>
+Normally the balance operation needs a work space, to
+temporarily move the data before the old block groups gets
+removed. If there&rsquo;s no work space, it ends with <i>no
+space left</i>.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>There&rsquo;s
+a special case when the block groups are completely unused,
+possibly left after removing lots of files or deleting
+snapshots. Removing empty block groups is automatic since
+3.18. The same can be achieved manually with a notable
+exception that this operation does not require the work
+space. Thus it can be used to reclaim unused block groups to
+make it available.</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>#
+btrfs balance start -dusage=0 /path</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>This
+should lead to decrease in the <i>total</i> numbers in the
+<b>btrfs filesystem df</b> output.</big></big></big></p>
+
+<h2>EXIT STATUS
+<a name="EXIT STATUS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>Unless
+indicated otherwise below, all <b>btrfs balance</b>
+subcommands return a zero exit status if they succeed, and
+non zero in case of failure.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>The
+<b>pause</b>, <b>cancel</b>, and <b>resume</b> subcommands
+exit with a status of <b>2</b> if they fail because a
+balance operation was not running.</big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big>The
+<b>status</b> subcommand exits with a status of <b>0</b> if
+a balance operation is not running, <b>1</b> if the
+command-line usage is incorrect or a balance operation is
+still running, and <b>2</b> on other
+errors.</big></big></big></p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>btrfs</b>
+is part of btrfs-progs. Please refer to the btrfs wiki
+<b><font color="#0000FF">http://btrfs.wiki.kernel.org</font></b>
+<font color="#000000">for further
+details.</font></big></big></big></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><font color="#000000"><b>mkfs.btrfs</b>(8),
+<b>btrfs-device</b>(8)</font></big></big></big></p>
+<hr>
+</body>
+</html>

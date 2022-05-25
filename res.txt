@@ -1,0 +1,452 @@
+*********resolving btrfs-restore******
+[" btrfs restore  <device><i> <path><i> <device><i>", " btrfs restore  <device><i> -l <device><i>"]
+{"-s": "", "-x": "", "-m": "", "-S": "", "-v": "", "-i": "", "-o": "", "-t": "<bytenr>", "-f": "<bytenr>", "-u": "<mirror>", "-r": "<rootid>", "-d": "", "-l": "", "-D": "", "--path-regex": "<regex>", "-c": ""}
+{"<regex>": "/Desktop,/.,/username,"}
+[]
+*********resolving csysdig******
+[]
+{}
+{}
+[]
+*********resolving bpfc******
+[" bpfc {  }", " bpfc {  }"]
+{"-i": "<source-file/->,", "-p": "", "-D": "<name>=<definition>,", "-f": "<format>,", "-b": "", "-V": "", "-d": "", "-v": "", "-h": ""}
+{}
+["bpfc fubar", "bpfc -f xt_bpf -b -p -i fubar, resp. iptables -A INPUT -m bpf ", "cat fubar | bpfc -", "bpfc foo > bar && netsniff-ng -f bar ...", "netsniff-ng", "-f", "bpfc -f tcpdump -i fubar"]
+*********resolving actions******
+[" tc  actions add  ACTSPEC<i>", " tc  actions change  ACTSPEC<i>", " tc  actions replace  ACTSPEC<i>", " tc  actions get  ACTISPEC<i>", " tc  actions delete  ACTISPEC<i>", "tc  actions flush  ACTNAMESPEC<i>", " tc  actions reclassify<i>  ACTNAMESPEC<i> ACTSPEC<i> := action  ACTDETAIL<i> ACTISPEC<i> := ACTNAMESPEC<i> INDEXSPEC<i> ACTNAMESPEC<i> := action ACTNAME INDEXSPEC<i> := index  INDEX<i> ACTFILTER<i> := since  MSTIME<i> COOKIESPEC<i> := cookie  COOKIE<i> FLAGS<i> := no_percpu<i> ACTDETAIL<i> := ACTNAME<i> ACTPARAMS<i> ACTNAME<i> may be any valid action type: gact, mirred, bpf, connmark, csum, police, etc. MSTIME<i> Time since last update. CONTROL<i> := { } TC_OPTIONS<i> These are the options that are specific to tc and not only the options. Refer to tc for more information.", " tc  actions pipe<i>  ACTNAMESPEC<i> ACTSPEC<i> := action  ACTDETAIL<i> ACTISPEC<i> := ACTNAMESPEC<i> INDEXSPEC<i> ACTNAMESPEC<i> := action ACTNAME INDEXSPEC<i> := index  INDEX<i> ACTFILTER<i> := since  MSTIME<i> COOKIESPEC<i> := cookie  COOKIE<i> FLAGS<i> := no_percpu<i> ACTDETAIL<i> := ACTNAME<i> ACTPARAMS<i> ACTNAME<i> may be any valid action type: gact, mirred, bpf, connmark, csum, police, etc. MSTIME<i> Time since last update. CONTROL<i> := { } TC_OPTIONS<i> These are the options that are specific to tc and not only the options. Refer to tc for more information.", " tc  actions drop<i>  ACTNAMESPEC<i> ACTSPEC<i> := action  ACTDETAIL<i> ACTISPEC<i> := ACTNAMESPEC<i> INDEXSPEC<i> ACTNAMESPEC<i> := action ACTNAME INDEXSPEC<i> := index  INDEX<i> ACTFILTER<i> := since  MSTIME<i> COOKIESPEC<i> := cookie  COOKIE<i> FLAGS<i> := no_percpu<i> ACTDETAIL<i> := ACTNAME<i> ACTPARAMS<i> ACTNAME<i> may be any valid action type: gact, mirred, bpf, connmark, csum, police, etc. MSTIME<i> Time since last update. CONTROL<i> := { } TC_OPTIONS<i> These are the options that are specific to tc and not only the options. Refer to tc for more information.", " tc  actions continue<i>  ACTNAMESPEC<i> ACTSPEC<i> := action  ACTDETAIL<i> ACTISPEC<i> := ACTNAMESPEC<i> INDEXSPEC<i> ACTNAMESPEC<i> := action ACTNAME INDEXSPEC<i> := index  INDEX<i> ACTFILTER<i> := since  MSTIME<i> COOKIESPEC<i> := cookie  COOKIE<i> FLAGS<i> := no_percpu<i> ACTDETAIL<i> := ACTNAME<i> ACTPARAMS<i> ACTNAME<i> may be any valid action type: gact, mirred, bpf, connmark, csum, police, etc. MSTIME<i> Time since last update. CONTROL<i> := { } TC_OPTIONS<i> These are the options that are specific to tc and not only the options. Refer to tc for more information.", " tc  actions ok<i>  ACTNAMESPEC<i> ACTSPEC<i> := action  ACTDETAIL<i> ACTISPEC<i> := ACTNAMESPEC<i> INDEXSPEC<i> ACTNAMESPEC<i> := action ACTNAME INDEXSPEC<i> := index  INDEX<i> ACTFILTER<i> := since  MSTIME<i> COOKIESPEC<i> := cookie  COOKIE<i> FLAGS<i> := no_percpu<i> ACTDETAIL<i> := ACTNAME<i> ACTPARAMS<i> ACTNAME<i> may be any valid action type: gact, mirred, bpf, connmark, csum, police, etc. MSTIME<i> Time since last update. CONTROL<i> := { } TC_OPTIONS<i> These are the options that are specific to tc and not only the options. Refer to tc for more information."]
+{"index": "INDEX", "cookie": "COOKIE", "FLAGS": "", "since": "MSTIME", "CONTROL": "", "reclassify": "", "pipe": "", "drop": "", "continue": "", "pass": ""}
+{"index": "INDEX,32,add,change,replace,optional.,get,delete,required,", "cookie": "COOKIE,128,", "FLAGS": "no_percpu,", "since": "MSTIME,20000,20,", "CONTROL": "tc,"}
+[]
+*********resolving augenrules******
+["augenrules"]
+{"--check": "", "--load": ""}
+{}
+[]
+*********resolving chcat******
+["chcat  category<i> file<i>", "chcat -l  category<i> user<i>", "chcat  file<i>", "chcat -l  user<i>", "chcat  -L<i>"]
+{"-d": "", "-L": "", "-l": ""}
+{}
+[]
+*********resolving accessdb******
+["/usr/sbin/accessdb"]
+{"-d": "", "-?": "", "--usage": "", "-V": ""}
+{}
+[]
+*********resolving arping******
+["arping {destination}"]
+{"-A": "", "-b": "", "-c": "count", "-D": "", "-f": "", "-I": "interface", "-h": "", "-q": "", "-s": "source", "-U": "", "-V": "", "-w": "deadline", "-i": "interval"}
+{"count": "deadline,", "source": "0,0.0.0.0,destination,", "deadline": "arping,count,"}
+[]
+*********resolving btrfs-convert******
+["btrfs-convert  <device><i>"]
+{"--csum": "type", "-d": "", "-i": "", "-n": "", "-N": "SIZE", "-r": "", "-l": "LABEL", "-L": "", "-O": "feature1", "-p": "", "--no-progress": "", "--checksum": "unknown", "--help": ""}
+{"type": "crc32c,xxhash,sha256,blake2,", "SIZE": "16384,65536,mkfs.btrfs,", "feature1": "^,FILESYSTEM FEATURES,mkfs.btrfs,8,btrfs-convert -O list-all,"}
+[]
+*********resolving auditd******
+["auditd"]
+{"-f": "", "-l": "", "-n": "", "-s": "ENABLE_STATE", "-c": ""}
+{}
+[]
+*********resolving bridge******
+[" bridge  OBJECT<i> { filename } OBJECT<i> := { } OPTIONS<i> := { }", " bridge  OBJECT<i> { -c } OBJECT<i> := { } OPTIONS<i> := { }", " bridge  OBJECT<i> { -p } OBJECT<i> := { } OPTIONS<i> := { }", " bridge  OBJECT<i> { -j } OBJECT<i> := { } OPTIONS<i> := { }", " bridge  OBJECT<i> { -o } OBJECT<i> := { } OPTIONS<i> := { }", "bridge link set dev  DEV<i>", "bridge link", " bridge fdb { local } LLADDR<i>  dev  DEV<i> { }", " bridge fdb { static } LLADDR<i>  dev  DEV<i> { }", " bridge fdb { dynamic } LLADDR<i>  dev  DEV<i> { }", "bridge fdb", "bridge fdb get  LLADDR<i>", " bridge mdb { add } dev  DEV<i>  port  PORT<i>  grp  GROUP<i>", " bridge mdb { del } dev  DEV<i>  port  PORT<i>  grp  GROUP<i>", "bridge mdb show", " bridge vlan { add } dev  DEV<i>  vid  VID<i>", " bridge vlan { del } dev  DEV<i>  vid  VID<i>", "bridge vlan", "bridge monitor"]
+{"-V": "", "-s": "", "-d": "", "-n": "", "-b": "", "-force": "", "-c": "", "-j": "", "-p": "", "-o": "", "command": "link,fdb,mdb,vlan,"}
+{}
+[]
+*********resolving badblocks******
+["badblocks  device<i>"]
+{"-b": "block_size", "-c": "number of blocks", "-d": "read delay factor", "-e": "max bad block count", "-f": "", "-i": "input_file", "-n": "", "-o": "output_file", "-p": "num_passes", "-s": "", "-t": "test_pattern", "-v": "", "-w": "", "-B": "", "-X": ""}
+{"block_size": "1024,", "number of blocks": "64,", "read delay factor": "100,200,", "max bad block count": "0,", "input_file": "Badblocks,new,dumpe2fs,8,", "output_file": "badblocks,e2fsck,8,mke2fs,", "num_passes": "0,badblocks,", "test_pattern": "/write,1,0,"}
+[]
+*********resolving btrfs-replace******
+["btrfs replace  <subcommand><i> <args><i>"]
+{"command": "cancel<<mount_point>>,start<<devid> <targetdev> <path>>,Note,Options,status<<mount_point>>,"}
+{"<mount_point>": "cancel,status,1,", "<devid> <targetdev> <path>": "start,<srcdev>,<path>,<targetdev>,Note,btrfs filesystem resize <devid>:max /path,"}
+["Replacing an online drive with a bigger one", "btrfs-filesystem"]
+*********resolving booleans******
+[]
+{}
+{}
+[]
+*********resolving btrfs-scrub******
+["btrfs scrub  <subcommand><i> <args><i>"]
+{"command": "cancel<<device>>,resume<<device>>,Options,start<<device>>,status<<device>>,"}
+{"<device>": "cancel,<path>,device,btrfs scrub cancel,resume,<ioprio_class>,<ioprio_classdata>,scrub start,ionice,1,status,"}
+[]
+*********resolving bfifo******
+["tc qdisc  add pfifo", "tc qdisc  add bfifo"]
+{}
+{}
+[]
+*********resolving btrfs-send******
+["btrfs send  <subvol><i>"]
+{"-e": "", "-p": "parent", "-c": "clone-src", "-f": "outfile", "--no-data": "", "-v": "", "-q": ""}
+{"parent": "subvol,"}
+[]
+*********resolving btrfs-inspect-internal******
+["btrfs inspect-internal  <subcommand><i> <args><i>"]
+{"command": "dump-super<<device>>,Note,Options,dump-tree<<device>>,inode-resolve<<ino> <path>>,logical-resolve<<logical> <path>>,min-dev-size<<path>>,rootid<<path>>,subvolid-resolve<<subvolid> <path>>,tree-stats<<device>>,"}
+{"<device>": "dump-super,btrfs-show-super,Note,8,4,<super>,<bytenr>,2,1,0,dump-tree,btrfs-debug-tree,<block_num>,5,3,<tree_id>,tree-stats,", "<ino> <path>": "inode-resolve,path,", "<logical> <path>": "logical-resolve,<bufsize>,4096,", "<path>": "min-dev-size,<id>,1,rootid,Note,2,", "<subvolid> <path>": "subvolid-resolve,"}
+[]
+*********resolving blkmapd******
+["blkmapd"]
+{"-h": "", "-d": "", "-f": ""}
+{}
+[]
+*********resolving arptables-nft-save******
+["arptables-save"]
+{"-M": "modprobe_program", "-c": "", "-V": ""}
+{"modprobe_program": "/proc/sys/kernel/modprobe,"}
+[]
+*********resolving chgpasswd******
+["chgpasswd"]
+{"-c": "", "-e": "", "-h": "", "-m": "", "-R": "CHROOT_DIR", "-s": ""}
+{}
+[]
+*********resolving chat******
+["chat  script<i>"]
+{"-f": "chat file", "-t": "timeout", "-r": "report file", "-e": "", "-E": "", "-v": "", "-V": "", "-s": "", "-S": "", "-T": "phone number", "-U": "phone number 2"}
+{"chat file": "file,", "timeout": "chat,", "report file": "REPORT,stderr,", "phone number 2": "script,chat,"}
+[]
+*********resolving blkid******
+[" blkid --label  label<i>  uuid<i>", " blkid --label  --uuid  uuid<i>", "blkid --probe  device<i>", "blkid", "blkid --info  device<i>"]
+{"-c": "cachefile", "-d": "", "-D": "", "-g": "", "-h": "", "-i": "", "-k": "", "-l": "", "-L": "label", "-n": "list", "-o": "format", "-O": "offset", "-p": "", "-s": "tag", "-S": "size", "-t": "NAME=value", "-u": "list", "-U": "uuid", "-V": "", "-w": "unknown", "-v": ""}
+{"cachefile": "/dev/null,", "label": "/etc/blkid.conf,/dev/disk/by,8,", "list": "/dev/sda1,", "format": "full,value,list,DEPRECATED,lsblk,8,device,udev,export,/O,", "size": "/file,", "NAME=value": "NAME,value,TYPE,LABEL,UUID,"}
+[]
+*********resolving btrfs-find-root******
+["btrfs-find-root  <device><i>"]
+{"-a": "", "-g": "generation", "-o": "objectid", "-l": "level", "--help": ""}
+{"level": "0,"}
+[]
+*********resolving blkdiscard******
+["blkdiscard  device<i>"]
+{"-o": "offset", "-l": "length", "-p": "length", "-s": "", "-z": "", "-v": "", "-V": "", "-h": ""}
+{"length": "blkdiscard,"}
+[]
+*********resolving btrfs-rescue******
+["btrfs rescue  <subcommand><i> <args><i>"]
+{"command": "chunk-recover<<device>>,Options,Note,fix-device-size<<device>>,super-recover<<device>>,zero-log<<device>>,"}
+{"<device>": "chunk-recover,yes,Note,VERY,fix-device-size,11,4,92017859094528,92017859088384,/0x1d0,/btrfs/ctree.h,1559,439,super-recover,zero-log,30,/0xb5,/0x19d,/0x1a1,/0x29c,/0xbc,/0x132c,open_ctree,replay,log_tree,"}
+[]
+*********resolving audispd-zos-remote******
+["audispd-zos-remote"]
+{}
+{}
+[]
+*********resolving btrace******
+["btrace        < dev<i> >"]
+{"-s": "", "-t": "", "-w": "", "-n": "N", "-b": "N", "-r": "", "-a": "trace"}
+{"trace": "<,dev,/dev/sda,blkparse,2006,//www.gnu.org/licenses/gpl.html,/usr/share/common,/GPL,1,8,"}
+[]
+*********resolving blkzone******
+["blkzone  command<i>  device<i>"]
+{"command": "report,reset,", "-o": "sector", "-l": "sectors", "-c": "count", "-v": "", "-V": "", "-h": ""}
+{"sector": "512,", "sectors": "offset,", "count": "offset,"}
+[]
+*********resolving astraceroute******
+["astraceroute"]
+{"-H": "<host>,", "-p": "<port>,", "-i": "<device>,", "-b": "<IP>,", "-f": "<ttl>,", "-m": "<ttl>,", "-q": "<num>,", "-x": "<sec>,", "-X": "<string>,", "-l": "<len>,", "-4": "", "-6": "", "-n": "", "-u": "", "-L": "", "-N": "", "-S": "", "-A": "", "-F": "", "-P": "", "-U": "", "-R": "", "-E": "", "-t": "<tos>,", "-G": "", "-Z": "", "-v": "", "-h": "", "-d": "unknown"}
+{"<port>,": "80,", "<ttl>,": "1,30,", "<num>,": "2,", "<sec>,": "3,"}
+["astraceroute -i eth0 -N -S -H netsniff-ng.org", "astraceroute -6 -i eth0 -S -E -N -H www.6bone.net", "astraceroute -i eth0 -N -F -H netsniff-ng.org", "astraceroute -i eth0 -N -FPU -H netsniff-ng.org", "astraceroute -i eth0 -N -H netsniff-ng.org -X censor-me -Z"]
+*********resolving btrfs-qgroup******
+["btrfs qgroup  <subcommand><i> <args><i>"]
+{"command": "assign<<src> <dst> <path>>,Options,create<<qgroupid> <path>>,destroy<<qgroupid> <path>>,limit<<path>>,remove<<src> <dst> <path>>,show<<path>>,"}
+{"<src> <dst> <path>": "assign,<src>,<dst>,<path>,19,4,QUOTA RESCAN,remove,", "<qgroupid> <path>": "create,0/<subvolume id>,destroy,", "<path>": "limit,<size>,<qgroupid>,show,B,1024,1000,<attr>,"}
+[]
+*********resolving blktrace******
+["blktrace -d  dev<i>"]
+{"-A": "hex-mask", "--set-mask": "hex-mask", "-a": "mask", "--act-mask": "mask", "-b": "size", "--buffer-size": "size", "-d": "dev", "--dev": "dev", "-I": "file", "--input-devs": "file", "-n": "num-sub", "--num-sub-buffers": "num-sub", "-l": "", "--listen": "", "-h": "hostname", "--host": "hostname", "-p": "number", "--port": "number", "-s": "", "--no-sendfile": "", "-o": "basename", "--output": "basename", "-D": "dir", "--output-dir": "dir", "-r": "rel-path", "--relay": "rel-path", "-v": "", "--version": "", "-V": "", "-w": "seconds", "--stopwatch": "seconds", "-k": ""}
+{"size": "1024,", "num-sub": "4,", "number": "8462,", "dir": "file,"}
+[]
+*********resolving addpart******
+["addpart  device<i> partition<i> start<i> length<i>"]
+{}
+{}
+[]
+*********resolving arptables-nft******
+["arptables  -  chain rule-specification", "arptables  -  chain rulenum rule-specification", "arptables  -D chain rulenum", "arptables  -", "arptables  -    -P chain target"]
+{"command": "COMMANDS,RULE-SPECIFICATIONS,--source-mac<mask>,--destination-mac<mask>,--opcode<mask>,--h-type<mask>,--proto-type<mask>,CLASSIFY,MARK,"}
+{"mask": "address,6,name,INPUT,OUTPUT,length,code,2,1,Request 2,Reply 3,Request_Reverse 4,Reply_Reverse 5,DRARP_Request 6,DRARP_Reply 7,DRARP_Error 8,InARP_Request 9,ARP_NAK,type,Ethernet,0x800,IPv4,iptables,DROP,CONTINUE,ACCEPT,CLASSIFY,MARK,"}
+[]
+*********resolving cryptsetup-reencrypt******
+["cryptsetup-reencrypt <options> <device>"]
+{"--batch-mode": "", "--block-size": "value", "--cipher": "cipher-spec", "--debug": "", "--decrypt": "", "--device-size": "size[units]", "--hash": "hash-spec", "--header": "LUKS header file", "--iter-time": "milliseconds", "--keep-key": "", "--key-file": "name", "--key-size": "bits", "--key-slot": "", "--keyfile-offset": "value", "--keyfile-size": "", "--master-key-file": "", "--new": "", "--pbkdf": "", "--pbkdf-force-iterations": "<num>", "--pbkdf-memory": "<number>", "--pbkdf-parallel": "<number>", "--progress-frequency": "<seconds>", "--reduce-device-size": "size[units]", "--tries": "", "--type": "<type>", "--use-directio": "", "--use-fsync": "", "--use-random": "", "--uuid": "uuid", "--verbose": "", "--version": "", "--write-log": ""}
+{"value": "1,64,", "size[units]": "/M/G/T,/MB/GB/TB,1000,512,1024,WARNING:,131072,64,", "hash-spec": "NOTE:,", "LUKS header file": "WARNING:,", "name": "WARNING:,", "bits": "8,", "<number>": "/id,4,", "<type>": "luks,luks1,luks2,"}
+["cryptsetup-reencrypt /dev/sdb1", "cryptsetup-reencrypt /dev/sdb1 -c aes-xts-plain64", "cryptsetup-reencrypt /dev/sdb1 --new --reduce-device-size 4096S", "cryptsetup-reencrypt /dev/sdb1 --decrypt"]
+*********resolving CoDel******
+["tc qdisc  codel"]
+{}
+{}
+[]
+*********resolving connmark******
+[" tc  action connmark CONTROL<i> := { reclassify<i> }", " tc  action connmark CONTROL<i> := { pipe<i> }", " tc  action connmark CONTROL<i> := { drop<i> }", " tc  action connmark CONTROL<i> := { continue<i> }", " tc  action connmark CONTROL<i> := { ok<i> }"]
+{"zone": "u16_zone_index", "CONTROL": "", "reclassify": "", "pipe": "", "drop": "", "shot": "", "continue": "", "pass": "", "index": "u32_index"}
+{}
+[]
+*********resolving btrfs-balance******
+["btrfs balance  <subcommand><i> <args><i>"]
+{"command": "cancel<<path>>,pause<<path>>,resume<<path>>,start<<path>>,Note,Options,status<<path>>,"}
+{"<path>": "cancel,pause,resume,skip_balance,start,Note,<filters>,FILTERS,raid1,single,fork,2,status,"}
+["btrfs-device", "MAKING BLOCK GROUP LAYOUT MORE COMPACT", "GETTING RID OF COMPLETELY UNUSED BLOCK GROUPS", "btrfs filesystem df"]
+*********resolving chmem******
+["chmem"]
+{"-b": "", "-d": "", "-e": "", "-z": "", "-h": "", "-v": "", "-V": ""}
+{}
+["chmem --enable 1024", "chmem -e 2g", "chmem --disable 0x00000000e4000000-0x00000000f3ffffff", "chmem -b -d 10"]
+*********resolving clockdiff******
+["clockdiff {destination}"]
+{"-o": "", "-o1": "", "-V": ""}
+{}
+[]
+*********resolving btrfs******
+["btrfs  <command><i>"]
+{"command": "balance,check,device,filesystem,inspect-internal,property,qgroup,quota,receive,replace,rescue,restore,scrub,send,subvolume,"}
+{}
+[]
+*********resolving cgroup******
+["tc filter  cgroup"]
+{"action": "ACTION_SPEC", "match": "EMATCH_TREE"}
+{"match": "8,EMATCH_TREE,"}
+["ff:be", "0xff00be", "cgroup", "qdisc"]
+*********resolving ausearch******
+["ausearch"]
+{"-a": "audit-event-id", "--arch": "CPU", "-c": "comm-name", "--debug": "", "--checkpoint": "checkpoint-file", "-e": "exit-code-or-errno", "--escape": "option", "--extra-keys": "", "--extra-labels": "", "--extra-obj2": "", "--extra-time": "", "-f": "file-name", "--format": "option", "-ga": "all-group-id", "-ge": "effective-group-id", "-gi": "group-id", "-h": "", "-hn": "host-name", "-i": "", "-if": "file-name\u00a0", "--input-logs": "", "--just-one": "", "-k": "key-string", "-l": "", "-m": "message-type\u00a0", "-n": "", "-o": "SE-Linux-context-string", "-p": "process-id", "-pp": "parent-process-id", "-r": "", "-sc": "syscall-name-or-value", "-se": "SE-Linux-context-string", "--session": "Login-Session-ID", "-su": "SE-Linux-context-string", "-sv": "success-value", "-te": "end-date", "-ts": "start-date", "-tm": "terminal", "-ua": "all-user-id", "-ue": "effective-user-id", "-ui": "user-id", "-ul": "login-id", "-uu": "guest-uuid", "-v": "", "-vm": "guest-name", "-w": "", "-x": "executable"}
+{"audit-event-id": "event ID,329,2401771,1116360555,", "CPU": "32,b32,64,b64.,", "comm-name": "comm name,", "checkpoint-file": "2,EXIT STATUS,", "exit-code-or-errno": "exit code or errno,", "option": "raw,tty,shell,shell_quote,default,interpret,csv,text,", "file-name": "filename,", "all-group-id": "group ID,", "effective-group-id": "effective group ID,", "group-id": "group ID,", "host-name": "host name,", "file-name\u00a0": "file,directory,", "key-string": "key string,", "message-type\u00a0": "message type,comma separated list of message types,ALL,", "SE-Linux-context-string": "tcontext,scontext,/subject,/object,", "process-id": "process ID,", "parent-process-id": "parent process ID,", "syscall-name-or-value": "syscall,", "success-value": "success value,yes,no,", "end-date": "date '+%x'.,today,now,/03/2009.,2009,09,24,03,00,18,recent,boot,yesterday,this-week,week-ago,this-month,this-year,Now,Recent,10,Boot,Today,Yesterday,This-week,localtime,Week-ago,7,This-month,This-year,", "start-date": "date '+%x'.,today,midnight,/03/2009.,2009,09,24,03,00,18,now,recent,boot,yesterday,this-week,week-ago,this-month,this-year,checkpoint,Boot,Today,Recent,10,Yesterday,This-week,localtime,Week-ago,7,This-month,This-year,ausearch,12,11,/etc/audit/auditd_checkpoint.txt,", "all-user-id": "user ID,", "effective-user-id": "effective user ID,", "user-id": "user ID,", "login-id": "login user ID,", "guest-uuid": "guest UUID,", "guest-name": "guest name,"}
+[]
+*********resolving CBQ******
+["tc qdisc  dev dev cbq avpkt bytes bandwidth rate", "tc class  dev dev parent major: cbq allot bytes prio priority avpkt bytes"]
+{}
+{}
+[]
+*********resolving btrfs-select-super******
+["btrfs-select-super -s number <device><i>"]
+{"-s": "superblock"}
+{"superblock": "2,1,0,"}
+[]
+*********resolving btrfs-receive******
+["btrfs receive  <path><i> or", "btrfs receive --dump"]
+{}
+{}
+[]
+*********resolving auditctl******
+["auditctl"]
+{"-b": "backlog", "--backlog_wait_time": "wait_time", "-c": "", "-D": "", "-e": "", "-f": "", "-h": "", "-i": "", "--loginuid-immutable": "", "-q": "mount-point,subtree", "-r": "rate", "--reset-lost": "", "-R": "file", "-t": "", "-s": "", "-l": "", "-v": "", "-C": "unknown", "-a": "unknown", "-A": "unknown", "-d": "unknown", "-S": "unknown", "-F": "unknown", "-m": "unknown", "-w": "unknown", "-W": "unknown", "-k": "unknown", "-p": "unknown"}
+{"backlog": "64,", "wait_time": "60,10,", "rate": "/sec,0,", "file": "1,", "[": "list,action,task,exit,user,exclude,filesystem,actions,never,always,", "list": "action,", "f": "2,/gid,", "n": "64,8, a0, a1, a2, a3,arch,32,b32,b64.,auid,devmajor,dir,egid,euid,exe,exit,fsgid,fsuid,filetype,key,msgtype,obj_uid,obj_gid,obj_user,obj_role,obj_type,obj_lev_low,obj_lev_high,path,perm,pers,pid,ppid,subj_user,subj_role,subj_type,subj_clr,success,/yes,/no,/no.,", "key": "31,", "Syscall name or number": "syscall name,number,2,64,32,"}
+["auditctl -a always,exit -S all -F pid=1005", "auditctl -a always,exit -S openat -F auid=510", "auditctl -a always,exit -S openat -F success=0", "auditctl -w /etc/shadow -p wa ", "auditctl -w /etc/ -p wa ", "auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid"]
+*********resolving cfdisk******
+["cfdisk"]
+{"-h": "", "-L": "when", "-V": "", "-z": "", "command": "b,d,h,n,q,s,t,u,W,x,"}
+{"when": "auto,never,always,"}
+[]
+*********resolving convertquota******
+["convertquota  -e  filesystem<i>", "convertquota  -f  oldformat<i> , newformat<i> filesystem<i>"]
+{"-u": "", "-g": "", "-f": "oldformat,newformat", "-e": "", "-V": ""}
+{"oldformat,newformat": "oldformat,"}
+[]
+*********resolving crash******
+["crash  NAMELIST<i> MEMORY-IMAGE<i>", "crash"]
+{"-h": "[option]", "--help": "[option]", "-s": "", "-i": "file", "-d": "num", "-S": "", "-e": "vi | emacs", "-f": "", "-k": "", "-g": "[namelist]", "-t": "", "-L": "", "-c": "tty-device", "-p": "page-size", "-o": "filename", "-m": "option=value", "--machdep": "option=value", "-x": "", "--active": "", "--buildinfo": "", "--memory_module": "modname", "--memory_device": "device", "--log": "dumpfile", "--no_kallsyms": "", "--no_modules": "", "--no_ikconf": "", "--no_data_debug": "", "--no_kmem_cache": "", "--no_elf_notes": "", "--kmem_cache_delay": "", "--readnow": "", "--smp": "", "-v": "", "--cpus": "number", "--osrelease": "dumpfile", "--hyper": "", "--p2m_mfn": "pfn", "--xen_phys_start": "physical-address", "--zero_excluded": "", "--no_panic": "", "--more": "", "--less": "", "--hex": "", "--dec": "", "--CRASHPAGER": "", "--no_scroll": "", "--no_strip": "", "--no_crashrc": "", "--mod": "directory", "--kaslr": "offset", "--reloc": "size", "--hash": "count", "--minimal": "", "--kvmhost": "[32|64]", "--kvmio": "size", "--offline": "[show|hide]"}
+{"[option]": "option,crash,", "num": "crash,", "vi | emacs": "readline(3),", "[namelist]": "vmlinux,xen-syms,", "option=value": "/pairs,2,6,11,5,14,4,", "modname": "crash.ko,/dev/crash,", "device": "/dev/crash, /dev/mem,/proc/kcore,", "dumpfile": "/proc/vmcore,", "directory": "mod -S,", "offset": "CONFIG_RANDOMIZE_BASE,,", "size": "CONFIG_PHYSICAL_START,CONFIG_PHYSICAL_ALIGN,/O,", "count": "32768,", "[32|64]": "64,32,"}
+[]
+*********resolving btrfs-check******
+["btrfs check  <device><i>"]
+{"-b": "", "--check-data-csum": "", "--chunk-root": "bytenr", "-E": "subvolid", "-p": "", "-Q": "", "-r": "bytenr", "--readonly": "", "-s": "superblock", "--clear-space-cache": "v1|v2", "--repair": "", "--init-csum-tree": "", "--init-extent-tree": "", "--mode": "MODE", "--force": ""}
+{"superblock": "2,1,0,", "v1|v2": "v1,clear_cache,v2,", "MODE": "original,lowmem,Note, lowmem,"}
+[]
+*********resolving chkcon******
+["chkcon policy_file context"]
+{}
+{}
+[]
+*********resolving btrfs-subvolume******
+["btrfs subvolume  <subcommand><i>"]
+{"command": "create<<name>>,Options,delete<<subvolume>>,find-new<<subvolume> <last_gen>>,get-default<<path>>,list<<path>>,set-default<<id> <path>>,show<<path>>,snapshot<<name>>,sync<<path>>,"}
+{"<name>": "create,<qgroupid>,<dest>,snapshot,<source> <dest>,", "<subvolume>": "delete,btrfs subvolume sync,", "<subvolume> <last_gen>": "find-new,<last_gen>,", "<path>": "get-default,subvolume list,<value>,<ID>,<generation>,parent,show,/mnt/btrfs/subvolume,0000,34,12,2018,01,56,79,2844,sync,<N>,", "<id> <path>": "set-default,<subvolume>,<path>,subvol=/,subvolid=5,<id>,btrfs subvolume list,btrfs subvolume show,btrfs inspect-internal rootid,"}
+[]
+*********resolving 30-systemd-environment-d-generator******
+["/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator"]
+{}
+{}
+[]
+*********resolving avcstat******
+["avcstat"]
+{"-c": "", "-f": ""}
+{}
+[]
+*********resolving CAKE******
+["tc qdisc  cake"]
+{}
+{}
+[]
+*********resolving aureport******
+["aureport"]
+{"-au": "", "-a": "", "--comm": "", "-c": "", "-cr": "", "-e": "", "--escape": "option", "-f": "", "--failed": "", "-h": "", "--help": "", "-i": "", "-if": "file\u00a0", "--input-logs": "", "--integrity": "", "-k": "", "-l": "", "-m": "", "-ma": "", "-n": "", "--node": "node-name", "-nc": "", "-p": "", "-r": "", "-s": "", "--success": "", "--summary": "", "-t": "", "--tty": "", "-te": "end-date", "-tm": "", "-ts": "start-date", "-u": "", "-v": "", "--virt": "", "-x": ""}
+{"option": "raw,tty,shell,shell_quote,", "file\u00a0": "file,directory,", "node-name": "node name,", "end-date": "today,now,/03/2009.,2009,09,24,03,00,18,recent,boot,yesterday,this-week,week-ago,this-month,this-year,Now,Recent,10,Boot,Today,Yesterday,This-week,localtime,Week-ago,7,This-month,This-year,", "start-date": "today,midnight,/03/2009.,2009,09,24,03,00,18,now,recent,boot,yesterday,this-week,week-ago,this-month,this-year,Boot,Today,Recent,10,Yesterday,This-week,localtime,Week-ago,7,This-month,This-year,"}
+[]
+*********resolving btrfs-image******
+["btrfs-image  <source><i> <target><i>"]
+{"-r": "", "-c": "value", "-t": "value", "-o": "", "-s": "", "-w": "", "-m": "", "--help": ""}
+{"value": "9,0,1,32,"}
+[]
+*********resolving chpasswd******
+["chpasswd"]
+{"-c": "METHOD", "-e": "", "-h": "", "-m": "", "-R": "CHROOT_DIR", "-s": "ROUNDS"}
+{"ROUNDS": "5000,0,1000,999,/etc/login.defs.,"}
+[]
+*********resolving automount******
+["automount"]
+{"-h": "", "-p": "", "-t": "<seconds>,", "-M": "<seconds>,", "-n": "<seconds>,", "-v": "", "-d": "", "-Dvariable=value": "", "-S": "", "-f": "", "-r": "", "-m": "", "-O": "", "-V": "", "-l": "", "-C": "", "-F": "", "-+": "", "-D": "unknown"}
+{"<seconds>,": "5,10,60,"}
+[]
+*********resolving cryptsetup******
+["cryptsetup <options> <action> <action args>"]
+{"command": "create,<options>,", "--verbose": "", "--debug": "or", "--type": "<device-type>", "--hash": "hash-spec", "--cipher": "cipher-spec", "--verify-passphrase": "", "--key-file": "name", "--keyfile-offset": "value", "--keyfile-size": "value", "--new-keyfile-offset": "value", "--new-keyfile-size": "value", "--master-key-file": "", "--dump-master-key": "", "--json-file": "", "--use-random": "", "--use-urandom": "", "--key-slot": "", "--key-size": "", "--size": "", "--offset": "", "--skip": "", "--device-size": "size[units]", "--readonly": "", "--shared": "", "--pbkdf": "<PBKDF", "--iter-time": "", "--pbkdf-memory": "<number>", "--pbkdf-parallel": "<number>", "--pbkdf-force-iterations": "<num>", "--batch-mode": "", "--progress-frequency": "<seconds>", "--timeout": "", "--tries": "", "--align-payload": "<number", "--uuid": "UUID", "--allow-discards": "", "--perf-same_cpu_crypt": "", "--perf-submit_from_crypt_cpus": "", "--test-passphrase": "", "--header": "", "--header-backup-file": "<file>", "--force-password": "", "--deferred": "", "--disable-locks": "", "--disable-keyring": "", "--key-description": "<text>", "--priority": "<normal|prefer|ignore>", "--token-id": "", "--token-only": "", "--sector-size": "<bytes>", "--persistent": "", "--refresh": "", "--label": "<LABEL>", "--subsystem": "config", "--integrity": "<integrity", "--luks2-metadata-size": "<size>", "--luks2-keyslots-size": "<size>", "--keyslot-cipher": "<cipher-spec>", "--keyslot-key-size": "<bits>", "--integrity-no-journal": "", "--integrity-no-wipe": "", "--unbound": "", "--tcrypt-hidden": "", "--tcrypt-system": "TCRYPT", "--veracrypt": "", "--veracrypt-pim": "", "--veracrypt-query-pim": "TCRYPT", "--serialize-memory-hard-pbkdf": "", "--encrypt": "", "--decrypt": "", "--init-only": "", "--resume-only": "", "--resilience": "<mode>", "--resilience-hash": "<hash>", "--hotzone-size": "<size>", "--reduce-device-size": "<size>", "--version": "", "--usage": "", "--help": ""}
+{"<device-type>": "BASIC COMMANDS,", "hash-spec": "open,luksFormat,160,\"crc32\",\"ripemd160\",open --type plain,\"sha1\",cryptsetup --help,", "cipher-spec": "cryptsetup --help,512,6,33,24,", "name": "luksFormat,luksAddKey,NOTES ON PASSPHRASE PROCESSING,", "value": "luksAddKey,", "size[units]": "reencrypt,resize,/M/G/T,/MB/GB/TB,1000,512,1024,WARNING:,", "<PBKDF": "pbkdf2,argon2i,argon2id,//www.cryptolux.org/index.php/Argon2,cryptsetup --help,/id,4,luksDump,NOTE:,", "<number>": "/id,4,", "<num>": "/LUKS2,", "<number": "value,512,luksFormat,2048,WARNING:,", "UUID": "luksFormat,1234,12345678,", "<file>": "luksHeaderBackup,luksHeaderRestore,", "<text>": "token,", "<normal|prefer|ignore>": "prefer,normal,ignored,", "<bytes>": "4096,512,", "<integrity": "WARNING: This extension is EXPERIMENTAL,12,4,AUTHENTICATED DISK ENCRYPTION,", "<size>": "256,16,128,4096,1024,64,512,2048,32,", "<mode>": "checksum,journal,none,"}
+[]
+*********resolving arptables-nft-restore******
+["arptables-restore"]
+{}
+{}
+[]
+*********resolving captest******
+["captest"]
+{"--drop-all": "", "--drop-caps": "", "--id": "", "--init-grp": "", "--text": "", "--lock": ""}
+{}
+[]
+*********resolving csum******
+[" tc  action csum  UPDATE<i> UPDATE<i> := TARGET<i> TARGET<i> := { and } SWEETS<i> := { }", " tc  action csum  UPDATE<i> UPDATE<i> := TARGET<i> TARGET<i> := { or } SWEETS<i> := { }", " tc  action csum  UPDATE<i> UPDATE<i> := TARGET<i> TARGET<i> := { + } SWEETS<i> := { }"]
+{"TARGET": "", "SWEETS": ""}
+{"TARGET": "ip4h,icmp,igmp,tcp,udp,udplite,sctp,"}
+["csum ip and udp"]
+*********resolving blockdev******
+["blockdev  command<i>  device<i>", "blockdev --report", " blockdev -h", " blockdev -V"]
+{"-q": "", "-v": "", "--report": "", "-h": "", "-V": "", "command": "--getalignoff,--getbsz,--getdiscardzeroes,--getfra,--getiomin,--getioopt,--getmaxsect,--getpbsz,--getra,--getro,--getsize64,--getss,--getsz,--rereadpt,--setbsz<bytes>,--setfra<sectors>,--setra<sectors>,--setro,--setrw,"}
+{"sectors": "2,6,512,"}
+[]
+*********resolving autrace******
+["autrace  program<i>"]
+{"-r": ""}
+{}
+["autrace /bin/ls /tmp ", "autrace -r /bin/ls "]
+*********resolving BPF******
+["tc action  bpf tc action  bpf"]
+{}
+{}
+["eBPF TOOLING", "examples/bpf/", "bpf(2)", "cls_bpf", "act_bpf", "echo 1 > /proc/sys/net/core/bpf_jit_enable", "clang -O2 -emit-llvm -c bpf.c -o - | llc -march=bpf -filetype=obj -o bpf.o", "eBPF PROGRAMMING", "objdump(1)", null, "tc filter add dev em1 parent 1: bpf obj bpf.o sec mycls flowid 1:1", null, null, null, "ifb", "tc filter add dev em1 parent 1: bpf obj bpf.o flowid 1:1 \\", null, "tc(8)", "1)", "tc(8)", "examples/bpf/", "2)", "tc exec", "sh(1)", null, null, "bpf(2)", "id", "struct bpf_elf_map", "eBPF PROGRAMMING", "linux/bpf.h", "examples/bpf", "0", " -1", " else", "linux/pkt_cls.h", "TC_ACT_OK (0)", " TC_ACT_SHOT (2)", " TC_ACT_UNSPEC (-1)", "-1", " TC_ACT_PIPE (3)", " TC_ACT_RECLASSIFY (1)", " else", "helpers.h", "all", "eBPF DEBUGGING", "filter", "action", "bpf", "verbose", "dmesg(1)", "echo 2 > /proc/sys/net/core/bpf_jit_enable", "tools/net/", "bpf_jit_disasm", "bpf_jit_disasm -o", "test_bpf", "modprobe test_bpf", "dmesg(1)", "cBPF", "eBPF", "bpf_jit_enable", "bpf_jit_disasm", "tc filter add dev em1 parent 1: bpf bytecode \u20191,6 0 0 4294967295,\u2019 flowid 1:1", "c t f k", "c", "t", "f", "k", "iptables(8)", "libpcap", "tc(8)", "tcpdump(8)", null, "tcpdump -iem1 -ddd \u2019tcp[tcpflags] & tcp-syn != 0\u2019 | tr \u2019\\n\u2019 \u2019,\u2019 > /var/bpf/tcp-syn", "libpcap", "tools/net/", "bpf_asm", "FURTHER READING", "bpf_asm", "foobar", null, "tools/net/", "bpf_dbg"]
+*********resolving choke******
+["tc qdisc  choke limit packets min packets max packets avpkt bytes burst packets probability chance"]
+{}
+{}
+[]
+*********resolving btrecord******
+["btrecord  < dev<i> >"]
+{"-d": "dir", "--input-directory": "dir", "-D": "dir", "--output-directory": "dir", "-F": "", "--find-traces": "", "-h": "", "--help": "", "-V": "", "--version": "", "-m": "nanoseconds", "--max-bunch-time": "nanoseconds", "-M": "num", "--max-pkts": "num", "-o": "basename", "--output-base": "basename", "-v": "", "--verbose": ""}
+{"dir": ".,", "nanoseconds": "000,10,", "num": "8,512,", "basename": "3,1,blktrace,2,btrecord,"}
+[]
+*********resolving cron******
+["cron"]
+{"-f": "", "-l": "", "-n": "", "-L": "loglevel"}
+{"loglevel": "jobs,1,2,4,0,8,levels,15,"}
+[]
+*********resolving btrfs-filesystem******
+["btrfs filesystem  <subcommand><i> <args><i>"]
+{"command": "df<<path>>,Options,defragment<<dir>>,Warning,Note,du<<path>>,label<<newlabel>>,resize<<path>>,show<<label>>,sync<<path>>,usage<<path>>,"}
+{"<path>": "df,1.9TiB,mkfs.btrfs -d single -m single,/path,144,32,12,6,0,512,Data,System,Metadata,GlobalReserve,total,/single.,used,GlobalReserve/total + Metadata/used = Metadata/total,1024,1000,du,set shared,btrfs filesystem du,resize,<devid>,<size>,Warning,btrfs filesystem show,max,/reduce,fdisk,8,parted,EXAMPLES,sync,usage,btrfs filesystem df,/6,669,692,/dev/sdb,", "<dir>": "defragment,<file>,2,6,33,0,Warning,13,14,10,31,12,9,4,cp --reflink,Note,start,len,size,<algo>,zlib,lzo,zstd,EXAMPLES,<start>,<len>,<size>,", "<newlabel>": "label,<device>,<mountpoint>,newlabel,Note,256,", "<label>": "show,<path>,<uuid>,<device>,label,/dev,/proc/partitions,B,1024,1000,"}
+["$ btrfs filesystem defrag -v -r dir/", "$ btrfs filesystem defrag -v -r -f dir/", "$ btrfs filesystem defrag -v -r -f -clzo dir/", "$ btrfs filesystem defrag -v -r -t 64M dir/", "$ btrfs filesystem resize -1G /path", "$ btrfs filesystem resize 1:-1G /path", "$ btrfs filesystem resize max /path", "$ btrfs filesystem resize 1:max /path", "Note", "btrfs inspect-internal min-dev-size"]
+*********resolving anacron******
+["anacron", "anacron  -u", "anacron -T"]
+{"-f": "", "-u": "", "-s": "", "-n": "", "-d": "", "-q": "", "-t": "anacrontab", "-T": "", "-S": "spooldir", "-V": "", "-h": ""}
+{}
+[]
+*********resolving btrfs-device******
+["btrfs device  <subcommand><i> <args><i>"]
+{"command": "add<<path>>,Options,remove<<path>>,Note,delete<<path>>,ready<<device>>,scan<<device>>,stats<<device>>,usage<<path>>,"}
+{"<path>": "add,<device>,blkid,8,wipefs,remove,<devid>,2,1,TYPICAL USECASES,missing,Note,delete,usage,B,1024,1000,", "<device>": "ready,scan,device,stats,<path>,DEVICE STATS,6,65,0,64,"}
+[]
+*********resolving btrfs-quota******
+["btrfs quota  <subcommand><i> <args><i>"]
+{"command": "disable<<path>>,enable<<path>>,rescan<<path>>,Options,"}
+{"<path>": "disable,enable,rescan,"}
+[]
+*********resolving checkmodule******
+["checkmodule"]
+{"-b": "", "-C": "", "-h": "", "-m": "", "-M": "", "-V": "", "-o": "filename", "-U": "<action>", "-c": "policyvers"}
+{}
+[]
+*********resolving catman******
+["catman"]
+{"-d": "", "-M": "path", "-C": "file", "-?": "", "--usage": "", "-V": ""}
+{"file": "~/.manpath,"}
+[]
+*********resolving arpd******
+["arpd"]
+{"-h": "", "-l": "", "-f": "<FILE>", "-b": "<DATABASE>", "-a": "<NUMBER>", "-k": "", "-n": "<TIME>", "-p": "<TIME>", "-R": "<RATE>", "-B": "<NUMBER>"}
+{"<DATABASE>": "/var/lib/arpd/arpd.db,", "<NUMBER>": "1,3,", "<TIME>": "60,30,", "<RATE>": "1,"}
+["arpd -b /var/tmp/arpd.db", "arpd -b /var/tmp/arpd.db -a 1 eth0 eth1", "arpd -b /var/tmp/arpd.db -a 3 -k eth0 eth1"]
+*********resolving btrfs-map-logical******
+["btrfs-map-logical  <options><i> <device><i>"]
+{"-l": "logical_num", "-c": "copy", "-o": "filename", "-b": "bytes"}
+{"copy": "2,1,"}
+[]
+*********resolving CBS******
+["tc qdisc  dev dev parent classid cbs idleslope idleslope sendslope sendslope hicredit hicredit locredit locredit"]
+{}
+{}
+["mqprio(8),"]
+*********resolving blkdeactivate******
+["blkdeactivate"]
+{"-d": "dm_options", "-e": "", "-h": "", "-l": "lvm_options", "-m": "mpath_options", "-r": "mdraid_options", "-u": "", "-v": ""}
+{"dm_options": "dmsetup,8,retry,force,", "lvm_options": "retry,wholevg,", "mpath_options": " disablequeueing,", "mdraid_options": "wait,"}
+["blkdeactivate", "blkdeactivate -u", "blkdeactivate -u /dev/vg/lvol0", "blkdeactivate -u -d retry -l wholevg", "blkdeactivate -d force,retry"]
+*********resolving basic******
+["tc filter  basic"]
+{"action": "ACTION_SPEC", "classid": "CLASSID", "match": "EMATCH_TREE"}
+{"classid": "CLASSID,", "match": "8,EMATCH_TREE,"}
+[]
+*********resolving btrfstune******
+["btrfstune  <device><i>"]
+{"-f": "", "-m": "", "-M": "<UUID>", "-n": "", "-r": "", "-S": "<0|1>", "-u": "", "-U": "<UUID>", "-x": "", "--help": ""}
+{"<UUID>": "5,0,btrfstune -u,", "<0|1>": "1,0,"}
+[]
+*********resolving blkiomon******
+["blkiomon -I  interval<i>"]
+{"-I": "interval", "--interval": "interval", "-h": "file", "--human-readable": "file", "-b": "file", "--binary": "file", "-d": "file", "--dump-lldd": "file", "-D": "file", "--debug": "file", "-Q": "path_name", "--msg-queue": "path_name", "-q": "msg_queue_id", "--msg-queue-id": "msg_queue_id", "-m": "msg_id", "--msg-id": "msg_id", "-V": "", "--version": ""}
+{}
+[]
+*********resolving checkpolicy******
+["checkpolicy"]
+{"-b": "", "-F": "", "-C": "", "-d": "", "-U": "<action>", "-M": "", "-c": "policyvers", "-o": "filename", "-S": "", "-t": "", "-O": "", "-V": "", "-h": ""}
+{}
+[]
+*********resolving arp******
+["arp", "arp  -d  hostname<i>", "arp  -s  hostname<i> hw_addr<i>", "arp  -s  hostname<i> hw_addr<i>  pub", "arp  -Ds  hostname<i> ifname<i>  pub", "arp  -f"]
+{"-v": "", "-n": "", "-H": "type", "-a": "", "-e": "", "-D": "", "-i": "If", "-f": "filename", "-A": "unknown", "-d": "", "-p": "unknown", "-s": "", "-t": "unknown", "-N": "", "-V": ""}
+{"type": "arp,ether,802,3,arcnet,pronet,25,ax25,/ROM,netrom,", "If": "temp,pub, NOTE:,2,0,arp,7,dontpub,4,", "filename": "/etc/ethers,pub,temp,netmask,hostname,IP address,C,M,"}
+["/usr/sbin/arp -i eth0 -Ds 10.0.0.2 eth1 pub", "/usr/sbin/arp -i eth1 -d 10.0.0.1"]
+*********resolving btreplay******
+["btreplay  < dev<i> >"]
+{"-c": "num", "--cpus": "num", "-d": "dir", "--input-directory": "dir", "-F": "", "--find-records": "", "-h": "", "--help": "", "-i": "basename", "--input-base": "basename", "-I": "num", "--iterations": "num", "-M": "filename", "--map-devs": "filename", "-": "", "-N": "", "--no-stalls": "", "-x": "factor", "--acc-factor": "factor", "-v": "", "--verbose": "", "-V": "", "--version": "", "-W": "", "--write-enable": "", "-t": "unknown"}
+{"dir": ".,", "basename": "3,1,blktrace,2,btrecord,", "num": "1,", "factor": "1,"}
+[]
+*********resolving agetty******
+["agetty  port<i>"]
+{"-8": "", "-a": "username", "-c": "", "-E": "", "-f": "file|directory", "-h": "", "-H": "fakehost", "-i": "", "-I": "initstring", "-J": "", "-l": "login_program", "-L": "mode", "-m": "", "--list-speeds": "", "-n": "", "-N": "", "-o": "login_options", "--login-options": "\u2019-h", "-p": "", "-r": "directory", "-R": "", "-s": "", "-t": "timeout", "-U": "", "-w": "", "--nohints": "", "--nohostname": "", "--long-hostname": "", "--erase-chars": "string", "--kill-chars": "string", "--chdir": "directory", "--delay": "number", "--nice": "number", "--reload": "", "--version": "", "--help": "", "-C": "unknown", "-d": "unknown", "-P": "unknown"}
+{"username": "/bin/login,", "file|directory": "file,/etc/issue,directory,", "fakehost": "agetty,", "initstring": "012,10,", "login_program": "/bin/login.,", "mode": "always,never,auto,agetty,", "login_options": "login,1,", "string": "2,23,"}
+["/sbin/agetty\u00a09600\u00a0ttyS1", "/sbin/agetty\u00a0--local-line\u00a09600\u00a0ttyS1\u00a0vt100", "/sbin/agetty\u00a0--extract-baud\u00a0--timeout\u00a060\u00a0ttyS1\u00a09600,2400,1200", "/sbin/agetty\u00a0--wait-cr\u00a0--init-string\u00a0\u2019ATE0Q1&D2&C1S0=1 15\u2019\u00a0115200\u00a0ttyS1"]
+*********resolving accton******
+[" accton on", " accton off", " accton filename", "accton"]
+{"-V": "", "-h": ""}
+{}
+[]
+*********resolving btrfs-property******
+["btrfs property  <subcommand><i> <args><i>"]
+{"command": "get<<name>>,list<<object>>,set<<object> <name> <value>>,"}
+{"<name>": "get,<type>,<object>,s[ubvol],f[ilesystem],i[node],d[evice],name,lzo,zlib,zstd,none,", "<object>": "list,<type>,get,", "<object> <name> <value>": "set,<type>,get,"}
+[]
+*********resolving chcpu******
+[" chcpu -c  cpu-list<i>", " chcpu -d  cpu-list<i>", " chcpu -e  cpu-list<i>", " chcpu -g  cpu-list<i>", "chcpu -p  mode<i>", " chcpu -r", " chcpu -h", " chcpu -V"]
+{"-c": "cpu-list", "-d": "cpu-list", "-e": "cpu-list", "-g": "cpu-list", "-p": "mode", "-r": "", "-V": "", "-h": ""}
+{"mode": "horizontal,vertical,"}
+[]
+********* resolving end ******
+{"<regex>": "/Desktop,/.,/username,", "index": "INDEX,32,add,change,replace,optional.,get,delete,required,", "cookie": "COOKIE,128,", "FLAGS": "no_percpu,", "since": "MSTIME,20000,20,", "CONTROL": "tc,", "count": "32768,", "source": "0,0.0.0.0,destination,", "deadline": "arping,count,", "type": "arp,ether,802,3,arcnet,pronet,25,ax25,/ROM,netrom,", "SIZE": "16384,65536,mkfs.btrfs,", "feature1": "^,FILESYSTEM FEATURES,mkfs.btrfs,8,btrfs-convert -O list-all,", "block_size": "1024,", "number of blocks": "64,", "read delay factor": "100,200,", "max bad block count": "0,", "input_file": "Badblocks,new,dumpe2fs,8,", "output_file": "badblocks,e2fsck,8,mke2fs,", "num_passes": "0,badblocks,", "test_pattern": "/write,1,0,", "<mount_point>": "cancel,status,1,", "<devid> <targetdev> <path>": "start,<srcdev>,<path>,<targetdev>,Note,btrfs filesystem resize <devid>:max /path,", "<device>": "ready,scan,device,stats,<path>,DEVICE STATS,6,65,0,64,", "parent": "subvol,", "<ino> <path>": "inode-resolve,path,", "<logical> <path>": "logical-resolve,<bufsize>,4096,", "<path>": "disable,enable,rescan,", "<subvolid> <path>": "subvolid-resolve,", "modprobe_program": "/proc/sys/kernel/modprobe,", "chat file": "file,", "timeout": "chat,", "report file": "REPORT,stderr,", "phone number 2": "script,chat,", "cachefile": "/dev/null,", "label": "/etc/blkid.conf,/dev/disk/by,8,", "list": "action,", "format": "full,value,list,DEPRECATED,lsblk,8,device,udev,export,/O,", "size": "CONFIG_PHYSICAL_START,CONFIG_PHYSICAL_ALIGN,/O,", "NAME=value": "NAME,value,TYPE,LABEL,UUID,", "level": "0,", "length": "blkdiscard,", "trace": "<,dev,/dev/sda,blkparse,2006,//www.gnu.org/licenses/gpl.html,/usr/share/common,/GPL,1,8,", "sector": "512,", "sectors": "2,6,512,", "<port>,": "80,", "<ttl>,": "1,30,", "<num>,": "2,", "<sec>,": "3,", "<src> <dst> <path>": "assign,<src>,<dst>,<path>,19,4,QUOTA RESCAN,remove,", "<qgroupid> <path>": "create,0/<subvolume id>,destroy,", "num-sub": "4,", "number": "8462,", "dir": ".,", "mask": "address,6,name,INPUT,OUTPUT,length,code,2,1,Request 2,Reply 3,Request_Reverse 4,Reply_Reverse 5,DRARP_Request 6,DRARP_Reply 7,DRARP_Error 8,InARP_Request 9,ARP_NAK,type,Ethernet,0x800,IPv4,iptables,DROP,CONTINUE,ACCEPT,CLASSIFY,MARK,", "value": "luksAddKey,", "size[units]": "reencrypt,resize,/M/G/T,/MB/GB/TB,1000,512,1024,WARNING:,", "hash-spec": "open,luksFormat,160,\"crc32\",\"ripemd160\",open --type plain,\"sha1\",cryptsetup --help,", "LUKS header file": "WARNING:,", "name": "luksFormat,luksAddKey,NOTES ON PASSPHRASE PROCESSING,", "bits": "8,", "<number>": "/id,4,", "<type>": "luks,luks1,luks2,", "match": "8,EMATCH_TREE,", "audit-event-id": "event ID,329,2401771,1116360555,", "CPU": "32,b32,64,b64.,", "comm-name": "comm name,", "checkpoint-file": "2,EXIT STATUS,", "exit-code-or-errno": "exit code or errno,", "option": "raw,tty,shell,shell_quote,", "file-name": "filename,", "all-group-id": "group ID,", "effective-group-id": "effective group ID,", "group-id": "group ID,", "host-name": "host name,", "file-name\u00a0": "file,directory,", "key-string": "key string,", "message-type\u00a0": "message type,comma separated list of message types,ALL,", "SE-Linux-context-string": "tcontext,scontext,/subject,/object,", "process-id": "process ID,", "parent-process-id": "parent process ID,", "syscall-name-or-value": "syscall,", "success-value": "success value,yes,no,", "end-date": "today,now,/03/2009.,2009,09,24,03,00,18,recent,boot,yesterday,this-week,week-ago,this-month,this-year,Now,Recent,10,Boot,Today,Yesterday,This-week,localtime,Week-ago,7,This-month,This-year,", "start-date": "today,midnight,/03/2009.,2009,09,24,03,00,18,now,recent,boot,yesterday,this-week,week-ago,this-month,this-year,Boot,Today,Recent,10,Yesterday,This-week,localtime,Week-ago,7,This-month,This-year,", "all-user-id": "user ID,", "effective-user-id": "effective user ID,", "user-id": "user ID,", "login-id": "login user ID,", "guest-uuid": "guest UUID,", "guest-name": "guest name,", "superblock": "2,1,0,", "backlog": "64,", "wait_time": "60,10,", "rate": "/sec,0,", "file": "~/.manpath,", "[": "list,action,task,exit,user,exclude,filesystem,actions,never,always,", "f": "2,/gid,", "n": "64,8, a0, a1, a2, a3,arch,32,b32,b64.,auid,devmajor,dir,egid,euid,exe,exit,fsgid,fsuid,filetype,key,msgtype,obj_uid,obj_gid,obj_user,obj_role,obj_type,obj_lev_low,obj_lev_high,path,perm,pers,pid,ppid,subj_user,subj_role,subj_type,subj_clr,success,/yes,/no,/no.,", "key": "31,", "Syscall name or number": "syscall name,number,2,64,32,", "when": "auto,never,always,", "oldformat,newformat": "oldformat,", "[option]": "option,crash,", "num": "1,", "vi | emacs": "readline(3),", "[namelist]": "vmlinux,xen-syms,", "option=value": "/pairs,2,6,11,5,14,4,", "modname": "crash.ko,/dev/crash,", "device": "/dev/crash, /dev/mem,/proc/kcore,", "dumpfile": "/proc/vmcore,", "directory": "mod -S,", "offset": "CONFIG_RANDOMIZE_BASE,,", "[32|64]": "64,32,", "v1|v2": "v1,clear_cache,v2,", "MODE": "original,lowmem,Note, lowmem,", "<name>": "get,<type>,<object>,s[ubvol],f[ilesystem],i[node],d[evice],name,lzo,zlib,zstd,none,", "<subvolume>": "delete,btrfs subvolume sync,", "<subvolume> <last_gen>": "find-new,<last_gen>,", "<id> <path>": "set-default,<subvolume>,<path>,subvol=/,subvolid=5,<id>,btrfs subvolume list,btrfs subvolume show,btrfs inspect-internal rootid,", "file\u00a0": "file,directory,", "node-name": "node name,", "ROUNDS": "5000,0,1000,999,/etc/login.defs.,", "<seconds>,": "5,10,60,", "<device-type>": "BASIC COMMANDS,", "cipher-spec": "cryptsetup --help,512,6,33,24,", "<PBKDF": "pbkdf2,argon2i,argon2id,//www.cryptolux.org/index.php/Argon2,cryptsetup --help,/id,4,luksDump,NOTE:,", "<num>": "/LUKS2,", "<number": "value,512,luksFormat,2048,WARNING:,", "UUID": "luksFormat,1234,12345678,", "<file>": "luksHeaderBackup,luksHeaderRestore,", "<text>": "token,", "<normal|prefer|ignore>": "prefer,normal,ignored,", "<bytes>": "4096,512,", "<integrity": "WARNING: This extension is EXPERIMENTAL,12,4,AUTHENTICATED DISK ENCRYPTION,", "<size>": "256,16,128,4096,1024,64,512,2048,32,", "<mode>": "checksum,journal,none,", "TARGET": "ip4h,icmp,igmp,tcp,udp,udplite,sctp,", "nanoseconds": "000,10,", "basename": "3,1,blktrace,2,btrecord,", "loglevel": "jobs,1,2,4,0,8,levels,15,", "<dir>": "defragment,<file>,2,6,33,0,Warning,13,14,10,31,12,9,4,cp --reflink,Note,start,len,size,<algo>,zlib,lzo,zstd,EXAMPLES,<start>,<len>,<size>,", "<newlabel>": "label,<device>,<mountpoint>,newlabel,Note,256,", "<label>": "show,<path>,<uuid>,<device>,label,/dev,/proc/partitions,B,1024,1000,", "<DATABASE>": "/var/lib/arpd/arpd.db,", "<NUMBER>": "1,3,", "<TIME>": "60,30,", "<RATE>": "1,", "copy": "2,1,", "dm_options": "dmsetup,8,retry,force,", "lvm_options": "retry,wholevg,", "mpath_options": " disablequeueing,", "mdraid_options": "wait,", "classid": "CLASSID,", "<UUID>": "5,0,btrfstune -u,", "<0|1>": "1,0,", "If": "temp,pub, NOTE:,2,0,arp,7,dontpub,4,", "filename": "/etc/ethers,pub,temp,netmask,hostname,IP address,C,M,", "factor": "1,", "username": "/bin/login,", "file|directory": "file,/etc/issue,directory,", "fakehost": "agetty,", "initstring": "012,10,", "login_program": "/bin/login.,", "mode": "horizontal,vertical,", "login_options": "login,1,", "string": "2,23,", "<object>": "list,<type>,get,", "<object> <name> <value>": "set,<type>,get,"}

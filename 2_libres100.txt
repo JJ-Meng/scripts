@@ -1,0 +1,143 @@
+**********res*******
+42 command has opt!
+33 command not install!
+*****command has options******
+accton short opts:hV
+accton long opts:version;help;
+addpart short opts:Vh
+addpart long opts:
+agetty short opts:8a:cC:d:Ef:hH:iI:Jl:L::mnNo:pP:r:Rst:Uw
+agetty long opts:list-speeds;nohints;nohostname;long-hostname;reload;version;help;erase-chars:;kill-chars:;
+agetty short opts:8a:cC:d:Ef:hH:iI:Jl:L::mnNo:pP:r:Rst:Uw
+agetty long opts:list-speeds;nohints;nohostname;long-hostname;reload;version;help;erase-chars:;kill-chars:;
+anacron short opts:sfundqt:TS:Vh
+arp short opts:A:H:adfp:nsei:t:vh?DNV
+arp long opts:
+arpd short opts:h?b:lf:a:n:p:kR:B:
+arping short opts:h?bfDUAqc:w:i:s:I:V
+arptables-nft-save short opts:cM:V
+arptables-nft-save long opts:
+arptables-nft short opts:-A:D:R:I:L::M:F::Z::N:X::E:P:Vh::o:p:s:d:j:l:i:vnt:m:c:
+arptables-nft long opts:source-mac:;destination-mac:;src-mac:;dst-mac:;p-length:;opcode:;h-type:;proto-type:;exact;line-numbers;
+arptables-save short opts:cM:V
+arptables-save long opts:
+arptables short opts:-A:D:R:I:L::M:F::Z::N:X::E:P:Vh::o:p:s:d:j:l:i:vnt:m:c:
+arptables long opts:source-mac:;destination-mac:;src-mac:;dst-mac:;p-length:;opcode:;h-type:;proto-type:;exact;line-numbers;
+astraceroute short opts:H:p:nNf:m:b:i:d:q:x:SAEFPURt:Gl:hv46X:ZuL
+astraceroute long opts:
+auditctl short opts:hicslDvtC:e:f:r:b:a:A:d:S:F:m:R:w:W:k:p:q:
+auditctl long opts:loginuid-immutable;backlog_wait_time:;reset-lost;
+auditd short opts:flns:c:
+auditd long opts:
+automount short opts:+hp:t:vmdD:SfVrO:l:n:CFM
+automount long opts:
+avcstat short opts:cf:h?-
+badblocks short opts:b:d:e:fi:o:svwnc:p:h:t:BX
+blkdiscard short opts:hVsvo:l:p:z
+blkdiscard long opts:
+blkid short opts:c:DdghilL:n:ko:O:ps:S:t:u:U:w:Vv
+blkid long opts:
+blkiomon short opts:b:d:D:h:I:Q:q:m:V
+blkiomon long opts:
+blkmapd short opts:hdf
+blktrace short opts:d:a:A:r:o:kw:vVb:n:D:lh:p:sI:
+blktrace long opts:
+blkzone short opts:hc:l:o:vV
+blkzone long opts:
+bpfc short opts:vhi:Vdbf:pD:
+bpfc long opts:
+btrecord short opts:d:D:Fhm:M:o:vV
+btrecord long opts:
+btreplay short opts:c:d:Fhi:I:M:Nx:t:vVW
+btreplay long opts:
+btrfs-convert short opts:dinN:rl:LpO:
+btrfs-convert long opts:checksum:;csum:;help;
+btrfs-find-root short opts:al:o:g:
+btrfs-find-root long opts:help;
+btrfs-image short opts:rc:t:oswm
+btrfs-image long opts:help;
+btrfs-map-logical short opts:l:c:o:b:
+btrfs-map-logical long opts:
+btrfs-select-super short opts:s:
+btrfs short opts:+
+btrfs long opts:version;format:;full;
+btrfsck short opts:as:br:pE:Q
+btrfsck long opts:repair;readonly;init-csum-tree;init-extent-tree;check-data-csum;chunk-root:;mode:;clear-space-cache:;force;
+btrfstune short opts:S:rxfuU:nmM:
+btrfstune long opts:help;
+cfdisk short opts:L::hVz
+cfdisk long opts:
+chcpu short opts:c:d:e:g:hp:rV
+chcpu long opts:
+checkmodule short opts:ho:bVU:mMCc:
+checkmodule long opts:
+checkpolicy short opts:o:t:dbU:MCFSVc:Oh
+checkpolicy long opts:
+chmem short opts:bdehvVz:
+chmem long opts:
+convertquota short opts:Vugef:h
+convertquota long opts:
+crash short opts:Lkgh::e:i:sSvc:d:tfp:m:xo:
+crash long opts:
+cron short opts:flL:n
+
+*****no options******(23)
+accessdb
+arptables-nft-restore
+arptables-restore
+audispd-zos-remote
+augenrules
+aureport
+ausearch
+autrace
+blkdeactivate
+blockdev
+bridge
+btrace
+captest
+catman
+chat
+chcat
+chgpasswd
+chkcon
+chpasswd
+clockdiff
+cryptsetup-reencrypt
+cryptsetup
+csysdig
+
+*****uninstall command****
+30-systemd-environment-d-generator
+actions
+autofs
+basic
+bfifo
+booleans
+BPF
+btrfs-balance
+btrfs-check
+btrfs-device
+btrfs-filesystem
+btrfs-inspect-internal
+btrfs-property
+btrfs-qgroup
+btrfs-quota
+btrfs-receive
+btrfs-replace
+btrfs-rescue
+btrfs-restore
+btrfs-scrub
+btrfs-send
+btrfs-subvolume
+CAKE
+CBQ
+CBS
+cgroup
+choke
+cmirrord
+CoDel
+connmark
+crond
+cryptsetup-ssh
+csum
+

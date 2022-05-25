@@ -1,0 +1,4078 @@
+augenrules
+augenrules --check
+augenrules --load
+chcat /home/mjz/another_glibc/test/normalfile.txt
+chcat  home/mjz/another_glibc/test/superfile.txt
+chcat /home/mjz/another_glibc/test/normalfile.txt -d
+chcat  home/mjz/another_glibc/test/superfile.txt -d
+chcat /home/mjz/another_glibc/test/normalfile.txt -L
+chcat  home/mjz/another_glibc/test/superfile.txt -L
+chcat /home/mjz/another_glibc/test/normalfile.txt -l
+chcat  home/mjz/another_glibc/test/superfile.txt -l
+chcat -l
+chcat
+/usr/sbin/accessdb
+/usr/sbin/accessdb -d
+/usr/sbin/accessdb -?
+/usr/sbin/accessdb --usage
+/usr/sbin/accessdb -V
+arping 127.0.0.1
+arping 192.168.119.138
+arping 182.61.200.7
+arping 127.0.0.1 -A
+arping 192.168.119.138 -A
+arping 182.61.200.7 -A
+arping 127.0.0.1 -b
+arping 192.168.119.138 -b
+arping 182.61.200.7 -b
+arping 127.0.0.1 -c deadline
+arping 192.168.119.138 -c deadline
+arping 182.61.200.7 -c deadline
+arping 127.0.0.1 -c
+arping 192.168.119.138 -c
+arping 182.61.200.7 -c
+arping 127.0.0.1 -D
+arping 192.168.119.138 -D
+arping 182.61.200.7 -D
+arping 127.0.0.1 -f
+arping 192.168.119.138 -f
+arping 182.61.200.7 -f
+arping 127.0.0.1 -h
+arping 192.168.119.138 -h
+arping 182.61.200.7 -h
+arping 127.0.0.1 -q
+arping 192.168.119.138 -q
+arping 182.61.200.7 -q
+arping 127.0.0.1 -s 0
+arping 192.168.119.138 -s 0
+arping 182.61.200.7 -s 0
+arping 127.0.0.1 -s 0.0.0.0
+arping 192.168.119.138 -s 0.0.0.0
+arping 182.61.200.7 -s 0.0.0.0
+arping 127.0.0.1 -s destination
+arping 192.168.119.138 -s destination
+arping 182.61.200.7 -s destination
+arping 127.0.0.1 -s
+arping 192.168.119.138 -s
+arping 182.61.200.7 -s
+arping 127.0.0.1 -U
+arping 192.168.119.138 -U
+arping 182.61.200.7 -U
+arping 127.0.0.1 -V
+arping 192.168.119.138 -V
+arping 182.61.200.7 -V
+arping 127.0.0.1 -w arping
+arping 192.168.119.138 -w arping
+arping 182.61.200.7 -w arping
+arping 127.0.0.1 -w count
+arping 192.168.119.138 -w count
+arping 182.61.200.7 -w count
+arping 127.0.0.1 -w
+arping 192.168.119.138 -w
+arping 182.61.200.7 -w
+btrfs-convert
+auditd
+auditd -f
+auditd -l
+auditd -n
+auditd -c
+badblocks /dev/sda
+badblocks  /dev/loop233
+badblocks /dev/sda -b 1024
+badblocks  /dev/loop233 -b 1024
+badblocks /dev/sda -b
+badblocks  /dev/loop233 -b
+badblocks /dev/sda -c 64
+badblocks  /dev/loop233 -c 64
+badblocks /dev/sda -c
+badblocks  /dev/loop233 -c
+badblocks /dev/sda -d 100
+badblocks  /dev/loop233 -d 100
+badblocks /dev/sda -d 200
+badblocks  /dev/loop233 -d 200
+badblocks /dev/sda -d
+badblocks  /dev/loop233 -d
+badblocks /dev/sda -e 0
+badblocks  /dev/loop233 -e 0
+badblocks /dev/sda -e
+badblocks  /dev/loop233 -e
+badblocks /dev/sda -f
+badblocks  /dev/loop233 -f
+badblocks /dev/sda -i Badblocks
+badblocks  /dev/loop233 -i Badblocks
+badblocks /dev/sda -i new
+badblocks  /dev/loop233 -i new
+badblocks /dev/sda -i dumpe2fs
+badblocks  /dev/loop233 -i dumpe2fs
+badblocks /dev/sda -i 8
+badblocks  /dev/loop233 -i 8
+badblocks /dev/sda -i
+badblocks  /dev/loop233 -i
+badblocks /dev/sda -n
+badblocks  /dev/loop233 -n
+badblocks /dev/sda -o badblocks
+badblocks  /dev/loop233 -o badblocks
+badblocks /dev/sda -o e2fsck
+badblocks  /dev/loop233 -o e2fsck
+badblocks /dev/sda -o 8
+badblocks  /dev/loop233 -o 8
+badblocks /dev/sda -o mke2fs
+badblocks  /dev/loop233 -o mke2fs
+badblocks /dev/sda -o
+badblocks  /dev/loop233 -o
+badblocks /dev/sda -p 0
+badblocks  /dev/loop233 -p 0
+badblocks /dev/sda -p badblocks
+badblocks  /dev/loop233 -p badblocks
+badblocks /dev/sda -p
+badblocks  /dev/loop233 -p
+badblocks /dev/sda -s
+badblocks  /dev/loop233 -s
+badblocks /dev/sda -t /write
+badblocks  /dev/loop233 -t /write
+badblocks /dev/sda -t 1
+badblocks  /dev/loop233 -t 1
+badblocks /dev/sda -t 0
+badblocks  /dev/loop233 -t 0
+badblocks /dev/sda -t
+badblocks  /dev/loop233 -t
+badblocks /dev/sda -v
+badblocks  /dev/loop233 -v
+badblocks /dev/sda -w
+badblocks  /dev/loop233 -w
+badblocks /dev/sda -B
+badblocks  /dev/loop233 -B
+badblocks /dev/sda -X
+badblocks  /dev/loop233 -X
+blkmapd
+blkmapd -h
+blkmapd -d
+blkmapd -f
+arptables-save
+chgpasswd
+chgpasswd -c
+chgpasswd -e
+chgpasswd -h
+chgpasswd -m
+chgpasswd -s
+chat
+chat -f file
+chat -f
+chat -t chat
+chat -t
+chat -r REPORT
+chat -r stderr
+chat -r
+chat -e
+chat -E
+chat -v
+chat -V
+chat -s
+chat -S
+chat -U script
+chat -U chat
+chat -U
+blkid --label
+blkid --label --uuid
+blkid --probe /dev/sda
+blkid --probe  /dev/loop233
+blkid
+blkid -c /dev/null
+blkid -c
+blkid -d
+blkid -D
+blkid -g
+blkid -h
+blkid -i
+blkid -k
+blkid -l
+blkid -L /etc/blkid.conf
+blkid -L /dev/disk/by
+blkid -L 8
+blkid -L
+blkid -n /dev/sda1
+blkid -n
+blkid -o full
+blkid -o value
+blkid -o list
+blkid -o DEPRECATED
+blkid -o lsblk
+blkid -o 8
+blkid -o device
+blkid -o udev
+blkid -o export
+blkid -o /O
+blkid -o
+blkid -p
+blkid -S /file
+blkid -S
+blkid -t NAME
+blkid -t value
+blkid -t TYPE
+blkid -t LABEL
+blkid -t UUID
+blkid -t
+blkid -u /dev/sda1
+blkid -u
+blkid -V
+blkid -v
+blkid --info /dev/sda
+blkid --info  /dev/loop233
+btrfs-find-root
+blkdiscard /dev/sda
+blkdiscard  /dev/loop233
+blkdiscard /dev/sda -l blkdiscard
+blkdiscard  /dev/loop233 -l blkdiscard
+blkdiscard /dev/sda -l
+blkdiscard  /dev/loop233 -l
+blkdiscard /dev/sda -p blkdiscard
+blkdiscard  /dev/loop233 -p blkdiscard
+blkdiscard /dev/sda -p
+blkdiscard  /dev/loop233 -p
+blkdiscard /dev/sda -s
+blkdiscard  /dev/loop233 -s
+blkdiscard /dev/sda -z
+blkdiscard  /dev/loop233 -z
+blkdiscard /dev/sda -v
+blkdiscard  /dev/loop233 -v
+blkdiscard /dev/sda -V
+blkdiscard  /dev/loop233 -V
+blkdiscard /dev/sda -h
+blkdiscard  /dev/loop233 -h
+audispd-zos-remote
+btrace < /dev/sda >
+btrace <  /dev/loop233 >
+btrace < /dev/sda > -s
+btrace <  /dev/loop233 > -s
+btrace < /dev/sda > -t
+btrace <  /dev/loop233 > -t
+btrace < /dev/sda > -w
+btrace <  /dev/loop233 > -w
+btrace < /dev/sda > -r
+btrace <  /dev/loop233 > -r
+btrace < /dev/sda > -a <
+btrace <  /dev/loop233 > -a <
+btrace < /dev/sda > -a dev
+btrace <  /dev/loop233 > -a dev
+btrace < /dev/sda > -a /dev/sda
+btrace <  /dev/loop233 > -a /dev/sda
+btrace < /dev/sda > -a blkparse
+btrace <  /dev/loop233 > -a blkparse
+btrace < /dev/sda > -a 2006
+btrace <  /dev/loop233 > -a 2006
+btrace < /dev/sda > -a //www.gnu.org/licenses/gpl.html
+btrace <  /dev/loop233 > -a //www.gnu.org/licenses/gpl.html
+btrace < /dev/sda > -a /usr/share/common
+btrace <  /dev/loop233 > -a /usr/share/common
+btrace < /dev/sda > -a /GPL
+btrace <  /dev/loop233 > -a /GPL
+btrace < /dev/sda > -a 1
+btrace <  /dev/loop233 > -a 1
+btrace < /dev/sda > -a 8
+btrace <  /dev/loop233 > -a 8
+btrace < /dev/sda > -a
+btrace <  /dev/loop233 > -a
+blkzone /dev/sda
+blkzone  /dev/loop233
+blkzone /dev/sda -o 512
+blkzone  /dev/loop233 -o 512
+blkzone /dev/sda -o
+blkzone  /dev/loop233 -o
+blkzone /dev/sda -l offset
+blkzone  /dev/loop233 -l offset
+blkzone /dev/sda -l
+blkzone  /dev/loop233 -l
+blkzone /dev/sda -c offset
+blkzone  /dev/loop233 -c offset
+blkzone /dev/sda -c
+blkzone  /dev/loop233 -c
+blkzone /dev/sda -v
+blkzone  /dev/loop233 -v
+blkzone /dev/sda -V
+blkzone  /dev/loop233 -V
+blkzone /dev/sda -h
+blkzone  /dev/loop233 -h
+astraceroute
+astraceroute -p 80
+astraceroute -p
+astraceroute -f 1
+astraceroute -f 30
+astraceroute -f
+astraceroute -m 1
+astraceroute -m 30
+astraceroute -m
+astraceroute -q 2
+astraceroute -q
+astraceroute -x 3
+astraceroute -x
+astraceroute -4
+astraceroute -6
+astraceroute -n
+astraceroute -u
+astraceroute -L
+astraceroute -N
+astraceroute -S
+astraceroute -A
+astraceroute -F
+astraceroute -P
+astraceroute -U
+astraceroute -R
+astraceroute -E
+astraceroute -G
+astraceroute -Z
+astraceroute -v
+astraceroute -h
+astraceroute -i eth0 -N -S -H netsniff-ng.org
+astraceroute -6 -i eth0 -S -E -N -H www.6bone.net
+astraceroute -i eth0 -N -F -H netsniff-ng.org
+astraceroute -i eth0 -N -FPU -H netsniff-ng.org
+astraceroute -i eth0 -N -H netsniff-ng.org -X censor-me -Z
+blktrace -d /dev/sda
+blktrace -d  /dev/loop233
+addpart /dev/sda 0 0 0
+addpart /dev/sda 0 0 1
+addpart /dev/sda 0 0 63
+addpart /dev/sda 0 0 121212
+addpart /dev/sda 0 0 65534
+addpart /dev/sda 0 1 0
+addpart /dev/sda 0 1 1
+addpart /dev/sda 0 1 63
+addpart /dev/sda 0 1 121212
+addpart /dev/sda 0 1 65534
+addpart /dev/sda 0 63 0
+addpart /dev/sda 0 63 1
+addpart /dev/sda 0 63 63
+addpart /dev/sda 0 63 121212
+addpart /dev/sda 0 63 65534
+addpart /dev/sda 0 121212 0
+addpart /dev/sda 0 121212 1
+addpart /dev/sda 0 121212 63
+addpart /dev/sda 0 121212 121212
+addpart /dev/sda 0 121212 65534
+addpart /dev/sda 0 65534 0
+addpart /dev/sda 0 65534 1
+addpart /dev/sda 0 65534 63
+addpart /dev/sda 0 65534 121212
+addpart /dev/sda 0 65534 65534
+addpart /dev/sda 1 0 0
+addpart /dev/sda 1 0 1
+addpart /dev/sda 1 0 63
+addpart /dev/sda 1 0 121212
+addpart /dev/sda 1 0 65534
+addpart /dev/sda 1 1 0
+addpart /dev/sda 1 1 1
+addpart /dev/sda 1 1 63
+addpart /dev/sda 1 1 121212
+addpart /dev/sda 1 1 65534
+addpart /dev/sda 1 63 0
+addpart /dev/sda 1 63 1
+addpart /dev/sda 1 63 63
+addpart /dev/sda 1 63 121212
+addpart /dev/sda 1 63 65534
+addpart /dev/sda 1 121212 0
+addpart /dev/sda 1 121212 1
+addpart /dev/sda 1 121212 63
+addpart /dev/sda 1 121212 121212
+addpart /dev/sda 1 121212 65534
+addpart /dev/sda 1 65534 0
+addpart /dev/sda 1 65534 1
+addpart /dev/sda 1 65534 63
+addpart /dev/sda 1 65534 121212
+addpart /dev/sda 1 65534 65534
+addpart /dev/sda 63 0 0
+addpart /dev/sda 63 0 1
+addpart /dev/sda 63 0 63
+addpart /dev/sda 63 0 121212
+addpart /dev/sda 63 0 65534
+addpart /dev/sda 63 1 0
+addpart /dev/sda 63 1 1
+addpart /dev/sda 63 1 63
+addpart /dev/sda 63 1 121212
+addpart /dev/sda 63 1 65534
+addpart /dev/sda 63 63 0
+addpart /dev/sda 63 63 1
+addpart /dev/sda 63 63 63
+addpart /dev/sda 63 63 121212
+addpart /dev/sda 63 63 65534
+addpart /dev/sda 63 121212 0
+addpart /dev/sda 63 121212 1
+addpart /dev/sda 63 121212 63
+addpart /dev/sda 63 121212 121212
+addpart /dev/sda 63 121212 65534
+addpart /dev/sda 63 65534 0
+addpart /dev/sda 63 65534 1
+addpart /dev/sda 63 65534 63
+addpart /dev/sda 63 65534 121212
+addpart /dev/sda 63 65534 65534
+addpart /dev/sda 121212 0 0
+addpart /dev/sda 121212 0 1
+addpart /dev/sda 121212 0 63
+addpart /dev/sda 121212 0 121212
+addpart /dev/sda 121212 0 65534
+addpart /dev/sda 121212 1 0
+addpart /dev/sda 121212 1 1
+addpart /dev/sda 121212 1 63
+addpart /dev/sda 121212 1 121212
+addpart /dev/sda 121212 1 65534
+addpart /dev/sda 121212 63 0
+addpart /dev/sda 121212 63 1
+addpart /dev/sda 121212 63 63
+addpart /dev/sda 121212 63 121212
+addpart /dev/sda 121212 63 65534
+addpart /dev/sda 121212 121212 0
+addpart /dev/sda 121212 121212 1
+addpart /dev/sda 121212 121212 63
+addpart /dev/sda 121212 121212 121212
+addpart /dev/sda 121212 121212 65534
+addpart /dev/sda 121212 65534 0
+addpart /dev/sda 121212 65534 1
+addpart /dev/sda 121212 65534 63
+addpart /dev/sda 121212 65534 121212
+addpart /dev/sda 121212 65534 65534
+addpart /dev/sda 65534 0 0
+addpart /dev/sda 65534 0 1
+addpart /dev/sda 65534 0 63
+addpart /dev/sda 65534 0 121212
+addpart /dev/sda 65534 0 65534
+addpart /dev/sda 65534 1 0
+addpart /dev/sda 65534 1 1
+addpart /dev/sda 65534 1 63
+addpart /dev/sda 65534 1 121212
+addpart /dev/sda 65534 1 65534
+addpart /dev/sda 65534 63 0
+addpart /dev/sda 65534 63 1
+addpart /dev/sda 65534 63 63
+addpart /dev/sda 65534 63 121212
+addpart /dev/sda 65534 63 65534
+addpart /dev/sda 65534 121212 0
+addpart /dev/sda 65534 121212 1
+addpart /dev/sda 65534 121212 63
+addpart /dev/sda 65534 121212 121212
+addpart /dev/sda 65534 121212 65534
+addpart /dev/sda 65534 65534 0
+addpart /dev/sda 65534 65534 1
+addpart /dev/sda 65534 65534 63
+addpart /dev/sda 65534 65534 121212
+addpart /dev/sda 65534 65534 65534
+addpart  /dev/loop233 0 0 0
+addpart  /dev/loop233 0 0 1
+addpart  /dev/loop233 0 0 63
+addpart  /dev/loop233 0 0 121212
+addpart  /dev/loop233 0 0 65534
+addpart  /dev/loop233 0 1 0
+addpart  /dev/loop233 0 1 1
+addpart  /dev/loop233 0 1 63
+addpart  /dev/loop233 0 1 121212
+addpart  /dev/loop233 0 1 65534
+addpart  /dev/loop233 0 63 0
+addpart  /dev/loop233 0 63 1
+addpart  /dev/loop233 0 63 63
+addpart  /dev/loop233 0 63 121212
+addpart  /dev/loop233 0 63 65534
+addpart  /dev/loop233 0 121212 0
+addpart  /dev/loop233 0 121212 1
+addpart  /dev/loop233 0 121212 63
+addpart  /dev/loop233 0 121212 121212
+addpart  /dev/loop233 0 121212 65534
+addpart  /dev/loop233 0 65534 0
+addpart  /dev/loop233 0 65534 1
+addpart  /dev/loop233 0 65534 63
+addpart  /dev/loop233 0 65534 121212
+addpart  /dev/loop233 0 65534 65534
+addpart  /dev/loop233 1 0 0
+addpart  /dev/loop233 1 0 1
+addpart  /dev/loop233 1 0 63
+addpart  /dev/loop233 1 0 121212
+addpart  /dev/loop233 1 0 65534
+addpart  /dev/loop233 1 1 0
+addpart  /dev/loop233 1 1 1
+addpart  /dev/loop233 1 1 63
+addpart  /dev/loop233 1 1 121212
+addpart  /dev/loop233 1 1 65534
+addpart  /dev/loop233 1 63 0
+addpart  /dev/loop233 1 63 1
+addpart  /dev/loop233 1 63 63
+addpart  /dev/loop233 1 63 121212
+addpart  /dev/loop233 1 63 65534
+addpart  /dev/loop233 1 121212 0
+addpart  /dev/loop233 1 121212 1
+addpart  /dev/loop233 1 121212 63
+addpart  /dev/loop233 1 121212 121212
+addpart  /dev/loop233 1 121212 65534
+addpart  /dev/loop233 1 65534 0
+addpart  /dev/loop233 1 65534 1
+addpart  /dev/loop233 1 65534 63
+addpart  /dev/loop233 1 65534 121212
+addpart  /dev/loop233 1 65534 65534
+addpart  /dev/loop233 63 0 0
+addpart  /dev/loop233 63 0 1
+addpart  /dev/loop233 63 0 63
+addpart  /dev/loop233 63 0 121212
+addpart  /dev/loop233 63 0 65534
+addpart  /dev/loop233 63 1 0
+addpart  /dev/loop233 63 1 1
+addpart  /dev/loop233 63 1 63
+addpart  /dev/loop233 63 1 121212
+addpart  /dev/loop233 63 1 65534
+addpart  /dev/loop233 63 63 0
+addpart  /dev/loop233 63 63 1
+addpart  /dev/loop233 63 63 63
+addpart  /dev/loop233 63 63 121212
+addpart  /dev/loop233 63 63 65534
+addpart  /dev/loop233 63 121212 0
+addpart  /dev/loop233 63 121212 1
+addpart  /dev/loop233 63 121212 63
+addpart  /dev/loop233 63 121212 121212
+addpart  /dev/loop233 63 121212 65534
+addpart  /dev/loop233 63 65534 0
+addpart  /dev/loop233 63 65534 1
+addpart  /dev/loop233 63 65534 63
+addpart  /dev/loop233 63 65534 121212
+addpart  /dev/loop233 63 65534 65534
+addpart  /dev/loop233 121212 0 0
+addpart  /dev/loop233 121212 0 1
+addpart  /dev/loop233 121212 0 63
+addpart  /dev/loop233 121212 0 121212
+addpart  /dev/loop233 121212 0 65534
+addpart  /dev/loop233 121212 1 0
+addpart  /dev/loop233 121212 1 1
+addpart  /dev/loop233 121212 1 63
+addpart  /dev/loop233 121212 1 121212
+addpart  /dev/loop233 121212 1 65534
+addpart  /dev/loop233 121212 63 0
+addpart  /dev/loop233 121212 63 1
+addpart  /dev/loop233 121212 63 63
+addpart  /dev/loop233 121212 63 121212
+addpart  /dev/loop233 121212 63 65534
+addpart  /dev/loop233 121212 121212 0
+addpart  /dev/loop233 121212 121212 1
+addpart  /dev/loop233 121212 121212 63
+addpart  /dev/loop233 121212 121212 121212
+addpart  /dev/loop233 121212 121212 65534
+addpart  /dev/loop233 121212 65534 0
+addpart  /dev/loop233 121212 65534 1
+addpart  /dev/loop233 121212 65534 63
+addpart  /dev/loop233 121212 65534 121212
+addpart  /dev/loop233 121212 65534 65534
+addpart  /dev/loop233 65534 0 0
+addpart  /dev/loop233 65534 0 1
+addpart  /dev/loop233 65534 0 63
+addpart  /dev/loop233 65534 0 121212
+addpart  /dev/loop233 65534 0 65534
+addpart  /dev/loop233 65534 1 0
+addpart  /dev/loop233 65534 1 1
+addpart  /dev/loop233 65534 1 63
+addpart  /dev/loop233 65534 1 121212
+addpart  /dev/loop233 65534 1 65534
+addpart  /dev/loop233 65534 63 0
+addpart  /dev/loop233 65534 63 1
+addpart  /dev/loop233 65534 63 63
+addpart  /dev/loop233 65534 63 121212
+addpart  /dev/loop233 65534 63 65534
+addpart  /dev/loop233 65534 121212 0
+addpart  /dev/loop233 65534 121212 1
+addpart  /dev/loop233 65534 121212 63
+addpart  /dev/loop233 65534 121212 121212
+addpart  /dev/loop233 65534 121212 65534
+addpart  /dev/loop233 65534 65534 0
+addpart  /dev/loop233 65534 65534 1
+addpart  /dev/loop233 65534 65534 63
+addpart  /dev/loop233 65534 65534 121212
+addpart  /dev/loop233 65534 65534 65534
+arptables  -  chain rule-specification
+arptables  -  chain rulenum rule-specification
+arptables  -D chain rulenum
+arptables  -
+arptables  -    -P chain target
+cryptsetup-reencrypt <options> <device>
+cryptsetup-reencrypt /dev/sdb1
+cryptsetup-reencrypt /dev/sdb1 -c aes-xts-plain64
+cryptsetup-reencrypt /dev/sdb1 --new --reduce-device-size 4096S
+cryptsetup-reencrypt /dev/sdb1 --decrypt
+chmem
+chmem -b
+chmem -d
+chmem -e
+chmem -z
+chmem -h
+chmem -v
+chmem -V
+chmem --enable 1024
+chmem -e 2g
+chmem --disable 0x00000000e4000000-0x00000000f3ffffff
+chmem -b -d 10
+clockdiff 127.0.0.1
+clockdiff 192.168.119.138
+clockdiff 182.61.200.7
+clockdiff 127.0.0.1 -o
+clockdiff 192.168.119.138 -o
+clockdiff 182.61.200.7 -o
+clockdiff 127.0.0.1 -o1
+clockdiff 192.168.119.138 -o1
+clockdiff 182.61.200.7 -o1
+clockdiff 127.0.0.1 -V
+clockdiff 192.168.119.138 -V
+clockdiff 182.61.200.7 -V
+ausearch
+ausearch -a event ID
+ausearch -a 329
+ausearch -a 2401771
+ausearch -a 1116360555
+ausearch -a
+ausearch --arch 32
+ausearch --arch b32
+ausearch --arch 64
+ausearch --arch b64.
+ausearch --arch
+ausearch -c comm name
+ausearch -c
+ausearch --debug
+ausearch --checkpoint 2
+ausearch --checkpoint EXIT STATUS
+ausearch --checkpoint
+ausearch -e exit code or errno
+ausearch -e
+ausearch --escape raw
+ausearch --escape tty
+ausearch --escape shell
+ausearch --escape shell_quote
+ausearch --escape default
+ausearch --escape interpret
+ausearch --escape csv
+ausearch --escape text
+ausearch --escape
+ausearch --extra-keys
+ausearch --extra-labels
+ausearch --extra-obj2
+ausearch --extra-time
+ausearch -f filename
+ausearch -f
+ausearch --format raw
+ausearch --format tty
+ausearch --format shell
+ausearch --format shell_quote
+ausearch --format default
+ausearch --format interpret
+ausearch --format csv
+ausearch --format text
+ausearch --format
+ausearch -ga group ID
+ausearch -ga
+ausearch -ge effective group ID
+ausearch -ge
+ausearch -gi group ID
+ausearch -gi
+ausearch -h
+ausearch -hn host name
+ausearch -hn
+ausearch -i
+ausearch -if file
+ausearch -if directory
+ausearch -if
+ausearch --input-logs
+ausearch --just-one
+ausearch -k key string
+ausearch -k
+ausearch -l
+ausearch -m message type
+ausearch -m comma separated list of message types
+ausearch -m ALL
+ausearch -m
+ausearch -n
+ausearch -o tcontext
+ausearch -o scontext
+ausearch -o /subject
+ausearch -o /object
+ausearch -o
+ausearch -p process ID
+ausearch -p
+ausearch -pp parent process ID
+ausearch -pp
+ausearch -r
+ausearch -sc syscall
+ausearch -sc
+ausearch -se tcontext
+ausearch -se scontext
+ausearch -se /subject
+ausearch -se /object
+ausearch -se
+ausearch -su tcontext
+ausearch -su scontext
+ausearch -su /subject
+ausearch -su /object
+ausearch -su
+ausearch -sv success value
+ausearch -sv yes
+ausearch -sv no
+ausearch -sv
+ausearch -te date '+%x'.
+ausearch -te today
+ausearch -te now
+ausearch -te /03/2009.
+ausearch -te 2009
+ausearch -te 09
+ausearch -te 24
+ausearch -te 03
+ausearch -te 00
+ausearch -te 18
+ausearch -te recent
+ausearch -te boot
+ausearch -te yesterday
+ausearch -te this-week
+ausearch -te week-ago
+ausearch -te this-month
+ausearch -te this-year
+ausearch -te Now
+ausearch -te Recent
+ausearch -te 10
+ausearch -te Boot
+ausearch -te Today
+ausearch -te Yesterday
+ausearch -te This-week
+ausearch -te localtime
+ausearch -te Week-ago
+ausearch -te 7
+ausearch -te This-month
+ausearch -te This-year
+ausearch -te
+ausearch -ts date '+%x'.
+ausearch -ts today
+ausearch -ts midnight
+ausearch -ts /03/2009.
+ausearch -ts 2009
+ausearch -ts 09
+ausearch -ts 24
+ausearch -ts 03
+ausearch -ts 00
+ausearch -ts 18
+ausearch -ts now
+ausearch -ts recent
+ausearch -ts boot
+ausearch -ts yesterday
+ausearch -ts this-week
+ausearch -ts week-ago
+ausearch -ts this-month
+ausearch -ts this-year
+ausearch -ts checkpoint
+ausearch -ts Boot
+ausearch -ts Today
+ausearch -ts Recent
+ausearch -ts 10
+ausearch -ts Yesterday
+ausearch -ts This-week
+ausearch -ts localtime
+ausearch -ts Week-ago
+ausearch -ts 7
+ausearch -ts This-month
+ausearch -ts This-year
+ausearch -ts ausearch
+ausearch -ts 12
+ausearch -ts 11
+ausearch -ts /etc/audit/auditd_checkpoint.txt
+ausearch -ts
+ausearch -ua user ID
+ausearch -ua
+ausearch -ue effective user ID
+ausearch -ue
+ausearch -ui user ID
+ausearch -ui
+ausearch -ul login user ID
+ausearch -ul
+ausearch -uu guest UUID
+ausearch -uu
+ausearch -v
+ausearch -vm guest name
+ausearch -vm
+ausearch -w
+btrfs-select-super -s number
+auditctl
+auditctl -b 64
+auditctl -b
+auditctl --backlog_wait_time 60
+auditctl --backlog_wait_time 10
+auditctl --backlog_wait_time
+auditctl -c
+auditctl -D
+auditctl -e
+auditctl -f
+auditctl -h
+auditctl -i
+auditctl --loginuid-immutable
+auditctl -r /sec
+auditctl -r 0
+auditctl -r
+auditctl --reset-lost
+auditctl -R 1
+auditctl -R
+auditctl -t
+auditctl -s
+auditctl -l
+auditctl -v
+auditctl -a always,exit -S all -F pid=1005
+auditctl -a always,exit -S openat -F auid=510
+auditctl -a always,exit -S openat -F success=0
+auditctl -w /etc/shadow -p wa
+auditctl -w /etc/ -p wa
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid
+cfdisk
+cfdisk -h
+cfdisk -L auto
+cfdisk -L never
+cfdisk -L always
+cfdisk -L
+cfdisk -V
+cfdisk -z
+convertquota -e
+convertquota -f ,
+crash
+crash -h option
+crash -h crash
+crash -h
+crash --help option
+crash --help crash
+crash --help
+crash -s
+crash -d crash
+crash -d
+crash -S
+crash -e readline(3)
+crash -e
+crash -f
+crash -k
+crash -g vmlinux
+crash -g xen-syms
+crash -g
+crash -t
+crash -L
+crash -m /pairs
+crash -m 2
+crash -m 6
+crash -m 11
+crash -m 5
+crash -m 14
+crash -m 4
+crash -m
+crash --machdep /pairs
+crash --machdep 2
+crash --machdep 6
+crash --machdep 11
+crash --machdep 5
+crash --machdep 14
+crash --machdep 4
+crash --machdep
+crash -x
+crash --active
+crash --buildinfo
+crash --memory_module crash.ko
+crash --memory_module /dev/crash
+crash --memory_module
+crash --memory_device /dev/crash
+crash --memory_device  /dev/mem
+crash --memory_device /proc/kcore
+crash --memory_device
+crash --log /proc/vmcore
+crash --log
+crash --no_kallsyms
+crash --no_modules
+crash --no_ikconf
+crash --no_data_debug
+crash --no_kmem_cache
+crash --no_elf_notes
+crash --kmem_cache_delay
+crash --readnow
+crash --smp
+crash -v
+crash --osrelease /proc/vmcore
+crash --osrelease
+crash --hyper
+crash --zero_excluded
+crash --no_panic
+crash --more
+crash --less
+crash --hex
+crash --dec
+crash --CRASHPAGER
+crash --no_scroll
+crash --no_strip
+crash --no_crashrc
+crash --mod mod -S
+crash --mod
+crash --kaslr CONFIG_RANDOMIZE_BASE
+crash --kaslr
+crash --reloc CONFIG_PHYSICAL_START
+crash --reloc CONFIG_PHYSICAL_ALIGN
+crash --reloc /O
+crash --reloc
+crash --hash 32768
+crash --hash
+crash --minimal
+crash --kvmhost 64
+crash --kvmhost 32
+crash --kvmhost
+crash --kvmio CONFIG_PHYSICAL_START
+crash --kvmio CONFIG_PHYSICAL_ALIGN
+crash --kvmio /O
+crash --kvmio
+chkcon policy_file context
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+avcstat
+avcstat -c
+avcstat -f
+aureport
+aureport -au
+aureport -a
+aureport --comm
+aureport -c
+aureport -cr
+aureport -e
+aureport --escape raw
+aureport --escape tty
+aureport --escape shell
+aureport --escape shell_quote
+aureport --escape
+aureport -f
+aureport --failed
+aureport -h
+aureport --help
+aureport -i
+aureport -if file
+aureport -if directory
+aureport -if
+aureport --input-logs
+aureport --integrity
+aureport -k
+aureport -l
+aureport -m
+aureport -ma
+aureport -n
+aureport --node node name
+aureport --node
+aureport -nc
+aureport -p
+aureport -r
+aureport -s
+aureport --success
+aureport --summary
+aureport -t
+aureport --tty
+aureport -te today
+aureport -te now
+aureport -te /03/2009.
+aureport -te 2009
+aureport -te 09
+aureport -te 24
+aureport -te 03
+aureport -te 00
+aureport -te 18
+aureport -te recent
+aureport -te boot
+aureport -te yesterday
+aureport -te this-week
+aureport -te week-ago
+aureport -te this-month
+aureport -te this-year
+aureport -te Now
+aureport -te Recent
+aureport -te 10
+aureport -te Boot
+aureport -te Today
+aureport -te Yesterday
+aureport -te This-week
+aureport -te localtime
+aureport -te Week-ago
+aureport -te 7
+aureport -te This-month
+aureport -te This-year
+aureport -te
+aureport -tm
+aureport -ts today
+aureport -ts midnight
+aureport -ts /03/2009.
+aureport -ts 2009
+aureport -ts 09
+aureport -ts 24
+aureport -ts 03
+aureport -ts 00
+aureport -ts 18
+aureport -ts now
+aureport -ts recent
+aureport -ts boot
+aureport -ts yesterday
+aureport -ts this-week
+aureport -ts week-ago
+aureport -ts this-month
+aureport -ts this-year
+aureport -ts Boot
+aureport -ts Today
+aureport -ts Recent
+aureport -ts 10
+aureport -ts Yesterday
+aureport -ts This-week
+aureport -ts localtime
+aureport -ts Week-ago
+aureport -ts 7
+aureport -ts This-month
+aureport -ts This-year
+aureport -ts
+aureport -u
+aureport -v
+aureport --virt
+aureport -x
+btrfs-image
+chpasswd
+chpasswd -e
+chpasswd -h
+chpasswd -m
+chpasswd -s 5000
+chpasswd -s 0
+chpasswd -s 1000
+chpasswd -s 999
+chpasswd -s /etc/login.defs.
+chpasswd -s
+automount
+automount -h
+automount -p
+automount -t 5
+automount -t 10
+automount -t 60
+automount -t
+automount -M 5
+automount -M 10
+automount -M 60
+automount -M
+automount -n 5
+automount -n 10
+automount -n 60
+automount -n
+automount -v
+automount -d
+automount -Dvariable=value
+automount -S
+automount -f
+automount -r
+automount -m
+automount -O
+automount -V
+automount -l
+automount -C
+automount -F
+automount -+
+cryptsetup <options> <action> <action args>
+cryptsetup <options> <action> <action args> --verbose
+cryptsetup <options> <action> <action args> --type BASIC COMMANDS
+cryptsetup <options> <action> <action args> --type
+cryptsetup <options> <action> <action args> --hash open
+cryptsetup <options> <action> <action args> --hash luksFormat
+cryptsetup <options> <action> <action args> --hash 160
+cryptsetup <options> <action> <action args> --hash "crc32"
+cryptsetup <options> <action> <action args> --hash "ripemd160"
+cryptsetup <options> <action> <action args> --hash open --type plain
+cryptsetup <options> <action> <action args> --hash "sha1"
+cryptsetup <options> <action> <action args> --hash cryptsetup --help
+cryptsetup <options> <action> <action args> --hash
+cryptsetup <options> <action> <action args> --cipher cryptsetup --help
+cryptsetup <options> <action> <action args> --cipher 512
+cryptsetup <options> <action> <action args> --cipher 6
+cryptsetup <options> <action> <action args> --cipher 33
+cryptsetup <options> <action> <action args> --cipher 24
+cryptsetup <options> <action> <action args> --cipher
+cryptsetup <options> <action> <action args> --verify-passphrase
+cryptsetup <options> <action> <action args> --key-file luksFormat
+cryptsetup <options> <action> <action args> --key-file luksAddKey
+cryptsetup <options> <action> <action args> --key-file NOTES ON PASSPHRASE PROCESSING
+cryptsetup <options> <action> <action args> --key-file
+cryptsetup <options> <action> <action args> --keyfile-offset luksAddKey
+cryptsetup <options> <action> <action args> --keyfile-offset
+cryptsetup <options> <action> <action args> --keyfile-size luksAddKey
+cryptsetup <options> <action> <action args> --keyfile-size
+cryptsetup <options> <action> <action args> --new-keyfile-offset luksAddKey
+cryptsetup <options> <action> <action args> --new-keyfile-offset
+cryptsetup <options> <action> <action args> --new-keyfile-size luksAddKey
+cryptsetup <options> <action> <action args> --new-keyfile-size
+cryptsetup <options> <action> <action args> --master-key-file
+cryptsetup <options> <action> <action args> --dump-master-key
+cryptsetup <options> <action> <action args> --json-file
+cryptsetup <options> <action> <action args> --use-random
+cryptsetup <options> <action> <action args> --use-urandom
+cryptsetup <options> <action> <action args> --key-slot
+cryptsetup <options> <action> <action args> --key-size
+cryptsetup <options> <action> <action args> --size
+cryptsetup <options> <action> <action args> --offset
+cryptsetup <options> <action> <action args> --skip
+cryptsetup <options> <action> <action args> --device-size reencrypt
+cryptsetup <options> <action> <action args> --device-size resize
+cryptsetup <options> <action> <action args> --device-size /M/G/T
+cryptsetup <options> <action> <action args> --device-size /MB/GB/TB
+cryptsetup <options> <action> <action args> --device-size 1000
+cryptsetup <options> <action> <action args> --device-size 512
+cryptsetup <options> <action> <action args> --device-size 1024
+cryptsetup <options> <action> <action args> --device-size WARNING:
+cryptsetup <options> <action> <action args> --device-size
+cryptsetup <options> <action> <action args> --readonly
+cryptsetup <options> <action> <action args> --shared
+cryptsetup <options> <action> <action args> --pbkdf pbkdf2
+cryptsetup <options> <action> <action args> --pbkdf argon2i
+cryptsetup <options> <action> <action args> --pbkdf argon2id
+cryptsetup <options> <action> <action args> --pbkdf //www.cryptolux.org/index.php/Argon2
+cryptsetup <options> <action> <action args> --pbkdf cryptsetup --help
+cryptsetup <options> <action> <action args> --pbkdf /id
+cryptsetup <options> <action> <action args> --pbkdf 4
+cryptsetup <options> <action> <action args> --pbkdf luksDump
+cryptsetup <options> <action> <action args> --pbkdf NOTE:
+cryptsetup <options> <action> <action args> --pbkdf
+cryptsetup <options> <action> <action args> --iter-time
+cryptsetup <options> <action> <action args> --pbkdf-memory /id
+cryptsetup <options> <action> <action args> --pbkdf-memory 4
+cryptsetup <options> <action> <action args> --pbkdf-memory
+cryptsetup <options> <action> <action args> --pbkdf-parallel /id
+cryptsetup <options> <action> <action args> --pbkdf-parallel 4
+cryptsetup <options> <action> <action args> --pbkdf-parallel
+cryptsetup <options> <action> <action args> --pbkdf-force-iterations /LUKS2
+cryptsetup <options> <action> <action args> --pbkdf-force-iterations
+cryptsetup <options> <action> <action args> --batch-mode
+cryptsetup <options> <action> <action args> --timeout
+cryptsetup <options> <action> <action args> --tries
+cryptsetup <options> <action> <action args> --align-payload value
+cryptsetup <options> <action> <action args> --align-payload 512
+cryptsetup <options> <action> <action args> --align-payload luksFormat
+cryptsetup <options> <action> <action args> --align-payload 2048
+cryptsetup <options> <action> <action args> --align-payload WARNING:
+cryptsetup <options> <action> <action args> --align-payload
+cryptsetup <options> <action> <action args> --uuid luksFormat
+cryptsetup <options> <action> <action args> --uuid 1234
+cryptsetup <options> <action> <action args> --uuid 12345678
+cryptsetup <options> <action> <action args> --uuid
+cryptsetup <options> <action> <action args> --allow-discards
+cryptsetup <options> <action> <action args> --perf-same_cpu_crypt
+cryptsetup <options> <action> <action args> --perf-submit_from_crypt_cpus
+cryptsetup <options> <action> <action args> --test-passphrase
+cryptsetup <options> <action> <action args> --header
+cryptsetup <options> <action> <action args> --header-backup-file luksHeaderBackup
+cryptsetup <options> <action> <action args> --header-backup-file luksHeaderRestore
+cryptsetup <options> <action> <action args> --header-backup-file
+cryptsetup <options> <action> <action args> --force-password
+cryptsetup <options> <action> <action args> --deferred
+cryptsetup <options> <action> <action args> --disable-locks
+cryptsetup <options> <action> <action args> --disable-keyring
+cryptsetup <options> <action> <action args> --key-description token
+cryptsetup <options> <action> <action args> --key-description
+cryptsetup <options> <action> <action args> --priority prefer
+cryptsetup <options> <action> <action args> --priority normal
+cryptsetup <options> <action> <action args> --priority ignored
+cryptsetup <options> <action> <action args> --priority
+cryptsetup <options> <action> <action args> --token-id
+cryptsetup <options> <action> <action args> --token-only
+cryptsetup <options> <action> <action args> --sector-size 4096
+cryptsetup <options> <action> <action args> --sector-size 512
+cryptsetup <options> <action> <action args> --sector-size
+cryptsetup <options> <action> <action args> --persistent
+cryptsetup <options> <action> <action args> --refresh
+cryptsetup <options> <action> <action args> --integrity WARNING: This extension is EXPERIMENTAL
+cryptsetup <options> <action> <action args> --integrity 12
+cryptsetup <options> <action> <action args> --integrity 4
+cryptsetup <options> <action> <action args> --integrity AUTHENTICATED DISK ENCRYPTION
+cryptsetup <options> <action> <action args> --integrity
+cryptsetup <options> <action> <action args> --luks2-metadata-size 256
+cryptsetup <options> <action> <action args> --luks2-metadata-size 16
+cryptsetup <options> <action> <action args> --luks2-metadata-size 128
+cryptsetup <options> <action> <action args> --luks2-metadata-size 4096
+cryptsetup <options> <action> <action args> --luks2-metadata-size 1024
+cryptsetup <options> <action> <action args> --luks2-metadata-size 64
+cryptsetup <options> <action> <action args> --luks2-metadata-size 512
+cryptsetup <options> <action> <action args> --luks2-metadata-size 2048
+cryptsetup <options> <action> <action args> --luks2-metadata-size 32
+cryptsetup <options> <action> <action args> --luks2-metadata-size
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 256
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 16
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 128
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 4096
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 1024
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 64
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 512
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 2048
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 32
+cryptsetup <options> <action> <action args> --luks2-keyslots-size
+cryptsetup <options> <action> <action args> --integrity-no-journal
+cryptsetup <options> <action> <action args> --integrity-no-wipe
+cryptsetup <options> <action> <action args> --unbound
+cryptsetup <options> <action> <action args> --tcrypt-hidden
+cryptsetup <options> <action> <action args> --veracrypt
+cryptsetup <options> <action> <action args> --veracrypt-pim
+cryptsetup <options> <action> <action args> --serialize-memory-hard-pbkdf
+cryptsetup <options> <action> <action args> --encrypt
+cryptsetup <options> <action> <action args> --decrypt
+cryptsetup <options> <action> <action args> --init-only
+cryptsetup <options> <action> <action args> --resume-only
+cryptsetup <options> <action> <action args> --resilience checksum
+cryptsetup <options> <action> <action args> --resilience journal
+cryptsetup <options> <action> <action args> --resilience none
+cryptsetup <options> <action> <action args> --resilience
+cryptsetup <options> <action> <action args> --hotzone-size 256
+cryptsetup <options> <action> <action args> --hotzone-size 16
+cryptsetup <options> <action> <action args> --hotzone-size 128
+cryptsetup <options> <action> <action args> --hotzone-size 4096
+cryptsetup <options> <action> <action args> --hotzone-size 1024
+cryptsetup <options> <action> <action args> --hotzone-size 64
+cryptsetup <options> <action> <action args> --hotzone-size 512
+cryptsetup <options> <action> <action args> --hotzone-size 2048
+cryptsetup <options> <action> <action args> --hotzone-size 32
+cryptsetup <options> <action> <action args> --hotzone-size
+cryptsetup <options> <action> <action args> --reduce-device-size 256
+cryptsetup <options> <action> <action args> --reduce-device-size 16
+cryptsetup <options> <action> <action args> --reduce-device-size 128
+cryptsetup <options> <action> <action args> --reduce-device-size 4096
+cryptsetup <options> <action> <action args> --reduce-device-size 1024
+cryptsetup <options> <action> <action args> --reduce-device-size 64
+cryptsetup <options> <action> <action args> --reduce-device-size 512
+cryptsetup <options> <action> <action args> --reduce-device-size 2048
+cryptsetup <options> <action> <action args> --reduce-device-size 32
+cryptsetup <options> <action> <action args> --reduce-device-size
+cryptsetup <options> <action> <action args> --version
+cryptsetup <options> <action> <action args> --usage
+cryptsetup <options> <action> <action args> --help
+arptables-restore
+captest
+captest --drop-all
+captest --drop-caps
+captest --id
+captest --init-grp
+captest --text
+captest --lock
+blockdev /dev/sda
+blockdev  /dev/loop233
+blockdev /dev/sda -q
+blockdev  /dev/loop233 -q
+blockdev /dev/sda -v
+blockdev  /dev/loop233 -v
+blockdev /dev/sda --report
+blockdev  /dev/loop233 --report
+blockdev /dev/sda -h
+blockdev  /dev/loop233 -h
+blockdev /dev/sda -V
+blockdev  /dev/loop233 -V
+blockdev --report
+blockdev -h
+blockdev -V
+autrace /bin/ls
+autrace /bin/ls -r
+autrace /bin/ls /tmp
+autrace -r /bin/ls
+btrecord < /dev/sda >
+btrecord <  /dev/loop233 >
+btrecord < /dev/sda > -d .
+btrecord <  /dev/loop233 > -d .
+btrecord < /dev/sda > -d
+btrecord <  /dev/loop233 > -d
+btrecord < /dev/sda > --input-directory .
+btrecord <  /dev/loop233 > --input-directory .
+btrecord < /dev/sda > --input-directory
+btrecord <  /dev/loop233 > --input-directory
+btrecord < /dev/sda > -D .
+btrecord <  /dev/loop233 > -D .
+btrecord < /dev/sda > -D
+btrecord <  /dev/loop233 > -D
+btrecord < /dev/sda > --output-directory .
+btrecord <  /dev/loop233 > --output-directory .
+btrecord < /dev/sda > --output-directory
+btrecord <  /dev/loop233 > --output-directory
+btrecord < /dev/sda > -F
+btrecord <  /dev/loop233 > -F
+btrecord < /dev/sda > --find-traces
+btrecord <  /dev/loop233 > --find-traces
+btrecord < /dev/sda > -h
+btrecord <  /dev/loop233 > -h
+btrecord < /dev/sda > --help
+btrecord <  /dev/loop233 > --help
+btrecord < /dev/sda > -V
+btrecord <  /dev/loop233 > -V
+btrecord < /dev/sda > --version
+btrecord <  /dev/loop233 > --version
+btrecord < /dev/sda > -m 000
+btrecord <  /dev/loop233 > -m 000
+btrecord < /dev/sda > -m 10
+btrecord <  /dev/loop233 > -m 10
+btrecord < /dev/sda > -m
+btrecord <  /dev/loop233 > -m
+btrecord < /dev/sda > --max-bunch-time 000
+btrecord <  /dev/loop233 > --max-bunch-time 000
+btrecord < /dev/sda > --max-bunch-time 10
+btrecord <  /dev/loop233 > --max-bunch-time 10
+btrecord < /dev/sda > --max-bunch-time
+btrecord <  /dev/loop233 > --max-bunch-time
+btrecord < /dev/sda > -M 8
+btrecord <  /dev/loop233 > -M 8
+btrecord < /dev/sda > -M 512
+btrecord <  /dev/loop233 > -M 512
+btrecord < /dev/sda > -M
+btrecord <  /dev/loop233 > -M
+btrecord < /dev/sda > --max-pkts 8
+btrecord <  /dev/loop233 > --max-pkts 8
+btrecord < /dev/sda > --max-pkts 512
+btrecord <  /dev/loop233 > --max-pkts 512
+btrecord < /dev/sda > --max-pkts
+btrecord <  /dev/loop233 > --max-pkts
+btrecord < /dev/sda > -o 3
+btrecord <  /dev/loop233 > -o 3
+btrecord < /dev/sda > -o 1
+btrecord <  /dev/loop233 > -o 1
+btrecord < /dev/sda > -o blktrace
+btrecord <  /dev/loop233 > -o blktrace
+btrecord < /dev/sda > -o 2
+btrecord <  /dev/loop233 > -o 2
+btrecord < /dev/sda > -o btrecord
+btrecord <  /dev/loop233 > -o btrecord
+btrecord < /dev/sda > -o
+btrecord <  /dev/loop233 > -o
+btrecord < /dev/sda > --output-base 3
+btrecord <  /dev/loop233 > --output-base 3
+btrecord < /dev/sda > --output-base 1
+btrecord <  /dev/loop233 > --output-base 1
+btrecord < /dev/sda > --output-base blktrace
+btrecord <  /dev/loop233 > --output-base blktrace
+btrecord < /dev/sda > --output-base 2
+btrecord <  /dev/loop233 > --output-base 2
+btrecord < /dev/sda > --output-base btrecord
+btrecord <  /dev/loop233 > --output-base btrecord
+btrecord < /dev/sda > --output-base
+btrecord <  /dev/loop233 > --output-base
+btrecord < /dev/sda > -v
+btrecord <  /dev/loop233 > -v
+btrecord < /dev/sda > --verbose
+btrecord <  /dev/loop233 > --verbose
+cron
+cron -f
+cron -l
+cron -n
+cron -L jobs
+cron -L 1
+cron -L 2
+cron -L 4
+cron -L 0
+cron -L 8
+cron -L levels
+cron -L 15
+cron -L
+anacron
+anacron -f
+anacron -u
+anacron -s
+anacron -n
+anacron -d
+anacron -q
+anacron -T
+anacron -V
+anacron -h
+anacron  -u
+checkmodule
+checkmodule -b
+checkmodule -C
+checkmodule -h
+checkmodule -m
+checkmodule -M
+checkmodule -V
+catman
+catman -d
+catman -C ~/.manpath
+catman -C
+catman -?
+catman --usage
+catman -V
+arpd
+arpd -h
+arpd -l
+arpd -b /var/lib/arpd/arpd.db
+arpd -b
+arpd -a 1
+arpd -a 3
+arpd -a
+arpd -k
+arpd -n 60
+arpd -n 30
+arpd -n
+arpd -p 60
+arpd -p 30
+arpd -p
+arpd -R 1
+arpd -R
+arpd -B 1
+arpd -B 3
+arpd -B
+arpd -b /var/tmp/arpd.db
+arpd -b /var/tmp/arpd.db -a 1 eth0 eth1
+arpd -b /var/tmp/arpd.db -a 3 -k eth0 eth1
+btrfs-map-logical
+blkdeactivate
+blkdeactivate -d dmsetup
+blkdeactivate -d 8
+blkdeactivate -d retry
+blkdeactivate -d force
+blkdeactivate -d
+blkdeactivate -e
+blkdeactivate -h
+blkdeactivate -l retry
+blkdeactivate -l wholevg
+blkdeactivate -l
+blkdeactivate -m  disablequeueing
+blkdeactivate -m
+blkdeactivate -r wait
+blkdeactivate -r
+blkdeactivate -u
+blkdeactivate -v
+blkdeactivate -u /dev/vg/lvol0
+blkdeactivate -u -d retry -l wholevg
+blkdeactivate -d force,retry
+btrfstune
+btrfstune -f
+btrfstune -m
+btrfstune -M 5
+btrfstune -M 0
+btrfstune -M btrfstune -u
+btrfstune -M
+btrfstune -n
+btrfstune -r
+btrfstune -S 1
+btrfstune -S 0
+btrfstune -S
+btrfstune -u
+btrfstune -U 5
+btrfstune -U 0
+btrfstune -U btrfstune -u
+btrfstune -U
+btrfstune -x
+btrfstune --help
+blkiomon -I
+checkpolicy
+checkpolicy -b
+checkpolicy -F
+checkpolicy -C
+checkpolicy -d
+checkpolicy -M
+checkpolicy -S
+checkpolicy -t
+checkpolicy -O
+checkpolicy -V
+checkpolicy -h
+arp
+arp -v
+arp -n
+arp -H arp
+arp -H ether
+arp -H 802
+arp -H 3
+arp -H arcnet
+arp -H pronet
+arp -H 25
+arp -H ax25
+arp -H /ROM
+arp -H netrom
+arp -H
+arp -a
+arp -e
+arp -D
+arp -i temp
+arp -i pub
+arp -i  NOTE:
+arp -i 2
+arp -i 0
+arp -i arp
+arp -i 7
+arp -i dontpub
+arp -i 4
+arp -i
+arp -f /etc/ethers
+arp -f pub
+arp -f temp
+arp -f netmask
+arp -f hostname
+arp -f IP address
+arp -f C
+arp -f M
+arp -f
+arp -d
+arp -s
+arp -N
+arp -V
+arp -d 127.0.0.1
+arp -d 192.168.119.138
+arp -d 182.61.200.7
+arp -s 127.0.0.1 00:0c:29:0d:19:d6
+arp -s 192.168.119.138 00:0c:29:0d:19:d6
+arp -s 182.61.200.7 00:0c:29:0d:19:d6
+arp -s 127.0.0.1 00:0c:29:0d:19:d6 pub
+arp -s 192.168.119.138 00:0c:29:0d:19:d6 pub
+arp -s 182.61.200.7 00:0c:29:0d:19:d6 pub
+arp -Ds 127.0.0.1 ens33 pub
+arp -Ds 127.0.0.1 ens38 pub
+arp -Ds 192.168.119.138 ens33 pub
+arp -Ds 192.168.119.138 ens38 pub
+arp -Ds 182.61.200.7 ens33 pub
+arp -Ds 182.61.200.7 ens38 pub
+arp  -f
+/usr/sbin/arp -i eth0 -Ds 10.0.0.2 eth1 pub
+/usr/sbin/arp -i eth1 -d 10.0.0.1
+btreplay < /dev/sda >
+btreplay <  /dev/loop233 >
+btreplay < /dev/sda > -c 1
+btreplay <  /dev/loop233 > -c 1
+btreplay < /dev/sda > -c
+btreplay <  /dev/loop233 > -c
+btreplay < /dev/sda > --cpus 1
+btreplay <  /dev/loop233 > --cpus 1
+btreplay < /dev/sda > --cpus
+btreplay <  /dev/loop233 > --cpus
+btreplay < /dev/sda > -d .
+btreplay <  /dev/loop233 > -d .
+btreplay < /dev/sda > -d
+btreplay <  /dev/loop233 > -d
+btreplay < /dev/sda > --input-directory .
+btreplay <  /dev/loop233 > --input-directory .
+btreplay < /dev/sda > --input-directory
+btreplay <  /dev/loop233 > --input-directory
+btreplay < /dev/sda > -F
+btreplay <  /dev/loop233 > -F
+btreplay < /dev/sda > --find-records
+btreplay <  /dev/loop233 > --find-records
+btreplay < /dev/sda > -h
+btreplay <  /dev/loop233 > -h
+btreplay < /dev/sda > --help
+btreplay <  /dev/loop233 > --help
+btreplay < /dev/sda > -i 3
+btreplay <  /dev/loop233 > -i 3
+btreplay < /dev/sda > -i 1
+btreplay <  /dev/loop233 > -i 1
+btreplay < /dev/sda > -i blktrace
+btreplay <  /dev/loop233 > -i blktrace
+btreplay < /dev/sda > -i 2
+btreplay <  /dev/loop233 > -i 2
+btreplay < /dev/sda > -i btrecord
+btreplay <  /dev/loop233 > -i btrecord
+btreplay < /dev/sda > -i
+btreplay <  /dev/loop233 > -i
+btreplay < /dev/sda > --input-base 3
+btreplay <  /dev/loop233 > --input-base 3
+btreplay < /dev/sda > --input-base 1
+btreplay <  /dev/loop233 > --input-base 1
+btreplay < /dev/sda > --input-base blktrace
+btreplay <  /dev/loop233 > --input-base blktrace
+btreplay < /dev/sda > --input-base 2
+btreplay <  /dev/loop233 > --input-base 2
+btreplay < /dev/sda > --input-base btrecord
+btreplay <  /dev/loop233 > --input-base btrecord
+btreplay < /dev/sda > --input-base
+btreplay <  /dev/loop233 > --input-base
+btreplay < /dev/sda > -I 1
+btreplay <  /dev/loop233 > -I 1
+btreplay < /dev/sda > -I
+btreplay <  /dev/loop233 > -I
+btreplay < /dev/sda > --iterations 1
+btreplay <  /dev/loop233 > --iterations 1
+btreplay < /dev/sda > --iterations
+btreplay <  /dev/loop233 > --iterations
+btreplay < /dev/sda > -
+btreplay <  /dev/loop233 > -
+btreplay < /dev/sda > -N
+btreplay <  /dev/loop233 > -N
+btreplay < /dev/sda > --no-stalls
+btreplay <  /dev/loop233 > --no-stalls
+btreplay < /dev/sda > -x 1
+btreplay <  /dev/loop233 > -x 1
+btreplay < /dev/sda > -x
+btreplay <  /dev/loop233 > -x
+btreplay < /dev/sda > --acc-factor 1
+btreplay <  /dev/loop233 > --acc-factor 1
+btreplay < /dev/sda > --acc-factor
+btreplay <  /dev/loop233 > --acc-factor
+btreplay < /dev/sda > -v
+btreplay <  /dev/loop233 > -v
+btreplay < /dev/sda > --verbose
+btreplay <  /dev/loop233 > --verbose
+btreplay < /dev/sda > -V
+btreplay <  /dev/loop233 > -V
+btreplay < /dev/sda > --version
+btreplay <  /dev/loop233 > --version
+btreplay < /dev/sda > -W
+btreplay <  /dev/loop233 > -W
+btreplay < /dev/sda > --write-enable
+btreplay <  /dev/loop233 > --write-enable
+agetty 0
+agetty 1
+agetty 63
+agetty 121212
+agetty 65534
+agetty 0 -8
+agetty 1 -8
+agetty 63 -8
+agetty 121212 -8
+agetty 65534 -8
+agetty 0 -a /bin/login
+agetty 1 -a /bin/login
+agetty 63 -a /bin/login
+agetty 121212 -a /bin/login
+agetty 65534 -a /bin/login
+agetty 0 -a
+agetty 1 -a
+agetty 63 -a
+agetty 121212 -a
+agetty 65534 -a
+agetty 0 -c
+agetty 1 -c
+agetty 63 -c
+agetty 121212 -c
+agetty 65534 -c
+agetty 0 -E
+agetty 1 -E
+agetty 63 -E
+agetty 121212 -E
+agetty 65534 -E
+agetty 0 -f file
+agetty 1 -f file
+agetty 63 -f file
+agetty 121212 -f file
+agetty 65534 -f file
+agetty 0 -f /etc/issue
+agetty 1 -f /etc/issue
+agetty 63 -f /etc/issue
+agetty 121212 -f /etc/issue
+agetty 65534 -f /etc/issue
+agetty 0 -f directory
+agetty 1 -f directory
+agetty 63 -f directory
+agetty 121212 -f directory
+agetty 65534 -f directory
+agetty 0 -f
+agetty 1 -f
+agetty 63 -f
+agetty 121212 -f
+agetty 65534 -f
+agetty 0 -h
+agetty 1 -h
+agetty 63 -h
+agetty 121212 -h
+agetty 65534 -h
+agetty 0 -H agetty
+agetty 1 -H agetty
+agetty 63 -H agetty
+agetty 121212 -H agetty
+agetty 65534 -H agetty
+agetty 0 -H
+agetty 1 -H
+agetty 63 -H
+agetty 121212 -H
+agetty 65534 -H
+agetty 0 -i
+agetty 1 -i
+agetty 63 -i
+agetty 121212 -i
+agetty 65534 -i
+agetty 0 -I 012
+agetty 1 -I 012
+agetty 63 -I 012
+agetty 121212 -I 012
+agetty 65534 -I 012
+agetty 0 -I 10
+agetty 1 -I 10
+agetty 63 -I 10
+agetty 121212 -I 10
+agetty 65534 -I 10
+agetty 0 -I
+agetty 1 -I
+agetty 63 -I
+agetty 121212 -I
+agetty 65534 -I
+agetty 0 -J
+agetty 1 -J
+agetty 63 -J
+agetty 121212 -J
+agetty 65534 -J
+agetty 0 -l /bin/login.
+agetty 1 -l /bin/login.
+agetty 63 -l /bin/login.
+agetty 121212 -l /bin/login.
+agetty 65534 -l /bin/login.
+agetty 0 -l
+agetty 1 -l
+agetty 63 -l
+agetty 121212 -l
+agetty 65534 -l
+agetty 0 -L always
+agetty 1 -L always
+agetty 63 -L always
+agetty 121212 -L always
+agetty 65534 -L always
+agetty 0 -L never
+agetty 1 -L never
+agetty 63 -L never
+agetty 121212 -L never
+agetty 65534 -L never
+agetty 0 -L auto
+agetty 1 -L auto
+agetty 63 -L auto
+agetty 121212 -L auto
+agetty 65534 -L auto
+agetty 0 -L agetty
+agetty 1 -L agetty
+agetty 63 -L agetty
+agetty 121212 -L agetty
+agetty 65534 -L agetty
+agetty 0 -L
+agetty 1 -L
+agetty 63 -L
+agetty 121212 -L
+agetty 65534 -L
+agetty 0 -m
+agetty 1 -m
+agetty 63 -m
+agetty 121212 -m
+agetty 65534 -m
+agetty 0 --list-speeds
+agetty 1 --list-speeds
+agetty 63 --list-speeds
+agetty 121212 --list-speeds
+agetty 65534 --list-speeds
+agetty 0 -n
+agetty 1 -n
+agetty 63 -n
+agetty 121212 -n
+agetty 65534 -n
+agetty 0 -N
+agetty 1 -N
+agetty 63 -N
+agetty 121212 -N
+agetty 65534 -N
+agetty 0 -o login
+agetty 1 -o login
+agetty 63 -o login
+agetty 121212 -o login
+agetty 65534 -o login
+agetty 0 -o 1
+agetty 1 -o 1
+agetty 63 -o 1
+agetty 121212 -o 1
+agetty 65534 -o 1
+agetty 0 -o
+agetty 1 -o
+agetty 63 -o
+agetty 121212 -o
+agetty 65534 -o
+agetty 0 -p
+agetty 1 -p
+agetty 63 -p
+agetty 121212 -p
+agetty 65534 -p
+agetty 0 -R
+agetty 1 -R
+agetty 63 -R
+agetty 121212 -R
+agetty 65534 -R
+agetty 0 -s
+agetty 1 -s
+agetty 63 -s
+agetty 121212 -s
+agetty 65534 -s
+agetty 0 -U
+agetty 1 -U
+agetty 63 -U
+agetty 121212 -U
+agetty 65534 -U
+agetty 0 -w
+agetty 1 -w
+agetty 63 -w
+agetty 121212 -w
+agetty 65534 -w
+agetty 0 --nohints
+agetty 1 --nohints
+agetty 63 --nohints
+agetty 121212 --nohints
+agetty 65534 --nohints
+agetty 0 --nohostname
+agetty 1 --nohostname
+agetty 63 --nohostname
+agetty 121212 --nohostname
+agetty 65534 --nohostname
+agetty 0 --long-hostname
+agetty 1 --long-hostname
+agetty 63 --long-hostname
+agetty 121212 --long-hostname
+agetty 65534 --long-hostname
+agetty 0 --erase-chars 2
+agetty 1 --erase-chars 2
+agetty 63 --erase-chars 2
+agetty 121212 --erase-chars 2
+agetty 65534 --erase-chars 2
+agetty 0 --erase-chars 23
+agetty 1 --erase-chars 23
+agetty 63 --erase-chars 23
+agetty 121212 --erase-chars 23
+agetty 65534 --erase-chars 23
+agetty 0 --erase-chars
+agetty 1 --erase-chars
+agetty 63 --erase-chars
+agetty 121212 --erase-chars
+agetty 65534 --erase-chars
+agetty 0 --kill-chars 2
+agetty 1 --kill-chars 2
+agetty 63 --kill-chars 2
+agetty 121212 --kill-chars 2
+agetty 65534 --kill-chars 2
+agetty 0 --kill-chars 23
+agetty 1 --kill-chars 23
+agetty 63 --kill-chars 23
+agetty 121212 --kill-chars 23
+agetty 65534 --kill-chars 23
+agetty 0 --kill-chars
+agetty 1 --kill-chars
+agetty 63 --kill-chars
+agetty 121212 --kill-chars
+agetty 65534 --kill-chars
+agetty 0 --reload
+agetty 1 --reload
+agetty 63 --reload
+agetty 121212 --reload
+agetty 65534 --reload
+agetty 0 --version
+agetty 1 --version
+agetty 63 --version
+agetty 121212 --version
+agetty 65534 --version
+agetty 0 --help
+agetty 1 --help
+agetty 63 --help
+agetty 121212 --help
+agetty 65534 --help
+/sbin/agetty 9600 ttyS1
+/sbin/agetty --local-line 9600 ttyS1 vt100
+/sbin/agetty --extract-baud --timeout 60 ttyS1 9600,2400,1200
+/sbin/agetty --wait-cr --init-string ’ATE0Q1&D2&C1S0=1 15’ 115200 ttyS1
+accton on
+accton on -V
+accton on -h
+accton off
+accton off -V
+accton off -h
+accton filename
+accton filename -V
+accton filename -h
+accton
+accton -V
+accton -h
+chcpu -c
+chcpu -d
+chcpu -e
+chcpu -g
+chcpu -p
+chcpu -r
+chcpu -h
+chcpu -V
+***********arguments are:**************
+category<i>
+file<i>
+user<i>
+-L<i>
+destination<i>
+<device><i>
+device<i>
+script<i>
+label<i>
+uuid<i>
+dev<i>
+command<i>
+partition<i>
+start<i>
+length<i>
+filesystem<i>
+oldformat<i>
+newformat<i>
+NAMELIST<i>
+MEMORY-IMAGE<i>
+<source><i>
+<target><i>
+program<i>
+<options><i>
+interval<i>
+hostname<i>
+hw_addr<i>
+ifname<i>
+port<i>
+cpu-list<i>
+mode<i>
+
+
+************opt args names are:***********
+count
+source
+deadline
+type
+SIZE
+feature1
+block_size
+number of blocks
+read delay factor
+max bad block count
+input_file
+output_file
+num_passes
+test_pattern
+modprobe_program
+chat file
+timeout
+report file
+phone number 2
+cachefile
+label
+list
+format
+size
+NAME=value
+level
+length
+trace
+sector
+sectors
+<port>,
+<ttl>,
+<num>,
+<sec>,
+num-sub
+number
+dir
+mask
+value
+size[units]
+hash-spec
+LUKS header file
+name
+bits
+<number>
+<type>
+audit-event-id
+CPU
+comm-name
+checkpoint-file
+exit-code-or-errno
+option
+file-name
+all-group-id
+effective-group-id
+group-id
+host-name
+file-name 
+key-string
+message-type 
+SE-Linux-context-string
+process-id
+parent-process-id
+syscall-name-or-value
+success-value
+end-date
+start-date
+all-user-id
+effective-user-id
+user-id
+login-id
+guest-uuid
+guest-name
+superblock
+backlog
+wait_time
+rate
+file
+[
+f
+n
+key
+Syscall name or number
+when
+oldformat,newformat
+[option]
+num
+vi | emacs
+[namelist]
+option=value
+modname
+device
+dumpfile
+directory
+offset
+[32|64]
+file 
+node-name
+ROUNDS
+<seconds>,
+<device-type>
+cipher-spec
+<PBKDF
+<num>
+<number
+UUID
+<file>
+<text>
+<normal|prefer|ignore>
+<bytes>
+<integrity
+<size>
+<mode>
+nanoseconds
+basename
+loglevel
+<DATABASE>
+<NUMBER>
+<TIME>
+<RATE>
+copy
+dm_options
+lvm_options
+mpath_options
+mdraid_options
+<UUID>
+<0|1>
+If
+filename
+factor
+username
+file|directory
+fakehost
+initstring
+login_program
+mode
+login_options
+string
+
+augenrules
+augenrules --check
+augenrules --load
+chcat /home/mjz/another_glibc/test/normalfile.txt
+chcat  home/mjz/another_glibc/test/superfile.txt
+chcat /home/mjz/another_glibc/test/normalfile.txt -d
+chcat  home/mjz/another_glibc/test/superfile.txt -d
+chcat /home/mjz/another_glibc/test/normalfile.txt -L
+chcat  home/mjz/another_glibc/test/superfile.txt -L
+chcat /home/mjz/another_glibc/test/normalfile.txt -l
+chcat  home/mjz/another_glibc/test/superfile.txt -l
+chcat -l
+chcat
+/usr/sbin/accessdb
+/usr/sbin/accessdb -d
+/usr/sbin/accessdb -?
+/usr/sbin/accessdb --usage
+/usr/sbin/accessdb -V
+arping 127.0.0.1
+arping 192.168.119.138
+arping 182.61.200.7
+arping 127.0.0.1 -A
+arping 192.168.119.138 -A
+arping 182.61.200.7 -A
+arping 127.0.0.1 -b
+arping 192.168.119.138 -b
+arping 182.61.200.7 -b
+arping 127.0.0.1 -c deadline
+arping 192.168.119.138 -c deadline
+arping 182.61.200.7 -c deadline
+arping 127.0.0.1 -c
+arping 192.168.119.138 -c
+arping 182.61.200.7 -c
+arping 127.0.0.1 -D
+arping 192.168.119.138 -D
+arping 182.61.200.7 -D
+arping 127.0.0.1 -f
+arping 192.168.119.138 -f
+arping 182.61.200.7 -f
+arping 127.0.0.1 -h
+arping 192.168.119.138 -h
+arping 182.61.200.7 -h
+arping 127.0.0.1 -q
+arping 192.168.119.138 -q
+arping 182.61.200.7 -q
+arping 127.0.0.1 -s 0
+arping 192.168.119.138 -s 0
+arping 182.61.200.7 -s 0
+arping 127.0.0.1 -s 0.0.0.0
+arping 192.168.119.138 -s 0.0.0.0
+arping 182.61.200.7 -s 0.0.0.0
+arping 127.0.0.1 -s destination
+arping 192.168.119.138 -s destination
+arping 182.61.200.7 -s destination
+arping 127.0.0.1 -s
+arping 192.168.119.138 -s
+arping 182.61.200.7 -s
+arping 127.0.0.1 -U
+arping 192.168.119.138 -U
+arping 182.61.200.7 -U
+arping 127.0.0.1 -V
+arping 192.168.119.138 -V
+arping 182.61.200.7 -V
+arping 127.0.0.1 -w arping
+arping 192.168.119.138 -w arping
+arping 182.61.200.7 -w arping
+arping 127.0.0.1 -w count
+arping 192.168.119.138 -w count
+arping 182.61.200.7 -w count
+arping 127.0.0.1 -w
+arping 192.168.119.138 -w
+arping 182.61.200.7 -w
+btrfs-convert
+auditd
+auditd -f
+auditd -l
+auditd -n
+auditd -c
+badblocks /dev/sda
+badblocks  /dev/loop233
+badblocks /dev/sda -b 1024
+badblocks  /dev/loop233 -b 1024
+badblocks /dev/sda -b
+badblocks  /dev/loop233 -b
+badblocks /dev/sda -c 64
+badblocks  /dev/loop233 -c 64
+badblocks /dev/sda -c
+badblocks  /dev/loop233 -c
+badblocks /dev/sda -d 100
+badblocks  /dev/loop233 -d 100
+badblocks /dev/sda -d 200
+badblocks  /dev/loop233 -d 200
+badblocks /dev/sda -d
+badblocks  /dev/loop233 -d
+badblocks /dev/sda -e 0
+badblocks  /dev/loop233 -e 0
+badblocks /dev/sda -e
+badblocks  /dev/loop233 -e
+badblocks /dev/sda -f
+badblocks  /dev/loop233 -f
+badblocks /dev/sda -i Badblocks
+badblocks  /dev/loop233 -i Badblocks
+badblocks /dev/sda -i new
+badblocks  /dev/loop233 -i new
+badblocks /dev/sda -i dumpe2fs
+badblocks  /dev/loop233 -i dumpe2fs
+badblocks /dev/sda -i 8
+badblocks  /dev/loop233 -i 8
+badblocks /dev/sda -i
+badblocks  /dev/loop233 -i
+badblocks /dev/sda -n
+badblocks  /dev/loop233 -n
+badblocks /dev/sda -o badblocks
+badblocks  /dev/loop233 -o badblocks
+badblocks /dev/sda -o e2fsck
+badblocks  /dev/loop233 -o e2fsck
+badblocks /dev/sda -o 8
+badblocks  /dev/loop233 -o 8
+badblocks /dev/sda -o mke2fs
+badblocks  /dev/loop233 -o mke2fs
+badblocks /dev/sda -o
+badblocks  /dev/loop233 -o
+badblocks /dev/sda -p 0
+badblocks  /dev/loop233 -p 0
+badblocks /dev/sda -p badblocks
+badblocks  /dev/loop233 -p badblocks
+badblocks /dev/sda -p
+badblocks  /dev/loop233 -p
+badblocks /dev/sda -s
+badblocks  /dev/loop233 -s
+badblocks /dev/sda -t /write
+badblocks  /dev/loop233 -t /write
+badblocks /dev/sda -t 1
+badblocks  /dev/loop233 -t 1
+badblocks /dev/sda -t 0
+badblocks  /dev/loop233 -t 0
+badblocks /dev/sda -t
+badblocks  /dev/loop233 -t
+badblocks /dev/sda -v
+badblocks  /dev/loop233 -v
+badblocks /dev/sda -w
+badblocks  /dev/loop233 -w
+badblocks /dev/sda -B
+badblocks  /dev/loop233 -B
+badblocks /dev/sda -X
+badblocks  /dev/loop233 -X
+blkmapd
+blkmapd -h
+blkmapd -d
+blkmapd -f
+arptables-save
+chgpasswd
+chgpasswd -c
+chgpasswd -e
+chgpasswd -h
+chgpasswd -m
+chgpasswd -s
+chat
+chat -f file
+chat -f
+chat -t chat
+chat -t
+chat -r REPORT
+chat -r stderr
+chat -r
+chat -e
+chat -E
+chat -v
+chat -V
+chat -s
+chat -S
+chat -U script
+chat -U chat
+chat -U
+blkid --label
+blkid --label --uuid
+blkid --probe /dev/sda
+blkid --probe  /dev/loop233
+blkid
+blkid -c /dev/null
+blkid -c
+blkid -d
+blkid -D
+blkid -g
+blkid -h
+blkid -i
+blkid -k
+blkid -l
+blkid -L /etc/blkid.conf
+blkid -L /dev/disk/by
+blkid -L 8
+blkid -L
+blkid -n /dev/sda1
+blkid -n
+blkid -o full
+blkid -o value
+blkid -o list
+blkid -o DEPRECATED
+blkid -o lsblk
+blkid -o 8
+blkid -o device
+blkid -o udev
+blkid -o export
+blkid -o /O
+blkid -o
+blkid -p
+blkid -S /file
+blkid -S
+blkid -t NAME
+blkid -t value
+blkid -t TYPE
+blkid -t LABEL
+blkid -t UUID
+blkid -t
+blkid -u /dev/sda1
+blkid -u
+blkid -V
+blkid -v
+blkid --info /dev/sda
+blkid --info  /dev/loop233
+btrfs-find-root
+blkdiscard /dev/sda
+blkdiscard  /dev/loop233
+blkdiscard /dev/sda -l blkdiscard
+blkdiscard  /dev/loop233 -l blkdiscard
+blkdiscard /dev/sda -l
+blkdiscard  /dev/loop233 -l
+blkdiscard /dev/sda -p blkdiscard
+blkdiscard  /dev/loop233 -p blkdiscard
+blkdiscard /dev/sda -p
+blkdiscard  /dev/loop233 -p
+blkdiscard /dev/sda -s
+blkdiscard  /dev/loop233 -s
+blkdiscard /dev/sda -z
+blkdiscard  /dev/loop233 -z
+blkdiscard /dev/sda -v
+blkdiscard  /dev/loop233 -v
+blkdiscard /dev/sda -V
+blkdiscard  /dev/loop233 -V
+blkdiscard /dev/sda -h
+blkdiscard  /dev/loop233 -h
+audispd-zos-remote
+btrace /dev/sda
+btrace  /dev/loop233
+btrace /dev/sda -s
+btrace  /dev/loop233 -s
+btrace /dev/sda -t
+btrace  /dev/loop233 -t
+btrace /dev/sda -w
+btrace  /dev/loop233 -w
+btrace /dev/sda -r
+btrace  /dev/loop233 -r
+btrace /dev/sda -a <
+btrace  /dev/loop233 -a <
+btrace /dev/sda -a dev
+btrace  /dev/loop233 -a dev
+btrace /dev/sda -a /dev/sda
+btrace  /dev/loop233 -a /dev/sda
+btrace /dev/sda -a blkparse
+btrace  /dev/loop233 -a blkparse
+btrace /dev/sda -a 2006
+btrace  /dev/loop233 -a 2006
+btrace /dev/sda -a //www.gnu.org/licenses/gpl.html
+btrace  /dev/loop233 -a //www.gnu.org/licenses/gpl.html
+btrace /dev/sda -a /usr/share/common
+btrace  /dev/loop233 -a /usr/share/common
+btrace /dev/sda -a /GPL
+btrace  /dev/loop233 -a /GPL
+btrace /dev/sda -a 1
+btrace  /dev/loop233 -a 1
+btrace /dev/sda -a 8
+btrace  /dev/loop233 -a 8
+btrace /dev/sda -a
+btrace  /dev/loop233 -a
+blkzone /dev/sda
+blkzone  /dev/loop233
+blkzone /dev/sda -o 512
+blkzone  /dev/loop233 -o 512
+blkzone /dev/sda -o
+blkzone  /dev/loop233 -o
+blkzone /dev/sda -l offset
+blkzone  /dev/loop233 -l offset
+blkzone /dev/sda -l
+blkzone  /dev/loop233 -l
+blkzone /dev/sda -c offset
+blkzone  /dev/loop233 -c offset
+blkzone /dev/sda -c
+blkzone  /dev/loop233 -c
+blkzone /dev/sda -v
+blkzone  /dev/loop233 -v
+blkzone /dev/sda -V
+blkzone  /dev/loop233 -V
+blkzone /dev/sda -h
+blkzone  /dev/loop233 -h
+astraceroute
+astraceroute -p 80
+astraceroute -p
+astraceroute -f 1
+astraceroute -f 30
+astraceroute -f
+astraceroute -m 1
+astraceroute -m 30
+astraceroute -m
+astraceroute -q 2
+astraceroute -q
+astraceroute -x 3
+astraceroute -x
+astraceroute -4
+astraceroute -6
+astraceroute -n
+astraceroute -u
+astraceroute -L
+astraceroute -N
+astraceroute -S
+astraceroute -A
+astraceroute -F
+astraceroute -P
+astraceroute -U
+astraceroute -R
+astraceroute -E
+astraceroute -G
+astraceroute -Z
+astraceroute -v
+astraceroute -h
+astraceroute -i eth0 -N -S -H netsniff-ng.org
+astraceroute -6 -i eth0 -S -E -N -H www.6bone.net
+astraceroute -i eth0 -N -F -H netsniff-ng.org
+astraceroute -i eth0 -N -FPU -H netsniff-ng.org
+astraceroute -i eth0 -N -H netsniff-ng.org -X censor-me -Z
+blktrace -d /dev/sda
+blktrace -d  /dev/loop233
+addpart /dev/sda 0 0 0
+addpart /dev/sda 0 0 1
+addpart /dev/sda 0 0 63
+addpart /dev/sda 0 0 121212
+addpart /dev/sda 0 0 65534
+addpart /dev/sda 0 1 0
+addpart /dev/sda 0 1 1
+addpart /dev/sda 0 1 63
+addpart /dev/sda 0 1 121212
+addpart /dev/sda 0 1 65534
+addpart /dev/sda 0 63 0
+addpart /dev/sda 0 63 1
+addpart /dev/sda 0 63 63
+addpart /dev/sda 0 63 121212
+addpart /dev/sda 0 63 65534
+addpart /dev/sda 0 121212 0
+addpart /dev/sda 0 121212 1
+addpart /dev/sda 0 121212 63
+addpart /dev/sda 0 121212 121212
+addpart /dev/sda 0 121212 65534
+addpart /dev/sda 0 65534 0
+addpart /dev/sda 0 65534 1
+addpart /dev/sda 0 65534 63
+addpart /dev/sda 0 65534 121212
+addpart /dev/sda 0 65534 65534
+addpart /dev/sda 1 0 0
+addpart /dev/sda 1 0 1
+addpart /dev/sda 1 0 63
+addpart /dev/sda 1 0 121212
+addpart /dev/sda 1 0 65534
+addpart /dev/sda 1 1 0
+addpart /dev/sda 1 1 1
+addpart /dev/sda 1 1 63
+addpart /dev/sda 1 1 121212
+addpart /dev/sda 1 1 65534
+addpart /dev/sda 1 63 0
+addpart /dev/sda 1 63 1
+addpart /dev/sda 1 63 63
+addpart /dev/sda 1 63 121212
+addpart /dev/sda 1 63 65534
+addpart /dev/sda 1 121212 0
+addpart /dev/sda 1 121212 1
+addpart /dev/sda 1 121212 63
+addpart /dev/sda 1 121212 121212
+addpart /dev/sda 1 121212 65534
+addpart /dev/sda 1 65534 0
+addpart /dev/sda 1 65534 1
+addpart /dev/sda 1 65534 63
+addpart /dev/sda 1 65534 121212
+addpart /dev/sda 1 65534 65534
+addpart /dev/sda 63 0 0
+addpart /dev/sda 63 0 1
+addpart /dev/sda 63 0 63
+addpart /dev/sda 63 0 121212
+addpart /dev/sda 63 0 65534
+addpart /dev/sda 63 1 0
+addpart /dev/sda 63 1 1
+addpart /dev/sda 63 1 63
+addpart /dev/sda 63 1 121212
+addpart /dev/sda 63 1 65534
+addpart /dev/sda 63 63 0
+addpart /dev/sda 63 63 1
+addpart /dev/sda 63 63 63
+addpart /dev/sda 63 63 121212
+addpart /dev/sda 63 63 65534
+addpart /dev/sda 63 121212 0
+addpart /dev/sda 63 121212 1
+addpart /dev/sda 63 121212 63
+addpart /dev/sda 63 121212 121212
+addpart /dev/sda 63 121212 65534
+addpart /dev/sda 63 65534 0
+addpart /dev/sda 63 65534 1
+addpart /dev/sda 63 65534 63
+addpart /dev/sda 63 65534 121212
+addpart /dev/sda 63 65534 65534
+addpart /dev/sda 121212 0 0
+addpart /dev/sda 121212 0 1
+addpart /dev/sda 121212 0 63
+addpart /dev/sda 121212 0 121212
+addpart /dev/sda 121212 0 65534
+addpart /dev/sda 121212 1 0
+addpart /dev/sda 121212 1 1
+addpart /dev/sda 121212 1 63
+addpart /dev/sda 121212 1 121212
+addpart /dev/sda 121212 1 65534
+addpart /dev/sda 121212 63 0
+addpart /dev/sda 121212 63 1
+addpart /dev/sda 121212 63 63
+addpart /dev/sda 121212 63 121212
+addpart /dev/sda 121212 63 65534
+addpart /dev/sda 121212 121212 0
+addpart /dev/sda 121212 121212 1
+addpart /dev/sda 121212 121212 63
+addpart /dev/sda 121212 121212 121212
+addpart /dev/sda 121212 121212 65534
+addpart /dev/sda 121212 65534 0
+addpart /dev/sda 121212 65534 1
+addpart /dev/sda 121212 65534 63
+addpart /dev/sda 121212 65534 121212
+addpart /dev/sda 121212 65534 65534
+addpart /dev/sda 65534 0 0
+addpart /dev/sda 65534 0 1
+addpart /dev/sda 65534 0 63
+addpart /dev/sda 65534 0 121212
+addpart /dev/sda 65534 0 65534
+addpart /dev/sda 65534 1 0
+addpart /dev/sda 65534 1 1
+addpart /dev/sda 65534 1 63
+addpart /dev/sda 65534 1 121212
+addpart /dev/sda 65534 1 65534
+addpart /dev/sda 65534 63 0
+addpart /dev/sda 65534 63 1
+addpart /dev/sda 65534 63 63
+addpart /dev/sda 65534 63 121212
+addpart /dev/sda 65534 63 65534
+addpart /dev/sda 65534 121212 0
+addpart /dev/sda 65534 121212 1
+addpart /dev/sda 65534 121212 63
+addpart /dev/sda 65534 121212 121212
+addpart /dev/sda 65534 121212 65534
+addpart /dev/sda 65534 65534 0
+addpart /dev/sda 65534 65534 1
+addpart /dev/sda 65534 65534 63
+addpart /dev/sda 65534 65534 121212
+addpart /dev/sda 65534 65534 65534
+addpart  /dev/loop233 0 0 0
+addpart  /dev/loop233 0 0 1
+addpart  /dev/loop233 0 0 63
+addpart  /dev/loop233 0 0 121212
+addpart  /dev/loop233 0 0 65534
+addpart  /dev/loop233 0 1 0
+addpart  /dev/loop233 0 1 1
+addpart  /dev/loop233 0 1 63
+addpart  /dev/loop233 0 1 121212
+addpart  /dev/loop233 0 1 65534
+addpart  /dev/loop233 0 63 0
+addpart  /dev/loop233 0 63 1
+addpart  /dev/loop233 0 63 63
+addpart  /dev/loop233 0 63 121212
+addpart  /dev/loop233 0 63 65534
+addpart  /dev/loop233 0 121212 0
+addpart  /dev/loop233 0 121212 1
+addpart  /dev/loop233 0 121212 63
+addpart  /dev/loop233 0 121212 121212
+addpart  /dev/loop233 0 121212 65534
+addpart  /dev/loop233 0 65534 0
+addpart  /dev/loop233 0 65534 1
+addpart  /dev/loop233 0 65534 63
+addpart  /dev/loop233 0 65534 121212
+addpart  /dev/loop233 0 65534 65534
+addpart  /dev/loop233 1 0 0
+addpart  /dev/loop233 1 0 1
+addpart  /dev/loop233 1 0 63
+addpart  /dev/loop233 1 0 121212
+addpart  /dev/loop233 1 0 65534
+addpart  /dev/loop233 1 1 0
+addpart  /dev/loop233 1 1 1
+addpart  /dev/loop233 1 1 63
+addpart  /dev/loop233 1 1 121212
+addpart  /dev/loop233 1 1 65534
+addpart  /dev/loop233 1 63 0
+addpart  /dev/loop233 1 63 1
+addpart  /dev/loop233 1 63 63
+addpart  /dev/loop233 1 63 121212
+addpart  /dev/loop233 1 63 65534
+addpart  /dev/loop233 1 121212 0
+addpart  /dev/loop233 1 121212 1
+addpart  /dev/loop233 1 121212 63
+addpart  /dev/loop233 1 121212 121212
+addpart  /dev/loop233 1 121212 65534
+addpart  /dev/loop233 1 65534 0
+addpart  /dev/loop233 1 65534 1
+addpart  /dev/loop233 1 65534 63
+addpart  /dev/loop233 1 65534 121212
+addpart  /dev/loop233 1 65534 65534
+addpart  /dev/loop233 63 0 0
+addpart  /dev/loop233 63 0 1
+addpart  /dev/loop233 63 0 63
+addpart  /dev/loop233 63 0 121212
+addpart  /dev/loop233 63 0 65534
+addpart  /dev/loop233 63 1 0
+addpart  /dev/loop233 63 1 1
+addpart  /dev/loop233 63 1 63
+addpart  /dev/loop233 63 1 121212
+addpart  /dev/loop233 63 1 65534
+addpart  /dev/loop233 63 63 0
+addpart  /dev/loop233 63 63 1
+addpart  /dev/loop233 63 63 63
+addpart  /dev/loop233 63 63 121212
+addpart  /dev/loop233 63 63 65534
+addpart  /dev/loop233 63 121212 0
+addpart  /dev/loop233 63 121212 1
+addpart  /dev/loop233 63 121212 63
+addpart  /dev/loop233 63 121212 121212
+addpart  /dev/loop233 63 121212 65534
+addpart  /dev/loop233 63 65534 0
+addpart  /dev/loop233 63 65534 1
+addpart  /dev/loop233 63 65534 63
+addpart  /dev/loop233 63 65534 121212
+addpart  /dev/loop233 63 65534 65534
+addpart  /dev/loop233 121212 0 0
+addpart  /dev/loop233 121212 0 1
+addpart  /dev/loop233 121212 0 63
+addpart  /dev/loop233 121212 0 121212
+addpart  /dev/loop233 121212 0 65534
+addpart  /dev/loop233 121212 1 0
+addpart  /dev/loop233 121212 1 1
+addpart  /dev/loop233 121212 1 63
+addpart  /dev/loop233 121212 1 121212
+addpart  /dev/loop233 121212 1 65534
+addpart  /dev/loop233 121212 63 0
+addpart  /dev/loop233 121212 63 1
+addpart  /dev/loop233 121212 63 63
+addpart  /dev/loop233 121212 63 121212
+addpart  /dev/loop233 121212 63 65534
+addpart  /dev/loop233 121212 121212 0
+addpart  /dev/loop233 121212 121212 1
+addpart  /dev/loop233 121212 121212 63
+addpart  /dev/loop233 121212 121212 121212
+addpart  /dev/loop233 121212 121212 65534
+addpart  /dev/loop233 121212 65534 0
+addpart  /dev/loop233 121212 65534 1
+addpart  /dev/loop233 121212 65534 63
+addpart  /dev/loop233 121212 65534 121212
+addpart  /dev/loop233 121212 65534 65534
+addpart  /dev/loop233 65534 0 0
+addpart  /dev/loop233 65534 0 1
+addpart  /dev/loop233 65534 0 63
+addpart  /dev/loop233 65534 0 121212
+addpart  /dev/loop233 65534 0 65534
+addpart  /dev/loop233 65534 1 0
+addpart  /dev/loop233 65534 1 1
+addpart  /dev/loop233 65534 1 63
+addpart  /dev/loop233 65534 1 121212
+addpart  /dev/loop233 65534 1 65534
+addpart  /dev/loop233 65534 63 0
+addpart  /dev/loop233 65534 63 1
+addpart  /dev/loop233 65534 63 63
+addpart  /dev/loop233 65534 63 121212
+addpart  /dev/loop233 65534 63 65534
+addpart  /dev/loop233 65534 121212 0
+addpart  /dev/loop233 65534 121212 1
+addpart  /dev/loop233 65534 121212 63
+addpart  /dev/loop233 65534 121212 121212
+addpart  /dev/loop233 65534 121212 65534
+addpart  /dev/loop233 65534 65534 0
+addpart  /dev/loop233 65534 65534 1
+addpart  /dev/loop233 65534 65534 63
+addpart  /dev/loop233 65534 65534 121212
+addpart  /dev/loop233 65534 65534 65534
+arptables  -  chain rule-specification
+arptables  -  chain rulenum rule-specification
+arptables  -D chain rulenum
+arptables  -
+arptables  -    -P chain target
+cryptsetup-reencrypt <options> <device>
+cryptsetup-reencrypt /dev/sdb1
+cryptsetup-reencrypt /dev/sdb1 -c aes-xts-plain64
+cryptsetup-reencrypt /dev/sdb1 --new --reduce-device-size 4096S
+cryptsetup-reencrypt /dev/sdb1 --decrypt
+chmem
+chmem -b
+chmem -d
+chmem -e
+chmem -z
+chmem -h
+chmem -v
+chmem -V
+chmem --enable 1024
+chmem -e 2g
+chmem --disable 0x00000000e4000000-0x00000000f3ffffff
+chmem -b -d 10
+clockdiff 127.0.0.1
+clockdiff 192.168.119.138
+clockdiff 182.61.200.7
+clockdiff 127.0.0.1 -o
+clockdiff 192.168.119.138 -o
+clockdiff 182.61.200.7 -o
+clockdiff 127.0.0.1 -o1
+clockdiff 192.168.119.138 -o1
+clockdiff 182.61.200.7 -o1
+clockdiff 127.0.0.1 -V
+clockdiff 192.168.119.138 -V
+clockdiff 182.61.200.7 -V
+ausearch
+ausearch -a event ID
+ausearch -a 329
+ausearch -a 2401771
+ausearch -a 1116360555
+ausearch -a
+ausearch --arch 32
+ausearch --arch b32
+ausearch --arch 64
+ausearch --arch b64.
+ausearch --arch
+ausearch -c comm name
+ausearch -c
+ausearch --debug
+ausearch --checkpoint 2
+ausearch --checkpoint EXIT STATUS
+ausearch --checkpoint
+ausearch -e exit code or errno
+ausearch -e
+ausearch --escape raw
+ausearch --escape tty
+ausearch --escape shell
+ausearch --escape shell_quote
+ausearch --escape default
+ausearch --escape interpret
+ausearch --escape csv
+ausearch --escape text
+ausearch --escape
+ausearch --extra-keys
+ausearch --extra-labels
+ausearch --extra-obj2
+ausearch --extra-time
+ausearch -f filename
+ausearch -f
+ausearch --format raw
+ausearch --format tty
+ausearch --format shell
+ausearch --format shell_quote
+ausearch --format default
+ausearch --format interpret
+ausearch --format csv
+ausearch --format text
+ausearch --format
+ausearch -ga group ID
+ausearch -ga
+ausearch -ge effective group ID
+ausearch -ge
+ausearch -gi group ID
+ausearch -gi
+ausearch -h
+ausearch -hn host name
+ausearch -hn
+ausearch -i
+ausearch -if file
+ausearch -if directory
+ausearch -if
+ausearch --input-logs
+ausearch --just-one
+ausearch -k key string
+ausearch -k
+ausearch -l
+ausearch -m message type
+ausearch -m comma separated list of message types
+ausearch -m ALL
+ausearch -m
+ausearch -n
+ausearch -o tcontext
+ausearch -o scontext
+ausearch -o /subject
+ausearch -o /object
+ausearch -o
+ausearch -p process ID
+ausearch -p
+ausearch -pp parent process ID
+ausearch -pp
+ausearch -r
+ausearch -sc syscall
+ausearch -sc
+ausearch -se tcontext
+ausearch -se scontext
+ausearch -se /subject
+ausearch -se /object
+ausearch -se
+ausearch -su tcontext
+ausearch -su scontext
+ausearch -su /subject
+ausearch -su /object
+ausearch -su
+ausearch -sv success value
+ausearch -sv yes
+ausearch -sv no
+ausearch -sv
+ausearch -te date '+%x'.
+ausearch -te today
+ausearch -te now
+ausearch -te /03/2009.
+ausearch -te 2009
+ausearch -te 09
+ausearch -te 24
+ausearch -te 03
+ausearch -te 00
+ausearch -te 18
+ausearch -te recent
+ausearch -te boot
+ausearch -te yesterday
+ausearch -te this-week
+ausearch -te week-ago
+ausearch -te this-month
+ausearch -te this-year
+ausearch -te Now
+ausearch -te Recent
+ausearch -te 10
+ausearch -te Boot
+ausearch -te Today
+ausearch -te Yesterday
+ausearch -te This-week
+ausearch -te localtime
+ausearch -te Week-ago
+ausearch -te 7
+ausearch -te This-month
+ausearch -te This-year
+ausearch -te
+ausearch -ts date '+%x'.
+ausearch -ts today
+ausearch -ts midnight
+ausearch -ts /03/2009.
+ausearch -ts 2009
+ausearch -ts 09
+ausearch -ts 24
+ausearch -ts 03
+ausearch -ts 00
+ausearch -ts 18
+ausearch -ts now
+ausearch -ts recent
+ausearch -ts boot
+ausearch -ts yesterday
+ausearch -ts this-week
+ausearch -ts week-ago
+ausearch -ts this-month
+ausearch -ts this-year
+ausearch -ts checkpoint
+ausearch -ts Boot
+ausearch -ts Today
+ausearch -ts Recent
+ausearch -ts 10
+ausearch -ts Yesterday
+ausearch -ts This-week
+ausearch -ts localtime
+ausearch -ts Week-ago
+ausearch -ts 7
+ausearch -ts This-month
+ausearch -ts This-year
+ausearch -ts ausearch
+ausearch -ts 12
+ausearch -ts 11
+ausearch -ts /etc/audit/auditd_checkpoint.txt
+ausearch -ts
+ausearch -ua user ID
+ausearch -ua
+ausearch -ue effective user ID
+ausearch -ue
+ausearch -ui user ID
+ausearch -ui
+ausearch -ul login user ID
+ausearch -ul
+ausearch -uu guest UUID
+ausearch -uu
+ausearch -v
+ausearch -vm guest name
+ausearch -vm
+ausearch -w
+btrfs-select-super -s number
+auditctl
+auditctl -b 64
+auditctl -b
+auditctl --backlog_wait_time 60
+auditctl --backlog_wait_time 10
+auditctl --backlog_wait_time
+auditctl -c
+auditctl -D
+auditctl -e
+auditctl -f
+auditctl -h
+auditctl -i
+auditctl --loginuid-immutable
+auditctl -r /sec
+auditctl -r 0
+auditctl -r
+auditctl --reset-lost
+auditctl -R 1
+auditctl -R
+auditctl -t
+auditctl -s
+auditctl -l
+auditctl -v
+auditctl -a always,exit -S all -F pid=1005
+auditctl -a always,exit -S openat -F auid=510
+auditctl -a always,exit -S openat -F success=0
+auditctl -w /etc/shadow -p wa
+auditctl -w /etc/ -p wa
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid
+cfdisk
+cfdisk -h
+cfdisk -L auto
+cfdisk -L never
+cfdisk -L always
+cfdisk -L
+cfdisk -V
+cfdisk -z
+convertquota -e
+convertquota -f ,
+crash
+crash -h option
+crash -h crash
+crash -h
+crash --help option
+crash --help crash
+crash --help
+crash -s
+crash -d crash
+crash -d
+crash -S
+crash -e readline(3)
+crash -e
+crash -f
+crash -k
+crash -g vmlinux
+crash -g xen-syms
+crash -g
+crash -t
+crash -L
+crash -m /pairs
+crash -m 2
+crash -m 6
+crash -m 11
+crash -m 5
+crash -m 14
+crash -m 4
+crash -m
+crash --machdep /pairs
+crash --machdep 2
+crash --machdep 6
+crash --machdep 11
+crash --machdep 5
+crash --machdep 14
+crash --machdep 4
+crash --machdep
+crash -x
+crash --active
+crash --buildinfo
+crash --memory_module crash.ko
+crash --memory_module /dev/crash
+crash --memory_module
+crash --memory_device /dev/crash
+crash --memory_device  /dev/mem
+crash --memory_device /proc/kcore
+crash --memory_device
+crash --log /proc/vmcore
+crash --log
+crash --no_kallsyms
+crash --no_modules
+crash --no_ikconf
+crash --no_data_debug
+crash --no_kmem_cache
+crash --no_elf_notes
+crash --kmem_cache_delay
+crash --readnow
+crash --smp
+crash -v
+crash --osrelease /proc/vmcore
+crash --osrelease
+crash --hyper
+crash --zero_excluded
+crash --no_panic
+crash --more
+crash --less
+crash --hex
+crash --dec
+crash --CRASHPAGER
+crash --no_scroll
+crash --no_strip
+crash --no_crashrc
+crash --mod mod -S
+crash --mod
+crash --kaslr CONFIG_RANDOMIZE_BASE
+crash --kaslr
+crash --reloc CONFIG_PHYSICAL_START
+crash --reloc CONFIG_PHYSICAL_ALIGN
+crash --reloc /O
+crash --reloc
+crash --hash 32768
+crash --hash
+crash --minimal
+crash --kvmhost 64
+crash --kvmhost 32
+crash --kvmhost
+crash --kvmio CONFIG_PHYSICAL_START
+crash --kvmio CONFIG_PHYSICAL_ALIGN
+crash --kvmio /O
+crash --kvmio
+chkcon policy_file context
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+avcstat
+avcstat -c
+avcstat -f
+aureport
+aureport -au
+aureport -a
+aureport --comm
+aureport -c
+aureport -cr
+aureport -e
+aureport --escape raw
+aureport --escape tty
+aureport --escape shell
+aureport --escape shell_quote
+aureport --escape
+aureport -f
+aureport --failed
+aureport -h
+aureport --help
+aureport -i
+aureport -if file
+aureport -if directory
+aureport -if
+aureport --input-logs
+aureport --integrity
+aureport -k
+aureport -l
+aureport -m
+aureport -ma
+aureport -n
+aureport --node node name
+aureport --node
+aureport -nc
+aureport -p
+aureport -r
+aureport -s
+aureport --success
+aureport --summary
+aureport -t
+aureport --tty
+aureport -te today
+aureport -te now
+aureport -te /03/2009.
+aureport -te 2009
+aureport -te 09
+aureport -te 24
+aureport -te 03
+aureport -te 00
+aureport -te 18
+aureport -te recent
+aureport -te boot
+aureport -te yesterday
+aureport -te this-week
+aureport -te week-ago
+aureport -te this-month
+aureport -te this-year
+aureport -te Now
+aureport -te Recent
+aureport -te 10
+aureport -te Boot
+aureport -te Today
+aureport -te Yesterday
+aureport -te This-week
+aureport -te localtime
+aureport -te Week-ago
+aureport -te 7
+aureport -te This-month
+aureport -te This-year
+aureport -te
+aureport -tm
+aureport -ts today
+aureport -ts midnight
+aureport -ts /03/2009.
+aureport -ts 2009
+aureport -ts 09
+aureport -ts 24
+aureport -ts 03
+aureport -ts 00
+aureport -ts 18
+aureport -ts now
+aureport -ts recent
+aureport -ts boot
+aureport -ts yesterday
+aureport -ts this-week
+aureport -ts week-ago
+aureport -ts this-month
+aureport -ts this-year
+aureport -ts Boot
+aureport -ts Today
+aureport -ts Recent
+aureport -ts 10
+aureport -ts Yesterday
+aureport -ts This-week
+aureport -ts localtime
+aureport -ts Week-ago
+aureport -ts 7
+aureport -ts This-month
+aureport -ts This-year
+aureport -ts
+aureport -u
+aureport -v
+aureport --virt
+aureport -x
+btrfs-image
+chpasswd
+chpasswd -e
+chpasswd -h
+chpasswd -m
+chpasswd -s 5000
+chpasswd -s 0
+chpasswd -s 1000
+chpasswd -s 999
+chpasswd -s /etc/login.defs.
+chpasswd -s
+automount
+automount -h
+automount -p
+automount -t 5
+automount -t 10
+automount -t 60
+automount -t
+automount -M 5
+automount -M 10
+automount -M 60
+automount -M
+automount -n 5
+automount -n 10
+automount -n 60
+automount -n
+automount -v
+automount -d
+automount -Dvariable=value
+automount -S
+automount -f
+automount -r
+automount -m
+automount -O
+automount -V
+automount -l
+automount -C
+automount -F
+automount -+
+cryptsetup <options> <action> <action args>
+cryptsetup <options> <action> <action args> --verbose
+cryptsetup <options> <action> <action args> --type BASIC COMMANDS
+cryptsetup <options> <action> <action args> --type
+cryptsetup <options> <action> <action args> --hash open
+cryptsetup <options> <action> <action args> --hash luksFormat
+cryptsetup <options> <action> <action args> --hash 160
+cryptsetup <options> <action> <action args> --hash "crc32"
+cryptsetup <options> <action> <action args> --hash "ripemd160"
+cryptsetup <options> <action> <action args> --hash open --type plain
+cryptsetup <options> <action> <action args> --hash "sha1"
+cryptsetup <options> <action> <action args> --hash cryptsetup --help
+cryptsetup <options> <action> <action args> --hash
+cryptsetup <options> <action> <action args> --cipher cryptsetup --help
+cryptsetup <options> <action> <action args> --cipher 512
+cryptsetup <options> <action> <action args> --cipher 6
+cryptsetup <options> <action> <action args> --cipher 33
+cryptsetup <options> <action> <action args> --cipher 24
+cryptsetup <options> <action> <action args> --cipher
+cryptsetup <options> <action> <action args> --verify-passphrase
+cryptsetup <options> <action> <action args> --key-file luksFormat
+cryptsetup <options> <action> <action args> --key-file luksAddKey
+cryptsetup <options> <action> <action args> --key-file NOTES ON PASSPHRASE PROCESSING
+cryptsetup <options> <action> <action args> --key-file
+cryptsetup <options> <action> <action args> --keyfile-offset luksAddKey
+cryptsetup <options> <action> <action args> --keyfile-offset
+cryptsetup <options> <action> <action args> --keyfile-size luksAddKey
+cryptsetup <options> <action> <action args> --keyfile-size
+cryptsetup <options> <action> <action args> --new-keyfile-offset luksAddKey
+cryptsetup <options> <action> <action args> --new-keyfile-offset
+cryptsetup <options> <action> <action args> --new-keyfile-size luksAddKey
+cryptsetup <options> <action> <action args> --new-keyfile-size
+cryptsetup <options> <action> <action args> --master-key-file
+cryptsetup <options> <action> <action args> --dump-master-key
+cryptsetup <options> <action> <action args> --json-file
+cryptsetup <options> <action> <action args> --use-random
+cryptsetup <options> <action> <action args> --use-urandom
+cryptsetup <options> <action> <action args> --key-slot
+cryptsetup <options> <action> <action args> --key-size
+cryptsetup <options> <action> <action args> --size
+cryptsetup <options> <action> <action args> --offset
+cryptsetup <options> <action> <action args> --skip
+cryptsetup <options> <action> <action args> --device-size reencrypt
+cryptsetup <options> <action> <action args> --device-size resize
+cryptsetup <options> <action> <action args> --device-size /M/G/T
+cryptsetup <options> <action> <action args> --device-size /MB/GB/TB
+cryptsetup <options> <action> <action args> --device-size 1000
+cryptsetup <options> <action> <action args> --device-size 512
+cryptsetup <options> <action> <action args> --device-size 1024
+cryptsetup <options> <action> <action args> --device-size WARNING:
+cryptsetup <options> <action> <action args> --device-size
+cryptsetup <options> <action> <action args> --readonly
+cryptsetup <options> <action> <action args> --shared
+cryptsetup <options> <action> <action args> --pbkdf pbkdf2
+cryptsetup <options> <action> <action args> --pbkdf argon2i
+cryptsetup <options> <action> <action args> --pbkdf argon2id
+cryptsetup <options> <action> <action args> --pbkdf //www.cryptolux.org/index.php/Argon2
+cryptsetup <options> <action> <action args> --pbkdf cryptsetup --help
+cryptsetup <options> <action> <action args> --pbkdf /id
+cryptsetup <options> <action> <action args> --pbkdf 4
+cryptsetup <options> <action> <action args> --pbkdf luksDump
+cryptsetup <options> <action> <action args> --pbkdf NOTE:
+cryptsetup <options> <action> <action args> --pbkdf
+cryptsetup <options> <action> <action args> --iter-time
+cryptsetup <options> <action> <action args> --pbkdf-memory /id
+cryptsetup <options> <action> <action args> --pbkdf-memory 4
+cryptsetup <options> <action> <action args> --pbkdf-memory
+cryptsetup <options> <action> <action args> --pbkdf-parallel /id
+cryptsetup <options> <action> <action args> --pbkdf-parallel 4
+cryptsetup <options> <action> <action args> --pbkdf-parallel
+cryptsetup <options> <action> <action args> --pbkdf-force-iterations /LUKS2
+cryptsetup <options> <action> <action args> --pbkdf-force-iterations
+cryptsetup <options> <action> <action args> --batch-mode
+cryptsetup <options> <action> <action args> --timeout
+cryptsetup <options> <action> <action args> --tries
+cryptsetup <options> <action> <action args> --align-payload value
+cryptsetup <options> <action> <action args> --align-payload 512
+cryptsetup <options> <action> <action args> --align-payload luksFormat
+cryptsetup <options> <action> <action args> --align-payload 2048
+cryptsetup <options> <action> <action args> --align-payload WARNING:
+cryptsetup <options> <action> <action args> --align-payload
+cryptsetup <options> <action> <action args> --uuid luksFormat
+cryptsetup <options> <action> <action args> --uuid 1234
+cryptsetup <options> <action> <action args> --uuid 12345678
+cryptsetup <options> <action> <action args> --uuid
+cryptsetup <options> <action> <action args> --allow-discards
+cryptsetup <options> <action> <action args> --perf-same_cpu_crypt
+cryptsetup <options> <action> <action args> --perf-submit_from_crypt_cpus
+cryptsetup <options> <action> <action args> --test-passphrase
+cryptsetup <options> <action> <action args> --header
+cryptsetup <options> <action> <action args> --header-backup-file luksHeaderBackup
+cryptsetup <options> <action> <action args> --header-backup-file luksHeaderRestore
+cryptsetup <options> <action> <action args> --header-backup-file
+cryptsetup <options> <action> <action args> --force-password
+cryptsetup <options> <action> <action args> --deferred
+cryptsetup <options> <action> <action args> --disable-locks
+cryptsetup <options> <action> <action args> --disable-keyring
+cryptsetup <options> <action> <action args> --key-description token
+cryptsetup <options> <action> <action args> --key-description
+cryptsetup <options> <action> <action args> --priority prefer
+cryptsetup <options> <action> <action args> --priority normal
+cryptsetup <options> <action> <action args> --priority ignored
+cryptsetup <options> <action> <action args> --priority
+cryptsetup <options> <action> <action args> --token-id
+cryptsetup <options> <action> <action args> --token-only
+cryptsetup <options> <action> <action args> --sector-size 4096
+cryptsetup <options> <action> <action args> --sector-size 512
+cryptsetup <options> <action> <action args> --sector-size
+cryptsetup <options> <action> <action args> --persistent
+cryptsetup <options> <action> <action args> --refresh
+cryptsetup <options> <action> <action args> --integrity WARNING: This extension is EXPERIMENTAL
+cryptsetup <options> <action> <action args> --integrity 12
+cryptsetup <options> <action> <action args> --integrity 4
+cryptsetup <options> <action> <action args> --integrity AUTHENTICATED DISK ENCRYPTION
+cryptsetup <options> <action> <action args> --integrity
+cryptsetup <options> <action> <action args> --luks2-metadata-size 256
+cryptsetup <options> <action> <action args> --luks2-metadata-size 16
+cryptsetup <options> <action> <action args> --luks2-metadata-size 128
+cryptsetup <options> <action> <action args> --luks2-metadata-size 4096
+cryptsetup <options> <action> <action args> --luks2-metadata-size 1024
+cryptsetup <options> <action> <action args> --luks2-metadata-size 64
+cryptsetup <options> <action> <action args> --luks2-metadata-size 512
+cryptsetup <options> <action> <action args> --luks2-metadata-size 2048
+cryptsetup <options> <action> <action args> --luks2-metadata-size 32
+cryptsetup <options> <action> <action args> --luks2-metadata-size
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 256
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 16
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 128
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 4096
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 1024
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 64
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 512
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 2048
+cryptsetup <options> <action> <action args> --luks2-keyslots-size 32
+cryptsetup <options> <action> <action args> --luks2-keyslots-size
+cryptsetup <options> <action> <action args> --integrity-no-journal
+cryptsetup <options> <action> <action args> --integrity-no-wipe
+cryptsetup <options> <action> <action args> --unbound
+cryptsetup <options> <action> <action args> --tcrypt-hidden
+cryptsetup <options> <action> <action args> --veracrypt
+cryptsetup <options> <action> <action args> --veracrypt-pim
+cryptsetup <options> <action> <action args> --serialize-memory-hard-pbkdf
+cryptsetup <options> <action> <action args> --encrypt
+cryptsetup <options> <action> <action args> --decrypt
+cryptsetup <options> <action> <action args> --init-only
+cryptsetup <options> <action> <action args> --resume-only
+cryptsetup <options> <action> <action args> --resilience checksum
+cryptsetup <options> <action> <action args> --resilience journal
+cryptsetup <options> <action> <action args> --resilience none
+cryptsetup <options> <action> <action args> --resilience
+cryptsetup <options> <action> <action args> --hotzone-size 256
+cryptsetup <options> <action> <action args> --hotzone-size 16
+cryptsetup <options> <action> <action args> --hotzone-size 128
+cryptsetup <options> <action> <action args> --hotzone-size 4096
+cryptsetup <options> <action> <action args> --hotzone-size 1024
+cryptsetup <options> <action> <action args> --hotzone-size 64
+cryptsetup <options> <action> <action args> --hotzone-size 512
+cryptsetup <options> <action> <action args> --hotzone-size 2048
+cryptsetup <options> <action> <action args> --hotzone-size 32
+cryptsetup <options> <action> <action args> --hotzone-size
+cryptsetup <options> <action> <action args> --reduce-device-size 256
+cryptsetup <options> <action> <action args> --reduce-device-size 16
+cryptsetup <options> <action> <action args> --reduce-device-size 128
+cryptsetup <options> <action> <action args> --reduce-device-size 4096
+cryptsetup <options> <action> <action args> --reduce-device-size 1024
+cryptsetup <options> <action> <action args> --reduce-device-size 64
+cryptsetup <options> <action> <action args> --reduce-device-size 512
+cryptsetup <options> <action> <action args> --reduce-device-size 2048
+cryptsetup <options> <action> <action args> --reduce-device-size 32
+cryptsetup <options> <action> <action args> --reduce-device-size
+cryptsetup <options> <action> <action args> --version
+cryptsetup <options> <action> <action args> --usage
+cryptsetup <options> <action> <action args> --help
+arptables-restore
+captest
+captest --drop-all
+captest --drop-caps
+captest --id
+captest --init-grp
+captest --text
+captest --lock
+blockdev /dev/sda
+blockdev  /dev/loop233
+blockdev /dev/sda -q
+blockdev  /dev/loop233 -q
+blockdev /dev/sda -v
+blockdev  /dev/loop233 -v
+blockdev /dev/sda --report
+blockdev  /dev/loop233 --report
+blockdev /dev/sda -h
+blockdev  /dev/loop233 -h
+blockdev /dev/sda -V
+blockdev  /dev/loop233 -V
+blockdev --report
+blockdev -h
+blockdev -V
+autrace /bin/ls
+autrace /bin/ls -r
+autrace /bin/ls /tmp
+autrace -r /bin/ls
+btrecord /dev/sda
+btrecord  /dev/loop233
+btrecord /dev/sda -d .
+btrecord  /dev/loop233 -d .
+btrecord /dev/sda -d
+btrecord  /dev/loop233 -d
+btrecord /dev/sda --input-directory .
+btrecord  /dev/loop233 --input-directory .
+btrecord /dev/sda --input-directory
+btrecord  /dev/loop233 --input-directory
+btrecord /dev/sda -D .
+btrecord  /dev/loop233 -D .
+btrecord /dev/sda -D
+btrecord  /dev/loop233 -D
+btrecord /dev/sda --output-directory .
+btrecord  /dev/loop233 --output-directory .
+btrecord /dev/sda --output-directory
+btrecord  /dev/loop233 --output-directory
+btrecord /dev/sda -F
+btrecord  /dev/loop233 -F
+btrecord /dev/sda --find-traces
+btrecord  /dev/loop233 --find-traces
+btrecord /dev/sda -h
+btrecord  /dev/loop233 -h
+btrecord /dev/sda --help
+btrecord  /dev/loop233 --help
+btrecord /dev/sda -V
+btrecord  /dev/loop233 -V
+btrecord /dev/sda --version
+btrecord  /dev/loop233 --version
+btrecord /dev/sda -m 000
+btrecord  /dev/loop233 -m 000
+btrecord /dev/sda -m 10
+btrecord  /dev/loop233 -m 10
+btrecord /dev/sda -m
+btrecord  /dev/loop233 -m
+btrecord /dev/sda --max-bunch-time 000
+btrecord  /dev/loop233 --max-bunch-time 000
+btrecord /dev/sda --max-bunch-time 10
+btrecord  /dev/loop233 --max-bunch-time 10
+btrecord /dev/sda --max-bunch-time
+btrecord  /dev/loop233 --max-bunch-time
+btrecord /dev/sda -M 8
+btrecord  /dev/loop233 -M 8
+btrecord /dev/sda -M 512
+btrecord  /dev/loop233 -M 512
+btrecord /dev/sda -M
+btrecord  /dev/loop233 -M
+btrecord /dev/sda --max-pkts 8
+btrecord  /dev/loop233 --max-pkts 8
+btrecord /dev/sda --max-pkts 512
+btrecord  /dev/loop233 --max-pkts 512
+btrecord /dev/sda --max-pkts
+btrecord  /dev/loop233 --max-pkts
+btrecord /dev/sda -o 3
+btrecord  /dev/loop233 -o 3
+btrecord /dev/sda -o 1
+btrecord  /dev/loop233 -o 1
+btrecord /dev/sda -o blktrace
+btrecord  /dev/loop233 -o blktrace
+btrecord /dev/sda -o 2
+btrecord  /dev/loop233 -o 2
+btrecord /dev/sda -o btrecord
+btrecord  /dev/loop233 -o btrecord
+btrecord /dev/sda -o
+btrecord  /dev/loop233 -o
+btrecord /dev/sda --output-base 3
+btrecord  /dev/loop233 --output-base 3
+btrecord /dev/sda --output-base 1
+btrecord  /dev/loop233 --output-base 1
+btrecord /dev/sda --output-base blktrace
+btrecord  /dev/loop233 --output-base blktrace
+btrecord /dev/sda --output-base 2
+btrecord  /dev/loop233 --output-base 2
+btrecord /dev/sda --output-base btrecord
+btrecord  /dev/loop233 --output-base btrecord
+btrecord /dev/sda --output-base
+btrecord  /dev/loop233 --output-base
+btrecord /dev/sda -v
+btrecord  /dev/loop233 -v
+btrecord /dev/sda --verbose
+btrecord  /dev/loop233 --verbose
+cron
+cron -f
+cron -l
+cron -n
+cron -L jobs
+cron -L 1
+cron -L 2
+cron -L 4
+cron -L 0
+cron -L 8
+cron -L levels
+cron -L 15
+cron -L
+anacron
+anacron -f
+anacron -u
+anacron -s
+anacron -n
+anacron -d
+anacron -q
+anacron -T
+anacron -V
+anacron -h
+anacron  -u
+checkmodule
+checkmodule -b
+checkmodule -C
+checkmodule -h
+checkmodule -m
+checkmodule -M
+checkmodule -V
+catman
+catman -d
+catman -C ~/.manpath
+catman -C
+catman -?
+catman --usage
+catman -V
+arpd
+arpd -h
+arpd -l
+arpd -b /var/lib/arpd/arpd.db
+arpd -b
+arpd -a 1
+arpd -a 3
+arpd -a
+arpd -k
+arpd -n 60
+arpd -n 30
+arpd -n
+arpd -p 60
+arpd -p 30
+arpd -p
+arpd -R 1
+arpd -R
+arpd -B 1
+arpd -B 3
+arpd -B
+arpd -b /var/tmp/arpd.db
+arpd -b /var/tmp/arpd.db -a 1 eth0 eth1
+arpd -b /var/tmp/arpd.db -a 3 -k eth0 eth1
+btrfs-map-logical
+blkdeactivate
+blkdeactivate -d dmsetup
+blkdeactivate -d 8
+blkdeactivate -d retry
+blkdeactivate -d force
+blkdeactivate -d
+blkdeactivate -e
+blkdeactivate -h
+blkdeactivate -l retry
+blkdeactivate -l wholevg
+blkdeactivate -l
+blkdeactivate -m  disablequeueing
+blkdeactivate -m
+blkdeactivate -r wait
+blkdeactivate -r
+blkdeactivate -u
+blkdeactivate -v
+blkdeactivate -u /dev/vg/lvol0
+blkdeactivate -u -d retry -l wholevg
+blkdeactivate -d force,retry
+btrfstune
+btrfstune -f
+btrfstune -m
+btrfstune -M 5
+btrfstune -M 0
+btrfstune -M btrfstune -u
+btrfstune -M
+btrfstune -n
+btrfstune -r
+btrfstune -S 1
+btrfstune -S 0
+btrfstune -S
+btrfstune -u
+btrfstune -U 5
+btrfstune -U 0
+btrfstune -U btrfstune -u
+btrfstune -U
+btrfstune -x
+btrfstune --help
+blkiomon -I
+checkpolicy
+checkpolicy -b
+checkpolicy -F
+checkpolicy -C
+checkpolicy -d
+checkpolicy -M
+checkpolicy -S
+checkpolicy -t
+checkpolicy -O
+checkpolicy -V
+checkpolicy -h
+arp
+arp -v
+arp -n
+arp -H arp
+arp -H ether
+arp -H 802
+arp -H 3
+arp -H arcnet
+arp -H pronet
+arp -H 25
+arp -H ax25
+arp -H /ROM
+arp -H netrom
+arp -H
+arp -a
+arp -e
+arp -D
+arp -i temp
+arp -i pub
+arp -i  NOTE:
+arp -i 2
+arp -i 0
+arp -i arp
+arp -i 7
+arp -i dontpub
+arp -i 4
+arp -i
+arp -f /etc/ethers
+arp -f pub
+arp -f temp
+arp -f netmask
+arp -f hostname
+arp -f IP address
+arp -f C
+arp -f M
+arp -f
+arp -d
+arp -s
+arp -N
+arp -V
+arp -d 127.0.0.1
+arp -d 192.168.119.138
+arp -d 182.61.200.7
+arp -s 127.0.0.1 00:0c:29:0d:19:d6
+arp -s 192.168.119.138 00:0c:29:0d:19:d6
+arp -s 182.61.200.7 00:0c:29:0d:19:d6
+arp -s 127.0.0.1 00:0c:29:0d:19:d6 pub
+arp -s 192.168.119.138 00:0c:29:0d:19:d6 pub
+arp -s 182.61.200.7 00:0c:29:0d:19:d6 pub
+arp -Ds 127.0.0.1 ens33 pub
+arp -Ds 127.0.0.1 ens38 pub
+arp -Ds 192.168.119.138 ens33 pub
+arp -Ds 192.168.119.138 ens38 pub
+arp -Ds 182.61.200.7 ens33 pub
+arp -Ds 182.61.200.7 ens38 pub
+arp  -f
+/usr/sbin/arp -i eth0 -Ds 10.0.0.2 eth1 pub
+/usr/sbin/arp -i eth1 -d 10.0.0.1
+btreplay /dev/sda
+btreplay  /dev/loop233
+btreplay /dev/sda -c 1
+btreplay  /dev/loop233 -c 1
+btreplay /dev/sda -c
+btreplay  /dev/loop233 -c
+btreplay /dev/sda --cpus 1
+btreplay  /dev/loop233 --cpus 1
+btreplay /dev/sda --cpus
+btreplay  /dev/loop233 --cpus
+btreplay /dev/sda -d .
+btreplay  /dev/loop233 -d .
+btreplay /dev/sda -d
+btreplay  /dev/loop233 -d
+btreplay /dev/sda --input-directory .
+btreplay  /dev/loop233 --input-directory .
+btreplay /dev/sda --input-directory
+btreplay  /dev/loop233 --input-directory
+btreplay /dev/sda -F
+btreplay  /dev/loop233 -F
+btreplay /dev/sda --find-records
+btreplay  /dev/loop233 --find-records
+btreplay /dev/sda -h
+btreplay  /dev/loop233 -h
+btreplay /dev/sda --help
+btreplay  /dev/loop233 --help
+btreplay /dev/sda -i 3
+btreplay  /dev/loop233 -i 3
+btreplay /dev/sda -i 1
+btreplay  /dev/loop233 -i 1
+btreplay /dev/sda -i blktrace
+btreplay  /dev/loop233 -i blktrace
+btreplay /dev/sda -i 2
+btreplay  /dev/loop233 -i 2
+btreplay /dev/sda -i btrecord
+btreplay  /dev/loop233 -i btrecord
+btreplay /dev/sda -i
+btreplay  /dev/loop233 -i
+btreplay /dev/sda --input-base 3
+btreplay  /dev/loop233 --input-base 3
+btreplay /dev/sda --input-base 1
+btreplay  /dev/loop233 --input-base 1
+btreplay /dev/sda --input-base blktrace
+btreplay  /dev/loop233 --input-base blktrace
+btreplay /dev/sda --input-base 2
+btreplay  /dev/loop233 --input-base 2
+btreplay /dev/sda --input-base btrecord
+btreplay  /dev/loop233 --input-base btrecord
+btreplay /dev/sda --input-base
+btreplay  /dev/loop233 --input-base
+btreplay /dev/sda -I 1
+btreplay  /dev/loop233 -I 1
+btreplay /dev/sda -I
+btreplay  /dev/loop233 -I
+btreplay /dev/sda --iterations 1
+btreplay  /dev/loop233 --iterations 1
+btreplay /dev/sda --iterations
+btreplay  /dev/loop233 --iterations
+btreplay /dev/sda -
+btreplay  /dev/loop233 -
+btreplay /dev/sda -N
+btreplay  /dev/loop233 -N
+btreplay /dev/sda --no-stalls
+btreplay  /dev/loop233 --no-stalls
+btreplay /dev/sda -x 1
+btreplay  /dev/loop233 -x 1
+btreplay /dev/sda -x
+btreplay  /dev/loop233 -x
+btreplay /dev/sda --acc-factor 1
+btreplay  /dev/loop233 --acc-factor 1
+btreplay /dev/sda --acc-factor
+btreplay  /dev/loop233 --acc-factor
+btreplay /dev/sda -v
+btreplay  /dev/loop233 -v
+btreplay /dev/sda --verbose
+btreplay  /dev/loop233 --verbose
+btreplay /dev/sda -V
+btreplay  /dev/loop233 -V
+btreplay /dev/sda --version
+btreplay  /dev/loop233 --version
+btreplay /dev/sda -W
+btreplay  /dev/loop233 -W
+btreplay /dev/sda --write-enable
+btreplay  /dev/loop233 --write-enable
+agetty 0
+agetty 1
+agetty 63
+agetty 121212
+agetty 65534
+agetty 0 -8
+agetty 1 -8
+agetty 63 -8
+agetty 121212 -8
+agetty 65534 -8
+agetty 0 -a /bin/login
+agetty 1 -a /bin/login
+agetty 63 -a /bin/login
+agetty 121212 -a /bin/login
+agetty 65534 -a /bin/login
+agetty 0 -a
+agetty 1 -a
+agetty 63 -a
+agetty 121212 -a
+agetty 65534 -a
+agetty 0 -c
+agetty 1 -c
+agetty 63 -c
+agetty 121212 -c
+agetty 65534 -c
+agetty 0 -E
+agetty 1 -E
+agetty 63 -E
+agetty 121212 -E
+agetty 65534 -E
+agetty 0 -f file
+agetty 1 -f file
+agetty 63 -f file
+agetty 121212 -f file
+agetty 65534 -f file
+agetty 0 -f /etc/issue
+agetty 1 -f /etc/issue
+agetty 63 -f /etc/issue
+agetty 121212 -f /etc/issue
+agetty 65534 -f /etc/issue
+agetty 0 -f directory
+agetty 1 -f directory
+agetty 63 -f directory
+agetty 121212 -f directory
+agetty 65534 -f directory
+agetty 0 -f
+agetty 1 -f
+agetty 63 -f
+agetty 121212 -f
+agetty 65534 -f
+agetty 0 -h
+agetty 1 -h
+agetty 63 -h
+agetty 121212 -h
+agetty 65534 -h
+agetty 0 -H agetty
+agetty 1 -H agetty
+agetty 63 -H agetty
+agetty 121212 -H agetty
+agetty 65534 -H agetty
+agetty 0 -H
+agetty 1 -H
+agetty 63 -H
+agetty 121212 -H
+agetty 65534 -H
+agetty 0 -i
+agetty 1 -i
+agetty 63 -i
+agetty 121212 -i
+agetty 65534 -i
+agetty 0 -I 012
+agetty 1 -I 012
+agetty 63 -I 012
+agetty 121212 -I 012
+agetty 65534 -I 012
+agetty 0 -I 10
+agetty 1 -I 10
+agetty 63 -I 10
+agetty 121212 -I 10
+agetty 65534 -I 10
+agetty 0 -I
+agetty 1 -I
+agetty 63 -I
+agetty 121212 -I
+agetty 65534 -I
+agetty 0 -J
+agetty 1 -J
+agetty 63 -J
+agetty 121212 -J
+agetty 65534 -J
+agetty 0 -l /bin/login.
+agetty 1 -l /bin/login.
+agetty 63 -l /bin/login.
+agetty 121212 -l /bin/login.
+agetty 65534 -l /bin/login.
+agetty 0 -l
+agetty 1 -l
+agetty 63 -l
+agetty 121212 -l
+agetty 65534 -l
+agetty 0 -L always
+agetty 1 -L always
+agetty 63 -L always
+agetty 121212 -L always
+agetty 65534 -L always
+agetty 0 -L never
+agetty 1 -L never
+agetty 63 -L never
+agetty 121212 -L never
+agetty 65534 -L never
+agetty 0 -L auto
+agetty 1 -L auto
+agetty 63 -L auto
+agetty 121212 -L auto
+agetty 65534 -L auto
+agetty 0 -L agetty
+agetty 1 -L agetty
+agetty 63 -L agetty
+agetty 121212 -L agetty
+agetty 65534 -L agetty
+agetty 0 -L
+agetty 1 -L
+agetty 63 -L
+agetty 121212 -L
+agetty 65534 -L
+agetty 0 -m
+agetty 1 -m
+agetty 63 -m
+agetty 121212 -m
+agetty 65534 -m
+agetty 0 --list-speeds
+agetty 1 --list-speeds
+agetty 63 --list-speeds
+agetty 121212 --list-speeds
+agetty 65534 --list-speeds
+agetty 0 -n
+agetty 1 -n
+agetty 63 -n
+agetty 121212 -n
+agetty 65534 -n
+agetty 0 -N
+agetty 1 -N
+agetty 63 -N
+agetty 121212 -N
+agetty 65534 -N
+agetty 0 -o login
+agetty 1 -o login
+agetty 63 -o login
+agetty 121212 -o login
+agetty 65534 -o login
+agetty 0 -o 1
+agetty 1 -o 1
+agetty 63 -o 1
+agetty 121212 -o 1
+agetty 65534 -o 1
+agetty 0 -o
+agetty 1 -o
+agetty 63 -o
+agetty 121212 -o
+agetty 65534 -o
+agetty 0 -p
+agetty 1 -p
+agetty 63 -p
+agetty 121212 -p
+agetty 65534 -p
+agetty 0 -R
+agetty 1 -R
+agetty 63 -R
+agetty 121212 -R
+agetty 65534 -R
+agetty 0 -s
+agetty 1 -s
+agetty 63 -s
+agetty 121212 -s
+agetty 65534 -s
+agetty 0 -U
+agetty 1 -U
+agetty 63 -U
+agetty 121212 -U
+agetty 65534 -U
+agetty 0 -w
+agetty 1 -w
+agetty 63 -w
+agetty 121212 -w
+agetty 65534 -w
+agetty 0 --nohints
+agetty 1 --nohints
+agetty 63 --nohints
+agetty 121212 --nohints
+agetty 65534 --nohints
+agetty 0 --nohostname
+agetty 1 --nohostname
+agetty 63 --nohostname
+agetty 121212 --nohostname
+agetty 65534 --nohostname
+agetty 0 --long-hostname
+agetty 1 --long-hostname
+agetty 63 --long-hostname
+agetty 121212 --long-hostname
+agetty 65534 --long-hostname
+agetty 0 --erase-chars 2
+agetty 1 --erase-chars 2
+agetty 63 --erase-chars 2
+agetty 121212 --erase-chars 2
+agetty 65534 --erase-chars 2
+agetty 0 --erase-chars 23
+agetty 1 --erase-chars 23
+agetty 63 --erase-chars 23
+agetty 121212 --erase-chars 23
+agetty 65534 --erase-chars 23
+agetty 0 --erase-chars
+agetty 1 --erase-chars
+agetty 63 --erase-chars
+agetty 121212 --erase-chars
+agetty 65534 --erase-chars
+agetty 0 --kill-chars 2
+agetty 1 --kill-chars 2
+agetty 63 --kill-chars 2
+agetty 121212 --kill-chars 2
+agetty 65534 --kill-chars 2
+agetty 0 --kill-chars 23
+agetty 1 --kill-chars 23
+agetty 63 --kill-chars 23
+agetty 121212 --kill-chars 23
+agetty 65534 --kill-chars 23
+agetty 0 --kill-chars
+agetty 1 --kill-chars
+agetty 63 --kill-chars
+agetty 121212 --kill-chars
+agetty 65534 --kill-chars
+agetty 0 --reload
+agetty 1 --reload
+agetty 63 --reload
+agetty 121212 --reload
+agetty 65534 --reload
+agetty 0 --version
+agetty 1 --version
+agetty 63 --version
+agetty 121212 --version
+agetty 65534 --version
+agetty 0 --help
+agetty 1 --help
+agetty 63 --help
+agetty 121212 --help
+agetty 65534 --help
+/sbin/agetty 9600 ttyS1
+/sbin/agetty --local-line 9600 ttyS1 vt100
+/sbin/agetty --extract-baud --timeout 60 ttyS1 9600,2400,1200
+/sbin/agetty --wait-cr --init-string ’ATE0Q1&D2&C1S0=1 15’ 115200 ttyS1
+accton on
+accton on -V
+accton on -h
+accton off
+accton off -V
+accton off -h
+accton filename
+accton filename -V
+accton filename -h
+accton
+accton -V
+accton -h
+chcpu -c
+chcpu -d
+chcpu -e
+chcpu -g
+chcpu -p
+chcpu -r
+chcpu -h
+chcpu -V
+***********arguments are:**************
+category<i>
+file<i>
+user<i>
+-L<i>
+destination<i>
+<device><i>
+device<i>
+script<i>
+label<i>
+uuid<i>
+dev<i>
+command<i>
+partition<i>
+start<i>
+length<i>
+filesystem<i>
+oldformat<i>
+newformat<i>
+NAMELIST<i>
+MEMORY-IMAGE<i>
+<source><i>
+<target><i>
+program<i>
+<options><i>
+interval<i>
+hostname<i>
+hw_addr<i>
+ifname<i>
+port<i>
+cpu-list<i>
+mode<i>
+
+
+************opt args names are:***********
+count
+source
+deadline
+type
+SIZE
+feature1
+block_size
+number of blocks
+read delay factor
+max bad block count
+input_file
+output_file
+num_passes
+test_pattern
+modprobe_program
+chat file
+timeout
+report file
+phone number 2
+cachefile
+label
+list
+format
+size
+NAME=value
+level
+length
+trace
+sector
+sectors
+<port>,
+<ttl>,
+<num>,
+<sec>,
+num-sub
+number
+dir
+mask
+value
+size[units]
+hash-spec
+LUKS header file
+name
+bits
+<number>
+<type>
+audit-event-id
+CPU
+comm-name
+checkpoint-file
+exit-code-or-errno
+option
+file-name
+all-group-id
+effective-group-id
+group-id
+host-name
+file-name 
+key-string
+message-type 
+SE-Linux-context-string
+process-id
+parent-process-id
+syscall-name-or-value
+success-value
+end-date
+start-date
+all-user-id
+effective-user-id
+user-id
+login-id
+guest-uuid
+guest-name
+superblock
+backlog
+wait_time
+rate
+file
+[
+f
+n
+key
+Syscall name or number
+when
+oldformat,newformat
+[option]
+num
+vi | emacs
+[namelist]
+option=value
+modname
+device
+dumpfile
+directory
+offset
+[32|64]
+file 
+node-name
+ROUNDS
+<seconds>,
+<device-type>
+cipher-spec
+<PBKDF
+<num>
+<number
+UUID
+<file>
+<text>
+<normal|prefer|ignore>
+<bytes>
+<integrity
+<size>
+<mode>
+nanoseconds
+basename
+loglevel
+<DATABASE>
+<NUMBER>
+<TIME>
+<RATE>
+copy
+dm_options
+lvm_options
+mpath_options
+mdraid_options
+<UUID>
+<0|1>
+If
+filename
+factor
+username
+file|directory
+fakehost
+initstring
+login_program
+mode
+login_options
+string
+

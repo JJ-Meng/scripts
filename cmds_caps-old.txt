@@ -1,0 +1,1705 @@
+accton on
+out: accton: Operation not permitted
+accton on:check cap 21 for 11 times,check cap 20 for 1 times,
+
+accton off
+out: accton: Operation not permitted
+accton off:check cap 21 for 11 times,check cap 20 for 1 times,
+
+accton filename
+out: accton: Operation not permitted
+accton filename:check cap 21 for 11 times,check cap 20 for 1 times,
+
+addpart /dev/sda 0 0 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 0 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 0 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 0 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 0 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 0 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 0 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 0 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 0 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 0 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 1 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 1 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 1 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 1 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 1 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 1 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 1 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 1 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 1 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 1 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 63 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 63 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 63 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 63 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 63 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 63 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 63 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 63 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 63 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 63 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 121212 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 121212 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 121212 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 121212 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 121212 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 121212 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 121212 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 121212 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 121212 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 121212 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 65534 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 65534 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 65534 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 65534 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 65534 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 65534 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 65534 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 65534 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 0 65534 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 0 65534 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 0 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 0 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 0 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 0 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 0 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 0 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 0 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 0 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 0 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 0 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 1 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 1 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 1 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 1 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 1 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 1 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 1 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 1 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 1 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 1 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 63 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 63 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 63 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 63 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 63 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 63 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 63 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 63 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 63 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 63 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 121212 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 121212 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 121212 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 121212 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 121212 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 121212 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 121212 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 121212 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 121212 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 121212 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 65534 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 65534 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 65534 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 65534 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 65534 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 65534 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 65534 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 65534 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 1 65534 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 1 65534 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 0 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 0 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 0 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 0 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 0 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 0 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 0 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 0 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 0 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 0 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 1 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 1 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 1 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 1 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 1 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 1 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 1 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 1 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 1 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 1 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 63 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 63 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 63 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 63 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 63 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 63 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 63 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 63 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 63 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 63 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 121212 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 121212 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 121212 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 121212 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 121212 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 121212 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 121212 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 121212 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 121212 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 121212 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 65534 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 65534 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 65534 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 65534 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 65534 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 65534 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 65534 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 65534 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 63 65534 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 63 65534 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 0 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 0 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 0 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 0 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 0 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 0 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 0 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 0 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 0 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 0 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 1 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 1 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 1 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 1 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 1 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 1 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 1 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 1 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 1 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 1 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 63 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 63 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 63 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 63 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 63 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 63 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 63 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 63 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 63 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 63 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 121212 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 121212 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 121212 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 121212 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 121212 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 121212 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 121212 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 121212 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 121212 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 121212 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 65534 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 65534 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 65534 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 65534 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 65534 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 65534 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 65534 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 65534 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 121212 65534 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 121212 65534 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 0 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 0 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 0 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 0 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 0 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 0 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 0 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 0 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 0 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 0 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 1 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 1 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 1 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 1 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 1 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 1 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 1 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 1 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 1 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 1 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 63 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 63 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 63 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 63 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 63 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 63 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 63 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 63 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 63 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 63 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 121212 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 121212 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 121212 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 121212 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 121212 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 121212 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 121212 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 121212 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 121212 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 121212 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 65534 0
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 65534 0:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 65534 1
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 65534 1:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 65534 63
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 65534 63:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 65534 121212
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 65534 121212:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+addpart /dev/sda 65534 65534 65534
+out: addpart: cannot open /dev/sda: Permission denied
+addpart /dev/sda 65534 65534 65534:check cap 21 for 12 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+agetty 0 --reload
+out: agetty: cannot open /run/agetty.reload: Permission denied
+agetty 0 --reload:check cap 21 for 13 times,check cap 1 for 1 times,
+
+agetty 1 --reload
+out: agetty: cannot open /run/agetty.reload: Permission denied
+agetty 1 --reload:check cap 21 for 13 times,check cap 1 for 1 times,
+
+agetty 63 --reload
+out: agetty: cannot open /run/agetty.reload: Permission denied
+agetty 63 --reload:check cap 21 for 13 times,check cap 1 for 1 times,
+
+agetty 121212 --reload
+out: agetty: cannot open /run/agetty.reload: Permission denied
+agetty 121212 --reload:check cap 21 for 13 times,check cap 1 for 1 times,
+
+agetty 65534 --reload
+out: agetty: cannot open /run/agetty.reload: Permission denied
+agetty 65534 --reload:check cap 21 for 13 times,check cap 1 for 1 times,
+
+anacron -d
+out: Anacron 2.3 started on 2022-04-28
+anacron: Can't open timestamp file for job cron.daily: Permission denied
+anacron: Aborted
+anacron -d:check cap 21 for 11 times,check cap 1 for 1 times,
+
+arp -d 127.0.0.1
+out: SIOCDARP(dontpub): Operation not permitted
+arp -d 127.0.0.1:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -d 192.168.119.138
+out: SIOCDARP(dontpub): Operation not permitted
+arp -d 192.168.119.138:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -d 182.61.200.7
+out: SIOCDARP(dontpub): Operation not permitted
+arp -d 182.61.200.7:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -s 127.0.0.1 00:0c:29:0d:19:d6
+out: SIOCSARP: Operation not permitted
+arp -s 127.0.0.1 00:0c:29:0d:19:d6:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -s 192.168.119.138 00:0c:29:0d:19:d6
+out: SIOCSARP: Operation not permitted
+arp -s 192.168.119.138 00:0c:29:0d:19:d6:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -s 182.61.200.7 00:0c:29:0d:19:d6
+out: SIOCSARP: Operation not permitted
+arp -s 182.61.200.7 00:0c:29:0d:19:d6:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -s 127.0.0.1 00:0c:29:0d:19:d6 pub
+out: SIOCSARP: Operation not permitted
+arp -s 127.0.0.1 00:0c:29:0d:19:d6 pub:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -s 192.168.119.138 00:0c:29:0d:19:d6 pub
+out: SIOCSARP: Operation not permitted
+arp -s 192.168.119.138 00:0c:29:0d:19:d6 pub:check cap 21 for 12 times,check cap 12 for 1 times,
+
+arp -s 182.61.200.7 00:0c:29:0d:19:d6 pub
+out: SIOCSARP: Operation not permitted
+arp -s 182.61.200.7 00:0c:29:0d:19:d6 pub:check cap 21 for 12 times,check cap 12 for 1 times,
+
+/usr/sbin/arp -i eth1 -d 10.0.0.1
+out: SIOCDARP(dontpub): Operation not permitted
+/usr/sbin/arp -i eth1 -d 10.0.0.1:check cap 21 for 10 times,check cap 12 for 1 times,
+
+arping 127.0.0.1
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -A
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -A:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -A
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -A:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -A
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -A:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -b
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -b:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -b
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -b:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -b
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -b:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -c deadline
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -c deadline:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -c deadline
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -c deadline:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -c deadline
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -c deadline:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -D
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -D:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -D
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -D:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -D
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -D:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -q
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -q:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -q
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -q:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -q
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -q:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -U
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -U:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -U
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -U:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -U
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -U:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -w arping
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -w arping:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -w arping
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -w arping:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -w arping
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -w arping:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 127.0.0.1 -w count
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 127.0.0.1 -w count:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 192.168.119.138 -w count
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 192.168.119.138 -w count:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arping 182.61.200.7 -w count
+out: arping: libnet_init(LIBNET_LINK, <null>): libnet_open_link(): UID/EUID 0 or capability CAP_NET_RAW required
+arping: you may need to run as root
+arping 182.61.200.7 -w count:check cap 21 for 29 times,check cap 13 for 2 times,
+
+arptables-save
+out: arptables-save v1.8.7 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+
+arptables-save:check cap 21 for 18 times,check cap 12 for 1 times,
+
+arptables-save
+out: arptables-save v1.8.7 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+
+arptables-save:check cap 21 for 18 times,check cap 12 for 1 times,
+
+astraceroute -v
+out: astraceroute 0.6.8 (Flutternozzle), Git id: (none)
+autonomous system trace route utility
+http://www.netsniff-ng.org
+
+Please report bugs at https://github.com/netsniff-ng/netsniff-ng/issues
+Copyright (C) 2011-2013 Daniel Borkmann <dborkma@tik.ee.ethz.ch>
+Swiss federal institute of technology (ETH Zurich)
+License: GNU GPL version 2.0
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+astraceroute -v:check cap 21 for 16 times,
+
+auditctl -b 64
+out: You must be root to run this program.
+auditctl -b 64:check cap 21 for 19 times,
+
+auditctl -b
+out: You must be root to run this program.
+auditctl -b:check cap 21 for 19 times,
+
+auditctl --backlog_wait_time 10
+out: You must be root to run this program.
+auditctl --backlog_wait_time 10:check cap 21 for 19 times,
+
+auditctl --backlog_wait_time 60
+out: You must be root to run this program.
+auditctl --backlog_wait_time 60:check cap 21 for 19 times,
+
+auditctl --backlog_wait_time
+out: You must be root to run this program.
+auditctl --backlog_wait_time:check cap 21 for 19 times,
+
+auditctl -c
+out: You must be root to run this program.
+auditctl -c:check cap 21 for 19 times,
+
+auditctl -D
+out: You must be root to run this program.
+auditctl -D:check cap 21 for 19 times,
+
+auditctl -e
+out: You must be root to run this program.
+auditctl -e:check cap 21 for 19 times,
+
+auditctl -f
+out: You must be root to run this program.
+auditctl -f:check cap 21 for 19 times,
+
+auditctl -i
+out: You must be root to run this program.
+auditctl -i:check cap 21 for 19 times,
+
+auditctl --loginuid-immutable
+out: You must be root to run this program.
+auditctl --loginuid-immutable:check cap 21 for 19 times,
+
+auditctl -r /sec
+out: You must be root to run this program.
+auditctl -r /sec:check cap 21 for 19 times,
+
+auditctl -r 0
+out: You must be root to run this program.
+auditctl -r 0:check cap 21 for 19 times,
+
+auditctl -r
+out: You must be root to run this program.
+auditctl -r:check cap 21 for 19 times,
+
+auditctl --reset-lost
+out: You must be root to run this program.
+auditctl --reset-lost:check cap 21 for 19 times,
+
+auditctl -R 1
+out: You must be root to run this program.
+auditctl -R 1:check cap 21 for 19 times,
+
+auditctl -R
+out: You must be root to run this program.
+auditctl -R:check cap 21 for 19 times,
+
+auditctl -t
+out: You must be root to run this program.
+auditctl -t:check cap 21 for 19 times,
+
+auditctl -s
+out: You must be root to run this program.
+auditctl -s:check cap 21 for 19 times,
+
+auditctl -l
+out: You must be root to run this program.
+auditctl -l:check cap 21 for 19 times,
+
+auditctl -v
+out: You must be root to run this program.
+auditctl -v:check cap 21 for 19 times,
+
+auditctl -a always,exit -S all -F pid=1005
+out: You must be root to run this program.
+auditctl -a always,exit -S all -F pid=1005:check cap 21 for 19 times,
+
+auditctl -a always,exit -S openat -F auid=510
+out: You must be root to run this program.
+auditctl -a always,exit -S openat -F auid=510:check cap 21 for 19 times,
+
+auditctl -a always,exit -S openat -F success=0
+out: You must be root to run this program.
+auditctl -a always,exit -S openat -F success=0:check cap 21 for 19 times,
+
+auditctl -w /etc/shadow -p wa
+out: You must be root to run this program.
+auditctl -w /etc/shadow -p wa:check cap 21 for 19 times,
+
+auditctl -w /etc/ -p wa
+out: You must be root to run this program.
+auditctl -w /etc/ -p wa:check cap 21 for 19 times,
+
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid
+out: You must be root to run this program.
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid:check cap 21 for 19 times,
+
+auditd
+out: You must be root or have capabilities to run this program.
+auditd:check cap 21 for 37 times,
+
+auditd -f
+out: You must be root or have capabilities to run this program.
+auditd -f:check cap 21 for 37 times,
+
+auditd -l
+out: You must be root or have capabilities to run this program.
+auditd -l:check cap 21 for 37 times,
+
+auditd -n
+out: You must be root or have capabilities to run this program.
+auditd -n:check cap 21 for 37 times,
+
+augenrules --load
+out: You must be root to run this program.
+augenrules --load:check cap 21 for 23 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+aureport
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -au
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -au:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -a
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -a:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -a
+out: 
+AVC Report
+===============================================================
+# date time comm subj syscall class permission obj result event
+===============================================================
+aureport -a:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --comm
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --comm:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -c
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -c:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -cr
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -cr:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -e
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -e:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --escape raw
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --escape raw:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --escape tty
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --escape tty:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --escape shell
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --escape shell:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --escape shell_quote
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --escape shell_quote:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -f
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -f:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --failed
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --failed:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -h
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -h:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -i
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -i:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --input-logs
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --input-logs:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --integrity
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --integrity:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -k
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -k:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -l
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -l:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -m
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -m:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ma
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ma:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -n
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -n:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -nc
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -nc:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -p
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -p:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -r
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -r:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -s
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -s:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --success
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --success:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --summary
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --summary:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -t
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -t:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --tty
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --tty:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te today
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te today:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te now
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te now:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te recent
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te recent:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te boot
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te boot:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te yesterday
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te yesterday:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te this-week
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te this-week:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te week-ago
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te week-ago:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te this-month
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te this-month:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -te this-year
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -te this-year:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -tm
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -tm:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts today
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts today:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts now
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts now:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts recent
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts recent:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts boot
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts boot:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts yesterday
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts yesterday:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts this-week
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts this-week:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts week-ago
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts week-ago:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts this-month
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts this-month:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -ts this-year
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -ts this-year:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -u
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -u:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport --virt
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport --virt:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+aureport -x
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+aureport -x:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -a 1116360555
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -a 1116360555:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -a 329
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -a 329:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -a 2401771
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -a 2401771:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --arch b32
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --arch b32:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --debug
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --debug:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --checkpoint 2
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --checkpoint 2:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --escape raw
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --escape raw:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --escape tty
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --escape tty:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --escape shell
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --escape shell:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --escape shell_quote
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --escape shell_quote:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --extra-obj2
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --extra-obj2:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -f filename
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -f filename:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --format raw
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --format raw:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --format default
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --format default:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --format interpret
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --format interpret:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --format csv
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --format csv:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --format text
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --format text:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -i
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -i:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --input-logs
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --input-logs:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch --just-one
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch --just-one:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -l
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -l:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -m ALL
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -m ALL:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -o tcontext
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -o tcontext:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -o scontext
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -o scontext:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -o /subject
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -o /subject:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -o /object
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -o /object:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -r
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -r:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -se tcontext
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -se tcontext:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -se scontext
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -se scontext:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -se /subject
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -se /subject:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -se /object
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -se /object:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -su tcontext
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -su tcontext:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -su scontext
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -su scontext:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -su /subject
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -su /subject:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -su /object
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -su /object:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -sv yes
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -sv yes:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -sv no
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -sv no:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te today
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te today:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te now
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te now:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te recent
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te recent:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te boot
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te boot:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te yesterday
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te yesterday:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te this-week
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te this-week:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te week-ago
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te week-ago:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te this-month
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te this-month:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -te this-year
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -te this-year:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts today
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts today:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts now
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts now:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts recent
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts recent:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts boot
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts boot:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts yesterday
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts yesterday:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts this-week
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts this-week:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts week-ago
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts week-ago:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts this-month
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts this-month:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts this-year
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts this-year:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -ts checkpoint
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -ts checkpoint:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+ausearch -w
+out: Error opening config file (Permission denied)
+NOTE - using built-in logs: /var/log/audit/audit.log
+Error opening /var/log/audit/audit.log (Permission denied)
+ausearch -w:check cap 21 for 19 times,check cap 2 for 3 times,check cap 1 for 3 times,
+
+automount
+out: automount: this program must be run by root.
+automount:check cap 21 for 44 times,
+
+automount -t 5
+out: automount: this program must be run by root.
+automount -t 5:check cap 21 for 44 times,
+
+automount -t 10
+out: automount: this program must be run by root.
+automount -t 10:check cap 21 for 44 times,
+
+automount -t 60
+out: automount: this program must be run by root.
+automount -t 60:check cap 21 for 44 times,
+
+automount -n 5
+out: automount: this program must be run by root.
+automount -n 5:check cap 21 for 44 times,
+
+automount -n 10
+out: automount: this program must be run by root.
+automount -n 10:check cap 21 for 44 times,
+
+automount -n 60
+out: automount: this program must be run by root.
+automount -n 60:check cap 21 for 44 times,
+
+automount -v
+out: automount: this program must be run by root.
+automount -v:check cap 21 for 44 times,
+
+automount -d
+out: automount: this program must be run by root.
+automount -d:check cap 21 for 44 times,
+
+automount -Dvariable=value
+out: automount: this program must be run by root.
+automount -Dvariable=value:check cap 21 for 44 times,
+
+automount -S
+out: automount: this program must be run by root.
+automount -S:check cap 21 for 44 times,
+
+automount -f
+out: automount: this program must be run by root.
+automount -f:check cap 21 for 44 times,
+
+automount -r
+out: automount: this program must be run by root.
+automount -r:check cap 21 for 44 times,
+
+automount -m
+out: automount: this program must be run by root.
+automount -m:check cap 21 for 44 times,
+
+automount -C
+out: automount: this program must be run by root.
+automount -C:check cap 21 for 44 times,
+
+automount -F
+out: automount: this program must be run by root.
+automount -F:check cap 21 for 44 times,
+
+autrace /bin/ls
+out: You must be root or have capabilities to run this program.
+autrace /bin/ls:check cap 21 for 17 times,
+
+autrace /bin/ls -r
+out: You must be root or have capabilities to run this program.
+autrace /bin/ls -r:check cap 21 for 17 times,
+
+autrace /bin/ls /tmp
+out: You must be root or have capabilities to run this program.
+autrace /bin/ls /tmp:check cap 21 for 17 times,
+
+autrace -r /bin/ls
+out: You must be root or have capabilities to run this program.
+autrace -r /bin/ls:check cap 21 for 17 times,
+
+badblocks /dev/sda
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -b 1024
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -b 1024:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -c 64
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -c 64:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -d 100
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -d 100:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -d 200
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -d 200:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -e 0
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -e 0:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -f
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -f:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -i Badblocks
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -i Badblocks:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -i new
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -i new:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -i dumpe2fs
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -i dumpe2fs:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -i 8
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -i 8:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -n
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -n:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -o badblocks
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -o badblocks:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -o e2fsck
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -o e2fsck:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -o 8
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -o 8:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -o mke2fs
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -o mke2fs:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -p 0
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -p 0:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -s
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -s:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -t 1
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -t 1:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -t 0
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -t 0:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -v
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -v:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -w
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -w:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -B
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -B:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+badblocks /dev/sda -X
+out: badblocks: Permission denied while trying to determine device size
+badblocks /dev/sda -X:check cap 21 for 16 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+*****************final results********************************
+fuzz 1100 commands in total,and 358 commands are privilege
+target cmds:26  priv target cmds:17 non-priv cmds:9

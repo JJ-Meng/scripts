@@ -1,0 +1,214 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:29:53 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>CBS</title>
+
+</head>
+<body>
+
+<h1 align="center">CBS</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#PARAMETERS">PARAMETERS</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#AUTHORS">AUTHORS</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">CBS - Credit
+Based Shaper (CBS) Qdisc</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc qdisc ...
+dev</b> dev <b>parent</b> classid <b>[ handle</b> major:
+<b>] cbs idleslope</b> idleslope <b>sendslope</b> sendslope
+<b>hicredit</b> hicredit <b>locredit</b> locredit <b>[
+offload</b> 0|1 <b>]</b></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The CBS (Credit
+Based Shaper) qdisc implements the shaping algorithm defined
+by the IEEE 802.1Q-2014 Section 8.6.8.2, which applies a
+well defined rate limiting method to the traffic.</p>
+
+<p style="margin-left:11%; margin-top: 1em">This queueing
+discipline is intended to be used by TSN (Time Sensitive
+Networking) applications, the CBS parameters are derived
+directly by what is described by the Annex L of the IEEE
+802.1Q-2014 Specification. The algorithm and how it affects
+the latency are detailed there.</p>
+
+<p style="margin-left:11%; margin-top: 1em">CBS is meant to
+be installed under another qdisc that maps packet flows to
+traffic classes, one example is <b>mqprio(8).</b></p>
+
+<h2>PARAMETERS
+<a name="PARAMETERS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">idleslope</p>
+
+<p style="margin-left:22%;">Idleslope is the rate of
+credits that is accumulated (in kilobits per second) when
+there is at least one packet waiting for transmission.
+Packets are transmitted when the current value of credits is
+equal or greater than zero. When there is no packet to be
+transmitted the amount of credits is set to zero. This is
+the main tunable of the CBS algorithm and represents the
+bandwidth that will be consumed. Note that when calculating
+idleslope, the entire packet size must be considered,
+including headers from all layers (i.e. MAC framing and any
+overhead from the physical layer), as described by IEEE
+802.1Q-2014 section 34.4.</p>
+
+<p style="margin-left:22%; margin-top: 1em">As an example,
+for an ethernet frame carrying 284 bytes of payload, and
+with no VLAN tags, you must add 14 bytes for the Ethernet
+headers, 4 bytes for the Frame check sequence (CRC), and 20
+bytes for the L1 overhead: 12 bytes of interpacket gap, 7
+bytes of preamble and 1 byte of start of frame delimiter.
+That results in 322 bytes for the total packet size, which
+is then used for calculating the idleslope.</p>
+
+<p style="margin-left:11%;">sendslope</p>
+
+<p style="margin-left:22%;">Sendslope is the rate of
+credits that is depleted (it should be a negative number of
+kilobits per second) when a transmission is occurring. It
+can be calculated as follows, (IEEE 802.1Q-2014 Section
+8.6.8.2 item g):</p>
+
+<p style="margin-left:22%; margin-top: 1em">sendslope =
+idleslope - port_transmit_rate</p>
+
+<p style="margin-left:11%;">hicredit</p>
+
+<p style="margin-left:22%;">Hicredit defines the maximum
+amount of credits (in bytes) that can be accumulated.
+Hicredit depends on the characteristics of interfering
+traffic, &rsquo;max_interference_size&rsquo; is the maximum
+size of any burst of traffic that can delay the transmission
+of a frame that is available for transmission for this
+traffic class, (IEEE 802.1Q-2014 Annex L, Equation L-3):</p>
+
+<p style="margin-left:22%; margin-top: 1em">hicredit =
+max_interference_size * (idleslope / port_transmit_rate)</p>
+
+<p style="margin-left:11%;">locredit</p>
+
+<p style="margin-left:22%;">Locredit is the minimum amount
+of credits that can be reached. It is a function of the
+traffic flowing through this qdisc (IEEE 802.1Q-2014 Annex
+L, Equation L-2):</p>
+
+<p style="margin-left:22%; margin-top: 1em">locredit =
+max_frame_size * (sendslope / port_transmit_rate)</p>
+
+<p style="margin-left:11%;">offload</p>
+
+<p style="margin-left:22%;">When <b>offload</b> is 1,
+<b>cbs(8)</b> will try to configure the network interface so
+the CBS algorithm runs in the controller. The default is
+0.</p>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">CBS is used to
+enforce a Quality of Service by limiting the data rate of a
+traffic class, to separate packets into traffic classes the
+user may choose <b>mqprio(8),</b> and configure it like
+this:</p>
+
+<p style="margin-left:11%; margin-top: 1em"># tc qdisc add
+dev eth0 handle 100: parent root mqprio num_tc 3 \</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="85%">
+
+
+<p>map 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2 \</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="85%">
+
+
+<p>queues 1@0 1@1 2@2 \</p></td></tr>
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="7%"></td>
+<td width="85%">
+
+
+<p>hw 0</p></td></tr>
+</table>
+
+<p style="margin-left:11%; margin-top: 1em">To replace the
+current queuing disciple by CBS in the current queueing
+discipline connected to traffic class number 0, issue:</p>
+
+<p style="margin-left:11%; margin-top: 1em"># tc qdisc
+replace dev eth0 parent 100:4 cbs \</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="8%"></td>
+<td width="92%">
+
+
+<p>locredit -1470 hicredit 30 sendslope -980000 idleslope
+20000</p> </td></tr>
+</table>
+
+<p style="margin-left:11%; margin-top: 1em">These values
+are obtained from the following parameters, idleslope is
+20mbit/s, the transmission rate is 1Gbit/s and the maximum
+interfering frame size is 1500 bytes.</p>
+
+<h2>AUTHORS
+<a name="AUTHORS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Vinicius Costa
+Gomes &lt;vinicius.gomes@intel.com&gt;</p>
+<hr>
+</body>
+</html>

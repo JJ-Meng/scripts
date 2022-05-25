@@ -1,0 +1,300 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:30:35 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>CHMEM</title>
+
+</head>
+<body>
+
+<h1 align="center">CHMEM</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#RETURN CODES">RETURN CODES</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">chmem -
+configure memory</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>chmem</b>
+[<b>-h</b>] [<b>-V</b>] [<b>-v</b>] [<b>-e</b>|<b>-d</b>]
+[<i>SIZE</i>|<i>RANGE</i>|<b>-b</b> <i>BLOCKRANGE</i>] [-z
+ZONE]</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The chmem
+command sets a particular size or range of memory online or
+offline.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>-</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Specify <i>SIZE</i> as &lt;size&gt;[m|M|g|G]. With m or
+M, &lt;size&gt; specifies the memory size in MiB (1024 x
+1024 bytes). With g or G, &lt;size&gt; specifies the memory
+size in GiB (1024 x 1024 x 1024 bytes). The default unit is
+MiB.</p> </td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>-</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Specify <i>RANGE</i> in the form
+0x&lt;start&gt;-0x&lt;end&gt; as shown in the output of the
+<b>lsmem</b> command. &lt;start&gt; is the hexadecimal
+address of the first byte and &lt;end&gt; is the hexadecimal
+address of the last byte in the memory range.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>-</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Specify <i>BLOCKRANGE</i> in the form
+&lt;first&gt;-&lt;last&gt; or &lt;block&gt; as shown in the
+output of the <b>lsmem</b> command. &lt;first&gt; is the
+number of the first memory block and &lt;last&gt; is the
+number of the last memory block in the memory range.
+Alternatively a single block can be specified.
+<i>BLOCKRANGE</i> requires the <b>--blocks</b> option.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>-</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Specify <i>ZONE</i> as the name of a memory zone, as
+shown in the output of the <b>lsmem -o +ZONES</b> command.
+The output shows one or more valid memory zones for each
+memory range. If multiple zones are shown, then the memory
+range currently belongs to the first zone. By default, chmem
+will set memory online to the zone Movable, if this is among
+the valid zones. This default can be changed by specifying
+the <b>--zone</b> option with another valid zone. For memory
+ballooning, it is recommended to select the zone Movable for
+memory online and offline, if possible. Memory in this zone
+is much more likely to be able to be offlined again, but it
+cannot be used for arbitrary kernel allocations, only for
+migratable pages (e.g. anonymous and page cache pages). Use
+the <b>--help</b> option to see all available zones.</p></td></tr>
+</table>
+
+<p style="margin-left:11%; margin-top: 1em"><i>SIZE</i> and
+<i>RANGE</i> must be aligned to the Linux memory block size,
+as shown in the output of the <b>lsmem</b> command.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Setting memory
+online can fail for various reasons. On virtualized systems
+it can fail if the hypervisor does not have enough memory
+left, for example because memory was overcommitted. Setting
+memory offline can fail if Linux cannot free the memory. If
+only part of the requested memory can be set online or
+offline, a message tells you how much memory was set online
+or offline instead of the requested amount.</p>
+
+<p style="margin-left:11%; margin-top: 1em">When setting
+memory online <b>chmem</b> starts with the lowest memory
+block numbers. When setting memory offline <b>chmem</b>
+starts with the highest memory block numbers.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>-b</b>,
+<b>--blocks</b></p>
+
+<p style="margin-left:22%;">Use a <i>BLOCKRANGE</i>
+parameter instead of <i>RANGE</i> or <i>SIZE</i> for the
+<b>--enable</b> and <b>--disable</b> options.</p>
+
+<p style="margin-left:11%;"><b>-d</b>, <b>--disable</b></p>
+
+<p style="margin-left:22%;">Set the specified <i>RANGE</i>,
+<i>SIZE</i>, or <i>BLOCKRANGE</i> of memory offline.</p>
+
+<p style="margin-left:11%;"><b>-e</b>, <b>--enable</b></p>
+
+<p style="margin-left:22%;">Set the specified <i>RANGE</i>,
+<i>SIZE</i>, or <i>BLOCKRANGE</i> of memory online.</p>
+
+<p style="margin-left:11%;"><b>-z</b>, <b>--zone</b></p>
+
+<p style="margin-left:22%;">Select the memory <i>ZONE</i>
+where to set the specified <i>RANGE</i>, <i>SIZE</i>, or
+<i>BLOCKRANGE</i> of memory online or offline. By default,
+memory will be set online to the zone Movable, if
+possible.</p>
+
+<p style="margin-left:11%;"><b>-h</b>, <b>--help</b></p>
+
+<p style="margin-left:22%;">Print a short help text, then
+exit.</p>
+
+<p style="margin-left:11%;"><b>-v</b>, <b>--verbose</b></p>
+
+<p style="margin-left:22%;">Verbose mode. Causes
+<b>chmem</b> to print debugging messages about it&rsquo;s
+progress.</p>
+
+<p style="margin-left:11%;"><b>-V</b>, <b>--version</b></p>
+
+<p style="margin-left:22%;">Print the version number, then
+exit.</p>
+
+<h2>RETURN CODES
+<a name="RETURN CODES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>chmem</b>
+has the following return codes:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>0</b></p></td>
+<td width="8%"></td>
+<td width="23%">
+
+
+<p>success</p></td>
+<td width="55%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>1</b></p></td>
+<td width="8%"></td>
+<td width="23%">
+
+
+<p>failure</p></td>
+<td width="55%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>64</b></p></td>
+<td width="8%"></td>
+<td width="23%">
+
+
+<p>partial success</p></td>
+<td width="55%">
+</td></tr>
+</table>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>chmem
+--enable 1024</b></p>
+
+<p style="margin-left:22%;">This command requests 1024 MiB
+of memory to be set online.</p>
+
+<p style="margin-left:11%;"><b>chmem -e 2g</b></p>
+
+<p style="margin-left:22%;">This command requests 2 GiB of
+memory to be set online.</p>
+
+<p style="margin-left:11%;"><b>chmem --disable
+0x00000000e4000000-0x00000000f3ffffff</b></p>
+
+<p style="margin-left:22%;">This command requests the
+memory range starting with 0x00000000e4000000 and ending
+with 0x00000000f3ffffff to be set offline.</p>
+
+<p style="margin-left:11%;"><b>chmem -b -d 10</b></p>
+
+<p style="margin-left:22%;">This command requests the
+memory block number 10 to be set offline.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>lsmem</b>(1)</p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The
+<b>chmem</b> command is part of the util-linux package and
+is available from
+<a href="https://www.kernel.org/pub/linux/utils/util-linux/">Linux
+Kernel Archive</a>.</p>
+<hr>
+</body>
+</html>

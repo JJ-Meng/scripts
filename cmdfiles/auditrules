@@ -1,0 +1,1 @@
+auditctl -a always,exit -S openat -S truncate -F dir=/etc -F success=0

@@ -1,0 +1,118 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:29:52 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BTRFS-SELECT-SUPER</title>
+
+</head>
+<body>
+
+<h1 align="center">BTRFS-SELECT-SUPER</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em">btrfs-select-super
+- overwrite primary superblock with a backup copy</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>btrfs-select-super</b>
+-s number <i>&lt;device&gt;</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Destructively
+overwrite all copies of the superblock with a specified
+copy. This helps in certain cases, for example when write
+barriers were disabled during a power failure and not all
+superblocks were written, or if the primary superblock is
+damaged, eg. accidentally overwritten.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The filesystem
+specified by <i>device</i> must not be mounted.</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big>
+<br>
+Prior to overwriting the primary superblock, please make
+sure that the backup copies are valid!</b></p>
+
+<p style="margin-left:11%; margin-top: 1em">To dump a
+superblock use the <b>btrfs inspect-internal dump-super</b>
+command.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Then run the
+check (in the non-repair mode) using the command <b>btrfs
+check -s</b> where <i>-s</i> specifies the superblock copy
+to use.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Superblock
+copies exist in the following offsets on the device:</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; primary:
+<i>64KiB</i> (65536)</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; 1st
+copy: <i>64MiB</i> (67108864)</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; 2nd
+copy: <i>256GiB</i> (274877906944)</p>
+
+<p style="margin-left:11%; margin-top: 1em">A superblock
+size is <i>4KiB</i> (4096).</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-s|--super
+<i>&lt;superblock&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>use 'superblock&rsquo;th
+superblock copy, valid values are 0 1 or 2 if the respective
+superblock offset is within the device size</big></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>btrfs-inspect-internal</b>(8),
+<b>btrfsck check</b>(8)</big></p>
+<hr>
+</body>
+</html>

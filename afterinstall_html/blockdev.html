@@ -1,0 +1,248 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:28:58 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BLOCKDEV</title>
+
+</head>
+<body>
+
+<h1 align="center">BLOCKDEV</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#COMMANDS">COMMANDS</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">blockdev - call
+block device ioctls from the command line</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>blockdev</b>
+[<b>-q</b>] [<b>-v</b>] <i>command</i> [<i>command</i>...]
+<i>device</i> [<i>device</i>...] <b><br>
+blockdev --report</b> [<i>device</i>...] <b><br>
+blockdev</b> -h<b>|</b>-V</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The utility
+<b>blockdev</b> allows one to call block device ioctls from
+the command line.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p style="margin-top: 1em"><b>-q</b></p></td>
+<td width="8%"></td>
+<td width="16%">
+
+
+<p style="margin-top: 1em">Be quiet.</p></td>
+<td width="62%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-v</b></p></td>
+<td width="8%"></td>
+<td width="16%">
+
+
+<p>Be verbose.</p></td>
+<td width="62%">
+</td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>--report</b></p>
+
+<p style="margin-left:22%;">Print a report for the
+specified device. It is possible to give multiple devices.
+If none is given, all devices which appear in
+/proc/partitions are shown. Note that the partition StartSec
+is in 512-byte sectors.</p>
+
+<p style="margin-left:11%;"><b>-h</b>, <b>--help</b></p>
+
+<p style="margin-left:22%;">Display help text and exit.</p>
+
+<p style="margin-left:11%;"><b>-V</b>, <b>--version</b></p>
+
+<p style="margin-left:22%;">Print version and exit.</p>
+
+<h2>COMMANDS
+<a name="COMMANDS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">It is possible
+to give multiple devices and multiple commands. <b><br>
+--flushbufs</b></p>
+
+<p style="margin-left:22%;">Flush buffers.</p>
+
+<p style="margin-left:11%;"><b>--getalignoff</b></p>
+
+<p style="margin-left:22%;">Get alignment offset.</p>
+
+<p style="margin-left:11%;"><b>--getbsz</b></p>
+
+<p style="margin-left:22%;">Print blocksize in bytes. This
+size does not describe device topology. It&rsquo;s size used
+internally by kernel and it maybe modified (for example) by
+filesystem driver on mount.</p>
+
+<p style="margin-left:11%;"><b>--getdiscardzeroes</b></p>
+
+<p style="margin-left:22%;">Get discard zeroes support
+status.</p>
+
+<p style="margin-left:11%;"><b>--getfra</b></p>
+
+<p style="margin-left:22%;">Get filesystem readahead in
+512-byte sectors.</p>
+
+<p style="margin-left:11%;"><b>--getiomin</b></p>
+
+<p style="margin-left:22%;">Get minimum I/O size.</p>
+
+<p style="margin-left:11%;"><b>--getioopt</b></p>
+
+<p style="margin-left:22%;">Get optimal I/O size.</p>
+
+<p style="margin-left:11%;"><b>--getmaxsect</b></p>
+
+<p style="margin-left:22%;">Get max sectors per request</p>
+
+<p style="margin-left:11%;"><b>--getpbsz</b></p>
+
+<p style="margin-left:22%;">Get physical block (sector)
+size.</p>
+
+<p style="margin-left:11%;"><b>--getra</b></p>
+
+<p style="margin-left:22%;">Print readahead (in 512-byte
+sectors).</p>
+
+<p style="margin-left:11%;"><b>--getro</b></p>
+
+<p style="margin-left:22%;">Get read-only. Print 1 if the
+device is read-only, 0 otherwise.</p>
+
+<p style="margin-left:11%;"><b>--getsize64</b></p>
+
+<p style="margin-left:22%;">Print device size in bytes.</p>
+
+<p style="margin-left:11%;"><b>--getsize</b></p>
+
+<p style="margin-left:22%;">Print device size (32-bit!) in
+sectors. Deprecated in favor of the --getsz option.</p>
+
+<p style="margin-left:11%;"><b>--getss</b></p>
+
+<p style="margin-left:22%;">Print logical sector size in
+bytes &ndash; usually 512.</p>
+
+<p style="margin-left:11%;"><b>--getsz</b></p>
+
+<p style="margin-left:22%;">Get size in 512-byte
+sectors.</p>
+
+<p style="margin-left:11%;"><b>--rereadpt</b></p>
+
+<p style="margin-left:22%;">Reread partition table</p>
+
+<p style="margin-left:11%;"><b>--setbsz</b>
+<i>bytes</i></p>
+
+<p style="margin-left:22%;">Set blocksize. Note that the
+block size is specific to the current file descriptor
+opening the block device, so the change of block size only
+persists for as long as blockdev has the device open, and is
+lost once blockdev exits.</p>
+
+<p style="margin-left:11%;"><b>--setfra</b>
+<i>sectors</i></p>
+
+<p style="margin-left:22%;">Set filesystem readahead (same
+like --setra on 2.6 kernels).</p>
+
+<p style="margin-left:11%;"><b>--setra</b>
+<i>sectors</i></p>
+
+<p style="margin-left:22%;">Set readahead (in 512-byte
+sectors).</p>
+
+<p style="margin-left:11%;"><b>--setro</b></p>
+
+<p style="margin-left:22%;">Set read-only. The currently
+active access to the device may not be affected by the
+change. For example filesystem already mounted in read-write
+mode will not be affected. The change applies after
+remount.</p>
+
+<p style="margin-left:11%;"><b>--setrw</b></p>
+
+<p style="margin-left:22%;">Set read-write.</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">blockdev was
+written by Andries E. Brouwer and rewritten by Karel
+Zak.</p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The blockdev
+command is part of the util-linux package and is available
+from https://www.kernel.org/pub/linux/utils/util-linux/.</p>
+<hr>
+</body>
+</html>

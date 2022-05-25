@@ -1,0 +1,5 @@
+non-privilege commands are:
+*****************final results********************************
+fuzz 68 commands in total,and 0 commands are privilege
+target cmds:1  priv target cmds:0 non-priv cmds:1
+target commands are: badblocks

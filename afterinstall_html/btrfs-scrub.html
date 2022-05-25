@@ -1,0 +1,273 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:29:52 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BTRFS-SCRUB</title>
+
+</head>
+<body>
+
+<h1 align="center">BTRFS-SCRUB</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#SUBCOMMAND">SUBCOMMAND</a><br>
+<a href="#EXIT STATUS">EXIT STATUS</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">btrfs-scrub -
+scrub btrfs filesystem, verify block checksums</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>btrfs
+scrub</b> <i>&lt;subcommand&gt; &lt;args&gt;</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>btrfs
+scrub</b></i> is used to scrub a btrfs filesystem, which
+will read all data and metadata blocks from all devices and
+verify checksums. Automatically repair corrupted blocks if
+there&rsquo;s a correct copy available.</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+Scrub is not a filesystem checker (fsck) and does not verify
+nor repair structural damage in the filesystem. It really
+only checks checksums of data and tree blocks, it
+doesn&rsquo;t ensure the content of tree blocks is valid and
+consistent. There&rsquo;s some validation performed when
+metadata blocks are read from disk but it&rsquo;s not
+extensive and cannot substitute full <i>btrfs check</i>
+run.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The user is
+supposed to run it manually or via a periodic system
+service. The recommended period is a month but could be
+less. The estimated device bandwidth utilization is about
+80% on an idle filesystem. The IO priority class is by
+default <i>idle</i> so background scrub should not
+significantly interfere with normal filesystem
+operation.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The scrubbing
+status is recorded in <i>/var/lib/btrfs/</i> in textual
+files named <i>scrub.status.UUID</i> for a filesystem
+identified by the given UUID. (Progress state is
+communicated through a named pipe in file
+<i>scrub.progress.UUID</i> in the same directory.) The
+status file is updated every 5 seconds. A resumed scrub will
+continue from the last saved position.</p>
+
+<h2>SUBCOMMAND
+<a name="SUBCOMMAND"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><big>cancel</big></b>
+<big><i>&lt;path&gt;</i>|<i>&lt;device&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>If a scrub is running on
+the filesystem identified by <i>path</i> cancel
+it.</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>If a
+<i>device</i> is specified, the corresponding filesystem is
+found and <b>btrfs scrub cancel</b> behaves as if it was
+called on that filesystem.</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>resume</b>
+[-BdqrR] [-c <i>&lt;ioprio_class&gt;</i> -n
+<i>&lt;ioprio_classdata&gt;</i>]
+<i>&lt;path&gt;</i>|<i>&lt;device&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>Resume a cancelled or
+interrupted scrub on the filesystem identified by
+<i>path</i> or on a given <i>device</i>.</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>Does not
+start a new scrub if the last scrub finished
+successfully.</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><b>Options</b></big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>see
+<b>scrub start</b>.</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>start</b>
+[-BdqrRf] [-c <i>&lt;ioprio_class&gt;</i> -n
+<i>&lt;ioprio_classdata&gt;</i>]
+<i>&lt;path&gt;</i>|<i>&lt;device&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>Start a scrub on all
+devices of the filesystem identified by <i>path</i> or on a
+single <i>device</i>. If a scrub is already running, the new
+one fails.</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>Without
+options, scrub is started as a background process.</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>The
+default IO priority of scrub is the idle class. The priority
+can be configured similar to the <b>ionice</b>(1) syntax
+using <i>-c</i> and <i>-n</i> options.</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><b>Options</b></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-B</big></p>
+
+<p style="margin-left:23%;"><big>do not background and
+print scrub statistics when finished</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-d</big></p>
+
+<p style="margin-left:23%;"><big>print separate statistics
+for each device of the filesystem (<i>-B</i> only) at the
+end</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-q</big></p>
+
+<p style="margin-left:23%;"><big>be quiet, omit error
+messages and statistics</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-r</big></p>
+
+<p style="margin-left:23%;"><big>run in read-only mode, do
+not attempt to correct anything, can be run on a read-only
+filesystem</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-R</big></p>
+
+<p style="margin-left:23%;"><big>raw print mode, print full
+data instead of summary</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>-c
+<i>&lt;ioprio_class&gt;</i></big></p>
+
+<p style="margin-left:23%;"><big>set IO priority class (see
+<b>ionice</b>(1) manpage)</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>-n
+<i>&lt;ioprio_classdata&gt;</i></big></p>
+
+<p style="margin-left:23%;"><big>set IO priority classdata
+(see <b>ionice</b>(1) manpage)</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-f</big></p>
+
+<p style="margin-left:23%;"><big>force starting new scrub
+even if a scrub is already running, this can useful when
+scrub status file is damaged and reports a running scrub
+although it is not, but should not normally be
+necessary</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>status</b>
+[-d] <i>&lt;path&gt;</i>|<i>&lt;device&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>Show status of a running
+scrub for the filesystem identified by <i>path</i> or for
+the specified <i>device</i>.</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>If no
+scrub is running, show statistics of the last finished or
+cancelled scrub for that filesystem or device.</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><b>Options</b></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-d</big></p>
+
+<p style="margin-left:23%;"><big>print separate statistics
+for each device of the filesystem</big></p>
+
+<h2>EXIT STATUS
+<a name="EXIT STATUS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>btrfs
+scrub</b> returns a zero exit status if it succeeds. Non
+zero is returned in case of failure:</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>1</big></p>
+
+<p style="margin-left:17%;"><big>scrub couldn&rsquo;t be
+performed</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>2</big></p>
+
+<p style="margin-left:17%;"><big>there is nothing to
+resume</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>3</big></p>
+
+<p style="margin-left:17%;"><big>scrub found uncorrectable
+errors</big></p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>btrfs</b>
+is part of btrfs-progs. Please refer to the btrfs wiki
+<b><font color="#0000FF">http://btrfs.wiki.kernel.org</font></b>
+<font color="#000000">for further details.</font></big></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><font color="#000000"><b>mkfs.btrfs</b>(8),
+<b>ionice</b>(1)</font></big></p>
+<hr>
+</body>
+</html>

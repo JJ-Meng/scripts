@@ -1,0 +1,372 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:28:12 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>actions in tc</title>
+
+</head>
+<body>
+
+<h1 align="center">actions in tc</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPERATIONS">OPERATIONS</a><br>
+<a href="#ACTION OPTIONS">ACTION OPTIONS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">actions -
+independently defined actions in tc</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc</b> [
+<i>TC_OPTIONS</i> ] <b>actions add</b> | <b>change</b> |
+<b>replace</b> <i>ACTSPEC</i></p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc</b> [
+<i>TC_OPTIONS</i> ] <b>actions get</b> | <b>delete</b>
+<i>ACTISPEC</i></p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc</b> [
+<i>TC_OPTIONS</i> ] <b>actions flush</b>
+<i>ACTNAMESPEC</i></p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc</b> [
+<i>TC_OPTIONS</i> ] <b>actions ls</b> | <b>list</b>
+<i>ACTNAMESPEC</i> [ <i>ACTFILTER</i> ]</p>
+
+<p style="margin-left:23%; margin-top: 1em"><i>ACTSPEC</i>
+:= <b>action</b> <i>ACTDETAIL</i> [ <i>INDEXSPEC</i> ] [
+<i>COOKIESPEC</i> ] [ <i>FLAGS</i> ] [ <i>CONTROL</i> ]</p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>ACTISPEC</i>
+:= <i>ACTNAMESPEC INDEXSPEC</i></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>ACTNAMESPEC</i>
+:= <b>action</b> ACTNAME</p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>INDEXSPEC</i>
+:= <b>index</b> <i>INDEX</i></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>ACTFILTER</i>
+:= <b>since</b> <i>MSTIME</i></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>COOKIESPEC</i>
+:= <b>cookie</b> <i>COOKIE</i></p>
+
+<p style="margin-left:23%; margin-top: 1em"><i>FLAGS</i> :=
+<i>no_percpu</i></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>ACTDETAIL</i>
+:= <i>ACTNAME ACTPARAMS</i></p>
+
+<p style="margin-left:23%; margin-top: 1em"><i>ACTNAME</i>
+may be any valid action type: gact, mirred, bpf, connmark,
+csum, police, etc.</p>
+
+<p style="margin-left:23%; margin-top: 1em"><i>MSTIME</i>
+Time since last update.</p>
+
+<p style="margin-left:23%; margin-top: 1em"><i>CONTROL</i>
+:= { <i>reclassify</i> | <i>pipe</i> | <i>drop</i> |
+<i>continue</i> | <i>ok</i> }</p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><i>TC_OPTIONS</i>
+These are the options that are specific to <b>tc</b> and not
+only the options. Refer to <b>tc(8)</b> for more
+information.</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The
+<b>actions</b> object in <b>tc</b> allows a user to define
+actions independently of a classifier (filter). These
+actions can then be assigned to one or more filters, with
+any packets matching the classifier&rsquo;s criteria having
+that action performed on them.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Each action
+type (mirred, police, etc.) will have its own table to store
+all created actions.</p>
+
+<h2>OPERATIONS
+<a name="OPERATIONS"></a>
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em"><b>add</b></p></td>
+<td width="2%"></td>
+<td width="66%">
+
+
+<p style="margin-top: 1em">Create a new action in that
+action&rsquo;s table.</p></td>
+<td width="12%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>change</b></p></td>
+<td width="2%"></td>
+<td width="66%"></td>
+<td width="12%">
+</td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>replace</b></p>
+
+<p style="margin-left:22%;">Make modifications to an
+existing action.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>get</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>Display the action with the specified index value. When
+combined with the <b>-s</b> option for <b>tc</b>, display
+the statistics for that action.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>delete</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>Delete the action with the specified index value. If the
+action is already associated with a classifier, it does not
+delete the classifier.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>ls</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>list</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>List all the actions in the specified table. When
+combined with the <b>-s</b> option for <b>tc</b>, display
+the statistics for all actions in the specified table. When
+combined with the option <b>since</b> allows doing a
+millisecond time-filter since the last time an action was
+used in the datapath.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>flush</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>Delete all actions stored in the specified table.</p></td></tr>
+</table>
+
+<h2>ACTION OPTIONS
+<a name="ACTION OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Note that these
+options are available to all action types. <b><br>
+index</b> <i>INDEX</i></p>
+
+<p style="margin-left:22%;">Specify the table index value
+of an action. <i>INDEX</i> is a 32-bit value that is unique
+to the specific type of action referenced.</p>
+
+<p style="margin-left:22%; margin-top: 1em">For <b>add</b>,
+<b>change</b>, and <b>replace</b> operations, the index is
+<b>optional.</b> When adding a new action, specifying an
+index value will assign the action to that index unless that
+index value has already been assigned. Omitting the index
+value for an add operation will cause the kernel to assign a
+value to the new action.</p>
+
+<p style="margin-left:22%; margin-top: 1em">For <b>get</b>
+and <b>delete</b> operations, the index is <b>required</b>
+to identify the specific action to be displayed or
+deleted.</p>
+
+<p style="margin-left:11%;"><b>cookie</b> <i>COOKIE</i></p>
+
+<p style="margin-left:22%;">In addition to the specific
+action, mark the matching packet with the value specified by
+<i>COOKIE</i>. The <i>COOKIE</i> is a 128-bit value that
+will not be interpreted by the kernel whatsoever. As such,
+it can be used as a correlating value for maintaining user
+state. The value to be stored is completely arbitrary and
+does not require a specific format. It is stored inside the
+action structure itself.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="7%">
+
+
+<p><i>FLAGS</i></p></td>
+<td width="4%"></td>
+<td width="78%">
+
+
+<p>Action-specific flags. Currently, the only supported
+flag is <i>no_percpu</i> which indicates that action is
+expected to have minimal software data-path traffic and
+doesn&rsquo;t need to allocate stat counters with percpu
+allocator. This option is intended to be used by
+hardware-offloaded actions.</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>since</b> <i>MSTIME</i></p>
+
+<p style="margin-left:22%;">When dumping large number of
+actions, a millisecond time-filter can be specified
+<i>MSTIME</i>. The <i>MSTIME</i> is a millisecond count
+since last time a packet hit the action. As an example
+specifying &quot;since 20000&quot; implies to dump all
+actions that have seen packets in the last 20 seconds. This
+option is useful when the kernel has a large number of
+actions and you are only interested in recently used
+actions.</p>
+
+<p style="margin-left:11%;"><i>CONTROL</i></p>
+
+<p style="margin-left:22%;">The <i>CONTROL</i> indicates
+how <b>tc</b> should proceed after executing the action. Any
+of the following are valid: <b><br>
+reclassify</b></p>
+
+<p style="margin-left:32%;">Restart the classifiction by
+jumping back to the first filter attached to the
+action&rsquo;s parent.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>pipe</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+
+
+<p>Continue with the next action. This is the default
+control.</p> </td></tr>
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>drop</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+
+
+<p>Drop the packed without running any further actions.</p></td></tr>
+</table>
+
+<p style="margin-left:22%;"><b>continue</b></p>
+
+<p style="margin-left:32%;">Continue the classification
+with the next filter.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>pass</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+
+
+<p>Return to the calling qdisc for packet processing, and
+end classification of this packet.</p></td></tr>
+</table>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc</b>(8),
+<b>tc-bpf</b>(8), <b>tc-connmark</b>(8), <b>tc-csum</b>(8),
+<b>tc-ife</b>(8), <b>tc-mirred</b>(8), <b>tc-nat</b>(8),
+<b>tc-pedit</b>(8), <b>tc-police</b>(8),
+<b>tc-simple</b>(8), <b>tc-skbedit</b>(8),
+<b>tc-skbmod</b>(8), <b>tc-tunnel_key</b>(8),
+<b>tc-vlan</b>(8), <b>tc-xt</b>(8)</p>
+<hr>
+</body>
+</html>

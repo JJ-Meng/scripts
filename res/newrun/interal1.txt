@@ -1,0 +1,930 @@
+augenrules:check cap :#getgid# for 1 times,check cap :#getegid# for 1 times,check cap 2 for 1 times,check cap :#geteuid# for 2 times,check cap 1 for 1 times,check cap :#getuid# for 1 times,
+
+augenrules --check:check cap :#getgid# for 1 times,check cap :#getegid# for 1 times,check cap 2 for 1 times,check cap :#geteuid# for 2 times,check cap 1 for 1 times,check cap :#getuid# for 1 times,
+
+augenrules --load:check cap :#getgid# for 1 times,check cap :#getegid# for 1 times,check cap 2 for 1 times,check cap :#geteuid# for 2 times,check cap 1 for 1 times,check cap :#getuid# for 1 times,
+
+arping 127.0.0.1 -c deadline:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 192.168.119.138 -c deadline:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 182.61.200.7 -c deadline:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 10.0.2.10 -c deadline:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 127.0.0.1 -w arping:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 192.168.119.138 -w arping:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 182.61.200.7 -w arping:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 10.0.2.10 -w arping:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 127.0.0.1 -w count:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 192.168.119.138 -w count:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 182.61.200.7 -w count:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+arping 10.0.2.10 -w count:check cap 13 for 3 times,check cap 18 for 1 times,check cap 6 for 2 times,check cap 7 for 1 times,
+
+auditd:check cap 23 for 1 times,check cap 2 for 5 times,
+
+auditd -f:check cap 30 for 4 times,check cap 2 for 19 times,check cap 1 for 3 times,check cap 24 for 2 times,check cap 23 for 1 times,check cap :#getuid# for 2 times,
+
+auditd -l:check cap 23 for 1 times,check cap 2 for 5 times,
+
+auditd -n:check cap 4 for 10 times,check cap 30 for 4 times,check cap 2 for 25 times,check cap 0 for 4 times,check cap 1 for 4 times,check cap 24 for 2 times,check cap 23 for 1 times,check cap :#getuid# for 2 times,check cap 3 for 5 times,
+
+badblocks /dev/sda -i Badblocks:check cap 2 for 2 times,
+
+badblocks /dev/sda -i new:check cap 2 for 2 times,
+
+badblocks /dev/sda -i dumpe2fs:check cap 2 for 2 times,
+
+badblocks /dev/sda -n:check cap 2 for 2 times,check cap 1 for 2 times,
+
+badblocks /dev/sda -w:check cap 2 for 2 times,check cap 1 for 2 times,
+
+audispd-zos-remote:check cap 8 for 42 times,check cap 2 for 1 times,check cap 1 for 1 times,
+
+astraceroute:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -p 80:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -p:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -f 1:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -f 30:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -f:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -m 1:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -m 30:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -m:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -q 2:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -q:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -x 3:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -x:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -4:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -6:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -n:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -u:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,check cap 1 for 3 times,
+
+astraceroute -L:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -N:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -S:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -A:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -F:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -P:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -U:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -R:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -E:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -G:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -Z:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -v:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -h:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -i eth0 -N -S -H netsniff-ng.org:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -6 -i eth0 -S -E -N -H www.6bone.net:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -i eth0 -N -F -H netsniff-ng.org:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -i eth0 -N -FPU -H netsniff-ng.org:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+astraceroute -i eth0 -N -H netsniff-ng.org -X censor-me -Z:check cap :#getgid# for 1 times,check cap :#getuid# for 1 times,
+
+addpart /dev/sda 0 0 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 0 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 0 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 0 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 0 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 1 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 1 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 1 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 1 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 1 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 63 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 63 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 63 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 63 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 63 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 121212 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 121212 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 121212 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 121212 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 121212 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 65534 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 65534 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 65534 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 65534 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 0 65534 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 0 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 0 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 0 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 0 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 0 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 1 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 1 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 1 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 1 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 1 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 63 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 63 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 63 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 63 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 63 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 121212 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 121212 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 121212 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 121212 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 121212 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 65534 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 65534 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 65534 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 65534 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 1 65534 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 0 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 0 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 0 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 0 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 0 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 1 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 1 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 1 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 1 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 1 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 63 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 63 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 63 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 63 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 63 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 121212 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 121212 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 121212 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 121212 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 121212 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 65534 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 65534 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 65534 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 65534 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 63 65534 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 0 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 0 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 0 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 0 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 0 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 1 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 1 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 1 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 1 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 1 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 63 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 63 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 63 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 63 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 63 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 121212 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 121212 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 121212 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 121212 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 121212 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 65534 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 65534 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 65534 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 65534 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 121212 65534 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 0 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 0 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 0 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 0 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 0 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 1 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 1 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 1 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 1 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 1 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 63 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 63 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 63 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 63 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 63 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 121212 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 121212 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 121212 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 121212 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 121212 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 65534 0:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 65534 1:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 65534 63:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 65534 121212:check cap 2 for 1 times,check cap 21 for 1 times,
+
+addpart /dev/sda 65534 65534 65534:check cap 2 for 1 times,check cap 21 for 1 times,
+
+ausearch -a 329:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -a 2401771:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -a 1116360555:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --arch b32:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --debug:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --checkpoint 2:check cap 2 for 6 times,check cap 1 for 1 times,
+
+ausearch --escape raw:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --escape tty:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --escape shell:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --escape shell_quote:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --extra-obj2:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -f filename:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --format raw:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --format default:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --format interpret:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --format csv:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --format text:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -i:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --input-logs:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch --just-one:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -l:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -m ALL:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -o tcontext:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -o scontext:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -o /subject:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -o /object:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -r:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -se tcontext:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -se scontext:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -se /subject:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -se /object:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -su tcontext:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -su scontext:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -su /subject:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -su /object:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -sv yes:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -sv no:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te today:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te now:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te recent:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te boot:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te yesterday:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te this-week:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te week-ago:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te this-month:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -te this-year:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts today:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts now:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts recent:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts boot:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts yesterday:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts this-week:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts week-ago:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts this-month:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts this-year:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -ts checkpoint:check cap 2 for 8 times,check cap 1 for 1 times,
+
+ausearch -w:check cap 2 for 8 times,check cap 1 for 1 times,
+
+auditctl -b 64:check cap 30 for 2 times,
+
+auditctl --backlog_wait_time 60:check cap 30 for 2 times,
+
+auditctl --backlog_wait_time 10:check cap 30 for 2 times,
+
+auditctl -D:check cap 30 for 2 times,
+
+auditctl --loginuid-immutable:check cap 30 for 1 times,
+
+auditctl -r 0:check cap 30 for 2 times,
+
+auditctl --reset-lost:check cap 30 for 2 times,
+
+auditctl -R 1:check cap 30 for 1 times,
+
+auditctl -t:check cap 30 for 1 times,
+
+auditctl -s:check cap 30 for 2 times,
+
+auditctl -l:check cap 30 for 1 times,check cap :#geteuid# for 1 times,
+
+auditctl -a always,exit -S all -F pid=1005:check cap 30 for 2 times,
+
+auditctl -a always,exit -S openat -F auid=510:check cap 30 for 2 times,
+
+auditctl -a always,exit -S openat -F success=0:check cap 30 for 2 times,
+
+auditctl -w /etc/shadow -p wa:check cap 30 for 2 times,
+
+auditctl -w /etc/ -p wa:check cap 30 for 2 times,
+
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid:check cap 30 for 2 times,
+
+aureport:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -au:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -a:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --comm:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -c:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -cr:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -e:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --escape raw:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --escape tty:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --escape shell:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --escape shell_quote:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -f:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --failed:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -h:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -i:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --input-logs:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --integrity:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -k:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -l:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -m:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ma:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -n:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -nc:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -p:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -r:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -s:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --success:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --summary:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -t:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --tty:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te today:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te now:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te recent:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te boot:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te yesterday:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te this-week:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te week-ago:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te this-month:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -te this-year:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -tm:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts today:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts now:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts recent:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts boot:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts yesterday:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts this-week:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts week-ago:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts this-month:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -ts this-year:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -u:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport --virt:check cap 2 for 8 times,check cap 1 for 1 times,
+
+aureport -x:check cap 2 for 8 times,check cap 1 for 1 times,
+
+automount:check cap :#geteuid# for 1 times,
+
+automount -t 5:check cap :#geteuid# for 1 times,
+
+automount -t 10:check cap :#geteuid# for 1 times,
+
+automount -t 60:check cap :#geteuid# for 1 times,
+
+automount -n 5:check cap :#geteuid# for 1 times,
+
+automount -n 10:check cap :#geteuid# for 1 times,
+
+automount -n 60:check cap :#geteuid# for 1 times,
+
+automount -v:check cap :#geteuid# for 1 times,
+
+automount -d:check cap :#geteuid# for 1 times,
+
+automount -Dvariable=value:check cap :#geteuid# for 1 times,
+
+automount -S:check cap :#geteuid# for 1 times,
+
+automount -f:check cap :#geteuid# for 1 times,
+
+automount -r:check cap :#geteuid# for 1 times,
+
+automount -m:check cap :#geteuid# for 1 times,
+
+automount -C:check cap :#geteuid# for 1 times,
+
+automount -F:check cap :#geteuid# for 1 times,
+
+autrace /bin/ls:check cap 30 for 1 times,
+
+autrace /bin/ls -r:check cap 30 for 1 times,
+
+autrace /bin/ls /tmp:check cap 30 for 1 times,
+
+autrace -r /bin/ls:check cap 30 for 1 times,
+
+anacron -d:check cap :#getgid# for 3 times,check cap :#getuid# for 3 times,
+
+arpd:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -l:check cap 1 for 2 times,
+
+arpd -b /var/lib/arpd/arpd.db:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -a 1:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -a 3:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -k:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -n 60:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -n 30:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -p 60:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -p 30:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -R 1:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -B 1:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -B 3:check cap 13 for 1 times,check cap 1 for 2 times,
+
+arpd -b /var/tmp/arpd.db:check cap 13 for 1 times,
+
+arpd -b /var/tmp/arpd.db -a 1 eth0 eth1:check cap 16 for 1 times,check cap 12 for 1 times,
+
+arpd -b /var/tmp/arpd.db -a 3 -k eth0 eth1:check cap 16 for 1 times,check cap 12 for 1 times,
+
+arp -d 127.0.0.1:check cap 12 for 2 times,
+
+arp -d 192.168.119.138:check cap 12 for 1 times,
+
+arp -d 182.61.200.7:check cap 12 for 1 times,
+
+arp -d 10.0.2.10:check cap 12 for 1 times,
+
+arp -s 127.0.0.1 00:0c:29:0d:19:d6:check cap 12 for 1 times,
+
+arp -s 192.168.119.138 00:0c:29:0d:19:d6:check cap 12 for 1 times,
+
+arp -s 182.61.200.7 00:0c:29:0d:19:d6:check cap 12 for 1 times,
+
+arp -s 10.0.2.10 00:0c:29:0d:19:d6:check cap 12 for 1 times,
+
+arp -s 127.0.0.1 00:0c:29:0d:19:d6 pub:check cap 12 for 1 times,
+
+arp -s 192.168.119.138 00:0c:29:0d:19:d6 pub:check cap 12 for 1 times,
+
+arp -s 182.61.200.7 00:0c:29:0d:19:d6 pub:check cap 12 for 1 times,
+
+arp -s 10.0.2.10 00:0c:29:0d:19:d6 pub:check cap 12 for 1 times,
+
+arp -Ds 127.0.0.1 eth0 pub:check cap 12 for 1 times,
+
+arp -Ds 192.168.119.138 eth0 pub:check cap 12 for 1 times,
+
+arp -Ds 182.61.200.7 eth0 pub:check cap 12 for 1 times,
+
+arp -Ds 10.0.2.10 eth0 pub:check cap 12 for 1 times,
+
+/usr/sbin/arp -i eth0 -Ds 10.0.0.2 eth1 pub:check cap 16 for 1 times,check cap 12 for 1 times,
+
+/usr/sbin/arp -i eth1 -d 10.0.0.1:check cap 12 for 1 times,
+
+agetty 0 --reload:check cap 3 for 1 times,check cap 1 for 1 times,
+
+agetty 1 --reload:check cap 3 for 1 times,check cap 1 for 1 times,
+
+agetty 63 --reload:check cap 3 for 1 times,check cap 1 for 1 times,
+
+agetty 121212 --reload:check cap 3 for 1 times,check cap 1 for 1 times,
+
+agetty 65534 --reload:check cap 3 for 1 times,check cap 1 for 1 times,
+
+accton on:check cap 20 for 1 times,check cap 1 for 1 times,
+
+accton off:check cap 20 for 1 times,
+
+accton filename:check cap 20 for 1 times,
+
+non-privilege commands are:
+filename
+<seconds>,
+f
+username
+process-id
+type
+SE-Linux-context-string
+comm-name
+fakehost
+[
+number
+checkpoint-file
+effective-group-id
+deadline
+mode
+start-date
+<TIME>
+<ttl>,
+max
+all-user-id
+list
+length<i>
+read
+end-date
+start<i>
+syscall-name-or-value
+n
+<RATE>
+device<i>
+block_size
+all-group-id
+count
+key-string
+<num>,
+login-id
+effective-user-id
+avcstat
+initstring
+login_program
+file
+If
+source
+Syscall
+group-id
+wait_time
+option
+node-name
+partition<i>
+hostname<i>
+************opt
+ifname<i>
+***********arguments
+backlog
+exit-code-or-errno
+parent-process-id
+success-value
+guest-uuid
+test_pattern
+file|directory
+<port>,
+program<i>
+login_options
+message-type
+hw_addr<i>
+destination<i>
+<NUMBER>
+<sec>,
+<DATABASE>
+host-name
+port<i>
+CPU
+key
+num_passes
+file-name
+user-id
+guest-name
+input_file
+audit-event-id
+rate
+output_file
+*****************final results********************************
+fuzz 1208 commands in total,and 374 commands are privilege
+target cmds:98  priv target cmds:17 non-priv cmds:81
+target commands are: filename
+<seconds>,
+ausearch
+f
+process-id
+username
+type
+SE-Linux-context-string
+comm-name
+fakehost
+[
+number
+checkpoint-file
+effective-group-id
+deadline
+mode
+agetty
+start-date
+<TIME>
+<ttl>,
+max
+all-user-id
+list
+length<i>
+read
+addpart
+end-date
+start<i>
+syscall-name-or-value
+n
+<RATE>
+device<i>
+auditctl
+block_size
+all-group-id
+count
+key-string
+<num>,
+login-id
+effective-user-id
+avcstat
+initstring
+login_program
+file
+If
+source
+arping
+aureport
+Syscall
+group-id
+wait_time
+option
+string
+node-name
+partition<i>
+hostname<i>
+************opt
+ifname<i>
+***********arguments
+backlog
+arpd
+exit-code-or-errno
+auditd
+arp
+parent-process-id
+success-value
+guest-uuid
+test_pattern
+astraceroute
+file|directory
+<port>,
+anacron
+program<i>
+login_options
+autrace
+message-type
+audispd-zos-remote
+destination<i>
+hw_addr<i>
+<NUMBER>
+<sec>,
+<DATABASE>
+host-name
+port<i>
+CPU
+key
+num_passes
+file-name
+user-id
+accton
+badblocks
+guest-name
+automount
+augenrules
+input_file
+audit-event-id
+rate
+output_file

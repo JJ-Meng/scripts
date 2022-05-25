@@ -1,0 +1,22 @@
+badblocks /dev/loop0p1
+badblocks /dev/loop0p1 -b 512
+badblocks /dev/loop0p1 -b 1024
+badblocks /dev/loop0p1 -c 32
+badblocks /dev/loop0p1 -c 64
+badblocks /dev/loop0p1 -d 
+badblocks /dev/loop0p1 -d 100
+badblocks /dev/loop0p1 -e 1
+badblocks /dev/loop0p1 -e 0
+badblocks /dev/loop0p1 -f 
+badblocks /dev/loop0p1 -i -
+badblocks /dev/loop0p1 -N
+badblocks /dev/loop0p1 -o /home/test/cmdfiles/normalfile.txt
+badblocks /dev/loop0p1 -p 1
+badblocks /dev/loop0p1 -p 0
+badblocks /dev/loop0p1 -s 
+badblocks /dev/loop0p1 -t random
+badblocks /dev/loop0p1 -v 
+badblocks /dev/loop0p1 -w 
+badblocks /dev/sda -B
+badblocks /dev/loop0p1 -B 
+badblocks /dev/loop0p1 -X 

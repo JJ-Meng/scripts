@@ -1,0 +1,1208 @@
+augenrules
+augenrules --check
+augenrules --load
+arping 127.0.0.1
+arping 192.168.119.138
+arping 182.61.200.7
+arping 10.0.2.10
+arping 127.0.0.1 -A
+arping 192.168.119.138 -A
+arping 182.61.200.7 -A
+arping 10.0.2.10 -A
+arping 127.0.0.1 -b
+arping 192.168.119.138 -b
+arping 182.61.200.7 -b
+arping 10.0.2.10 -b
+arping 127.0.0.1 -c deadline
+arping 192.168.119.138 -c deadline
+arping 182.61.200.7 -c deadline
+arping 10.0.2.10 -c deadline
+arping 127.0.0.1 -c
+arping 192.168.119.138 -c
+arping 182.61.200.7 -c
+arping 10.0.2.10 -c
+arping 127.0.0.1 -D
+arping 192.168.119.138 -D
+arping 182.61.200.7 -D
+arping 10.0.2.10 -D
+arping 127.0.0.1 -f
+arping 192.168.119.138 -f
+arping 182.61.200.7 -f
+arping 10.0.2.10 -f
+arping 127.0.0.1 -h
+arping 192.168.119.138 -h
+arping 182.61.200.7 -h
+arping 10.0.2.10 -h
+arping 127.0.0.1 -q
+arping 192.168.119.138 -q
+arping 182.61.200.7 -q
+arping 10.0.2.10 -q
+arping 127.0.0.1 -s 0
+arping 192.168.119.138 -s 0
+arping 182.61.200.7 -s 0
+arping 10.0.2.10 -s 0
+arping 127.0.0.1 -s 0.0.0.0
+arping 192.168.119.138 -s 0.0.0.0
+arping 182.61.200.7 -s 0.0.0.0
+arping 10.0.2.10 -s 0.0.0.0
+arping 127.0.0.1 -s destination
+arping 192.168.119.138 -s destination
+arping 182.61.200.7 -s destination
+arping 10.0.2.10 -s destination
+arping 127.0.0.1 -s
+arping 192.168.119.138 -s
+arping 182.61.200.7 -s
+arping 10.0.2.10 -s
+arping 127.0.0.1 -U
+arping 192.168.119.138 -U
+arping 182.61.200.7 -U
+arping 10.0.2.10 -U
+arping 127.0.0.1 -V
+arping 192.168.119.138 -V
+arping 182.61.200.7 -V
+arping 10.0.2.10 -V
+arping 127.0.0.1 -w arping
+arping 192.168.119.138 -w arping
+arping 182.61.200.7 -w arping
+arping 10.0.2.10 -w arping
+arping 127.0.0.1 -w count
+arping 192.168.119.138 -w count
+arping 182.61.200.7 -w count
+arping 10.0.2.10 -w count
+arping 127.0.0.1 -w
+arping 192.168.119.138 -w
+arping 182.61.200.7 -w
+arping 10.0.2.10 -w
+auditd
+auditd -f
+auditd -l
+auditd -n
+auditd -c
+badblocks /dev/sda
+badblocks  /dev/loop0p1
+badblocks /dev/sda -b 1024
+badblocks  /dev/loop0p1 -b 1024
+badblocks /dev/sda -b
+badblocks  /dev/loop0p1 -b
+badblocks /dev/sda -c 64
+badblocks  /dev/loop0p1 -c 64
+badblocks /dev/sda -c
+badblocks  /dev/loop0p1 -c
+badblocks /dev/sda -d 100
+badblocks  /dev/loop0p1 -d 100
+badblocks /dev/sda -d 200
+badblocks  /dev/loop0p1 -d 200
+badblocks /dev/sda -d
+badblocks  /dev/loop0p1 -d
+badblocks /dev/sda -e 0
+badblocks  /dev/loop0p1 -e 0
+badblocks /dev/sda -e
+badblocks  /dev/loop0p1 -e
+badblocks /dev/sda -f
+badblocks  /dev/loop0p1 -f
+badblocks /dev/sda -i Badblocks
+badblocks  /dev/loop0p1 -i Badblocks
+badblocks /dev/sda -i new
+badblocks  /dev/loop0p1 -i new
+badblocks /dev/sda -i dumpe2fs
+badblocks  /dev/loop0p1 -i dumpe2fs
+badblocks /dev/sda -i 8
+badblocks  /dev/loop0p1 -i 8
+badblocks /dev/sda -i
+badblocks  /dev/loop0p1 -i
+badblocks /dev/sda -n
+badblocks  /dev/loop0p1 -n
+badblocks /dev/sda -o badblocks
+badblocks  /dev/loop0p1 -o badblocks
+badblocks /dev/sda -o e2fsck
+badblocks  /dev/loop0p1 -o e2fsck
+badblocks /dev/sda -o 8
+badblocks  /dev/loop0p1 -o 8
+badblocks /dev/sda -o mke2fs
+badblocks  /dev/loop0p1 -o mke2fs
+badblocks /dev/sda -o
+badblocks  /dev/loop0p1 -o
+badblocks /dev/sda -p 0
+badblocks  /dev/loop0p1 -p 0
+badblocks /dev/sda -p badblocks
+badblocks  /dev/loop0p1 -p badblocks
+badblocks /dev/sda -p
+badblocks  /dev/loop0p1 -p
+badblocks /dev/sda -s
+badblocks  /dev/loop0p1 -s
+badblocks /dev/sda -t /write
+badblocks  /dev/loop0p1 -t /write
+badblocks /dev/sda -t 1
+badblocks  /dev/loop0p1 -t 1
+badblocks /dev/sda -t 0
+badblocks  /dev/loop0p1 -t 0
+badblocks /dev/sda -t
+badblocks  /dev/loop0p1 -t
+badblocks /dev/sda -v
+badblocks  /dev/loop0p1 -v
+badblocks /dev/sda -w
+badblocks  /dev/loop0p1 -w
+badblocks /dev/sda -B
+badblocks  /dev/loop0p1 -B
+badblocks /dev/sda -X
+badblocks  /dev/loop0p1 -X
+audispd-zos-remote
+astraceroute
+astraceroute -p 80
+astraceroute -p
+astraceroute -f 1
+astraceroute -f 30
+astraceroute -f
+astraceroute -m 1
+astraceroute -m 30
+astraceroute -m
+astraceroute -q 2
+astraceroute -q
+astraceroute -x 3
+astraceroute -x
+astraceroute -4
+astraceroute -6
+astraceroute -n
+astraceroute -u
+astraceroute -L
+astraceroute -N
+astraceroute -S
+astraceroute -A
+astraceroute -F
+astraceroute -P
+astraceroute -U
+astraceroute -R
+astraceroute -E
+astraceroute -G
+astraceroute -Z
+astraceroute -v
+astraceroute -h
+astraceroute -i eth0 -N -S -H netsniff-ng.org
+astraceroute -6 -i eth0 -S -E -N -H www.6bone.net
+astraceroute -i eth0 -N -F -H netsniff-ng.org
+astraceroute -i eth0 -N -FPU -H netsniff-ng.org
+astraceroute -i eth0 -N -H netsniff-ng.org -X censor-me -Z
+addpart /dev/sda 0 0 0
+addpart /dev/sda 0 0 1
+addpart /dev/sda 0 0 63
+addpart /dev/sda 0 0 121212
+addpart /dev/sda 0 0 65534
+addpart /dev/sda 0 1 0
+addpart /dev/sda 0 1 1
+addpart /dev/sda 0 1 63
+addpart /dev/sda 0 1 121212
+addpart /dev/sda 0 1 65534
+addpart /dev/sda 0 63 0
+addpart /dev/sda 0 63 1
+addpart /dev/sda 0 63 63
+addpart /dev/sda 0 63 121212
+addpart /dev/sda 0 63 65534
+addpart /dev/sda 0 121212 0
+addpart /dev/sda 0 121212 1
+addpart /dev/sda 0 121212 63
+addpart /dev/sda 0 121212 121212
+addpart /dev/sda 0 121212 65534
+addpart /dev/sda 0 65534 0
+addpart /dev/sda 0 65534 1
+addpart /dev/sda 0 65534 63
+addpart /dev/sda 0 65534 121212
+addpart /dev/sda 0 65534 65534
+addpart /dev/sda 1 0 0
+addpart /dev/sda 1 0 1
+addpart /dev/sda 1 0 63
+addpart /dev/sda 1 0 121212
+addpart /dev/sda 1 0 65534
+addpart /dev/sda 1 1 0
+addpart /dev/sda 1 1 1
+addpart /dev/sda 1 1 63
+addpart /dev/sda 1 1 121212
+addpart /dev/sda 1 1 65534
+addpart /dev/sda 1 63 0
+addpart /dev/sda 1 63 1
+addpart /dev/sda 1 63 63
+addpart /dev/sda 1 63 121212
+addpart /dev/sda 1 63 65534
+addpart /dev/sda 1 121212 0
+addpart /dev/sda 1 121212 1
+addpart /dev/sda 1 121212 63
+addpart /dev/sda 1 121212 121212
+addpart /dev/sda 1 121212 65534
+addpart /dev/sda 1 65534 0
+addpart /dev/sda 1 65534 1
+addpart /dev/sda 1 65534 63
+addpart /dev/sda 1 65534 121212
+addpart /dev/sda 1 65534 65534
+addpart /dev/sda 63 0 0
+addpart /dev/sda 63 0 1
+addpart /dev/sda 63 0 63
+addpart /dev/sda 63 0 121212
+addpart /dev/sda 63 0 65534
+addpart /dev/sda 63 1 0
+addpart /dev/sda 63 1 1
+addpart /dev/sda 63 1 63
+addpart /dev/sda 63 1 121212
+addpart /dev/sda 63 1 65534
+addpart /dev/sda 63 63 0
+addpart /dev/sda 63 63 1
+addpart /dev/sda 63 63 63
+addpart /dev/sda 63 63 121212
+addpart /dev/sda 63 63 65534
+addpart /dev/sda 63 121212 0
+addpart /dev/sda 63 121212 1
+addpart /dev/sda 63 121212 63
+addpart /dev/sda 63 121212 121212
+addpart /dev/sda 63 121212 65534
+addpart /dev/sda 63 65534 0
+addpart /dev/sda 63 65534 1
+addpart /dev/sda 63 65534 63
+addpart /dev/sda 63 65534 121212
+addpart /dev/sda 63 65534 65534
+addpart /dev/sda 121212 0 0
+addpart /dev/sda 121212 0 1
+addpart /dev/sda 121212 0 63
+addpart /dev/sda 121212 0 121212
+addpart /dev/sda 121212 0 65534
+addpart /dev/sda 121212 1 0
+addpart /dev/sda 121212 1 1
+addpart /dev/sda 121212 1 63
+addpart /dev/sda 121212 1 121212
+addpart /dev/sda 121212 1 65534
+addpart /dev/sda 121212 63 0
+addpart /dev/sda 121212 63 1
+addpart /dev/sda 121212 63 63
+addpart /dev/sda 121212 63 121212
+addpart /dev/sda 121212 63 65534
+addpart /dev/sda 121212 121212 0
+addpart /dev/sda 121212 121212 1
+addpart /dev/sda 121212 121212 63
+addpart /dev/sda 121212 121212 121212
+addpart /dev/sda 121212 121212 65534
+addpart /dev/sda 121212 65534 0
+addpart /dev/sda 121212 65534 1
+addpart /dev/sda 121212 65534 63
+addpart /dev/sda 121212 65534 121212
+addpart /dev/sda 121212 65534 65534
+addpart /dev/sda 65534 0 0
+addpart /dev/sda 65534 0 1
+addpart /dev/sda 65534 0 63
+addpart /dev/sda 65534 0 121212
+addpart /dev/sda 65534 0 65534
+addpart /dev/sda 65534 1 0
+addpart /dev/sda 65534 1 1
+addpart /dev/sda 65534 1 63
+addpart /dev/sda 65534 1 121212
+addpart /dev/sda 65534 1 65534
+addpart /dev/sda 65534 63 0
+addpart /dev/sda 65534 63 1
+addpart /dev/sda 65534 63 63
+addpart /dev/sda 65534 63 121212
+addpart /dev/sda 65534 63 65534
+addpart /dev/sda 65534 121212 0
+addpart /dev/sda 65534 121212 1
+addpart /dev/sda 65534 121212 63
+addpart /dev/sda 65534 121212 121212
+addpart /dev/sda 65534 121212 65534
+addpart /dev/sda 65534 65534 0
+addpart /dev/sda 65534 65534 1
+addpart /dev/sda 65534 65534 63
+addpart /dev/sda 65534 65534 121212
+addpart /dev/sda 65534 65534 65534
+addpart  /dev/loop0p1 0 0 0
+addpart  /dev/loop0p1 0 0 1
+addpart  /dev/loop0p1 0 0 63
+addpart  /dev/loop0p1 0 0 121212
+addpart  /dev/loop0p1 0 0 65534
+addpart  /dev/loop0p1 0 1 0
+addpart  /dev/loop0p1 0 1 1
+addpart  /dev/loop0p1 0 1 63
+addpart  /dev/loop0p1 0 1 121212
+addpart  /dev/loop0p1 0 1 65534
+addpart  /dev/loop0p1 0 63 0
+addpart  /dev/loop0p1 0 63 1
+addpart  /dev/loop0p1 0 63 63
+addpart  /dev/loop0p1 0 63 121212
+addpart  /dev/loop0p1 0 63 65534
+addpart  /dev/loop0p1 0 121212 0
+addpart  /dev/loop0p1 0 121212 1
+addpart  /dev/loop0p1 0 121212 63
+addpart  /dev/loop0p1 0 121212 121212
+addpart  /dev/loop0p1 0 121212 65534
+addpart  /dev/loop0p1 0 65534 0
+addpart  /dev/loop0p1 0 65534 1
+addpart  /dev/loop0p1 0 65534 63
+addpart  /dev/loop0p1 0 65534 121212
+addpart  /dev/loop0p1 0 65534 65534
+addpart  /dev/loop0p1 1 0 0
+addpart  /dev/loop0p1 1 0 1
+addpart  /dev/loop0p1 1 0 63
+addpart  /dev/loop0p1 1 0 121212
+addpart  /dev/loop0p1 1 0 65534
+addpart  /dev/loop0p1 1 1 0
+addpart  /dev/loop0p1 1 1 1
+addpart  /dev/loop0p1 1 1 63
+addpart  /dev/loop0p1 1 1 121212
+addpart  /dev/loop0p1 1 1 65534
+addpart  /dev/loop0p1 1 63 0
+addpart  /dev/loop0p1 1 63 1
+addpart  /dev/loop0p1 1 63 63
+addpart  /dev/loop0p1 1 63 121212
+addpart  /dev/loop0p1 1 63 65534
+addpart  /dev/loop0p1 1 121212 0
+addpart  /dev/loop0p1 1 121212 1
+addpart  /dev/loop0p1 1 121212 63
+addpart  /dev/loop0p1 1 121212 121212
+addpart  /dev/loop0p1 1 121212 65534
+addpart  /dev/loop0p1 1 65534 0
+addpart  /dev/loop0p1 1 65534 1
+addpart  /dev/loop0p1 1 65534 63
+addpart  /dev/loop0p1 1 65534 121212
+addpart  /dev/loop0p1 1 65534 65534
+addpart  /dev/loop0p1 63 0 0
+addpart  /dev/loop0p1 63 0 1
+addpart  /dev/loop0p1 63 0 63
+addpart  /dev/loop0p1 63 0 121212
+addpart  /dev/loop0p1 63 0 65534
+addpart  /dev/loop0p1 63 1 0
+addpart  /dev/loop0p1 63 1 1
+addpart  /dev/loop0p1 63 1 63
+addpart  /dev/loop0p1 63 1 121212
+addpart  /dev/loop0p1 63 1 65534
+addpart  /dev/loop0p1 63 63 0
+addpart  /dev/loop0p1 63 63 1
+addpart  /dev/loop0p1 63 63 63
+addpart  /dev/loop0p1 63 63 121212
+addpart  /dev/loop0p1 63 63 65534
+addpart  /dev/loop0p1 63 121212 0
+addpart  /dev/loop0p1 63 121212 1
+addpart  /dev/loop0p1 63 121212 63
+addpart  /dev/loop0p1 63 121212 121212
+addpart  /dev/loop0p1 63 121212 65534
+addpart  /dev/loop0p1 63 65534 0
+addpart  /dev/loop0p1 63 65534 1
+addpart  /dev/loop0p1 63 65534 63
+addpart  /dev/loop0p1 63 65534 121212
+addpart  /dev/loop0p1 63 65534 65534
+addpart  /dev/loop0p1 121212 0 0
+addpart  /dev/loop0p1 121212 0 1
+addpart  /dev/loop0p1 121212 0 63
+addpart  /dev/loop0p1 121212 0 121212
+addpart  /dev/loop0p1 121212 0 65534
+addpart  /dev/loop0p1 121212 1 0
+addpart  /dev/loop0p1 121212 1 1
+addpart  /dev/loop0p1 121212 1 63
+addpart  /dev/loop0p1 121212 1 121212
+addpart  /dev/loop0p1 121212 1 65534
+addpart  /dev/loop0p1 121212 63 0
+addpart  /dev/loop0p1 121212 63 1
+addpart  /dev/loop0p1 121212 63 63
+addpart  /dev/loop0p1 121212 63 121212
+addpart  /dev/loop0p1 121212 63 65534
+addpart  /dev/loop0p1 121212 121212 0
+addpart  /dev/loop0p1 121212 121212 1
+addpart  /dev/loop0p1 121212 121212 63
+addpart  /dev/loop0p1 121212 121212 121212
+addpart  /dev/loop0p1 121212 121212 65534
+addpart  /dev/loop0p1 121212 65534 0
+addpart  /dev/loop0p1 121212 65534 1
+addpart  /dev/loop0p1 121212 65534 63
+addpart  /dev/loop0p1 121212 65534 121212
+addpart  /dev/loop0p1 121212 65534 65534
+addpart  /dev/loop0p1 65534 0 0
+addpart  /dev/loop0p1 65534 0 1
+addpart  /dev/loop0p1 65534 0 63
+addpart  /dev/loop0p1 65534 0 121212
+addpart  /dev/loop0p1 65534 0 65534
+addpart  /dev/loop0p1 65534 1 0
+addpart  /dev/loop0p1 65534 1 1
+addpart  /dev/loop0p1 65534 1 63
+addpart  /dev/loop0p1 65534 1 121212
+addpart  /dev/loop0p1 65534 1 65534
+addpart  /dev/loop0p1 65534 63 0
+addpart  /dev/loop0p1 65534 63 1
+addpart  /dev/loop0p1 65534 63 63
+addpart  /dev/loop0p1 65534 63 121212
+addpart  /dev/loop0p1 65534 63 65534
+addpart  /dev/loop0p1 65534 121212 0
+addpart  /dev/loop0p1 65534 121212 1
+addpart  /dev/loop0p1 65534 121212 63
+addpart  /dev/loop0p1 65534 121212 121212
+addpart  /dev/loop0p1 65534 121212 65534
+addpart  /dev/loop0p1 65534 65534 0
+addpart  /dev/loop0p1 65534 65534 1
+addpart  /dev/loop0p1 65534 65534 63
+addpart  /dev/loop0p1 65534 65534 121212
+addpart  /dev/loop0p1 65534 65534 65534
+ausearch
+ausearch -a event ID
+ausearch -a 329
+ausearch -a 2401771
+ausearch -a 1116360555
+ausearch -a
+ausearch --arch 32
+ausearch --arch b32
+ausearch --arch 64
+ausearch --arch b64.
+ausearch --arch
+ausearch -c comm name
+ausearch -c
+ausearch --debug
+ausearch --checkpoint 2
+ausearch --checkpoint EXIT STATUS
+ausearch --checkpoint
+ausearch -e exit code or errno
+ausearch -e
+ausearch --escape raw
+ausearch --escape tty
+ausearch --escape shell
+ausearch --escape shell_quote
+ausearch --escape default
+ausearch --escape interpret
+ausearch --escape csv
+ausearch --escape text
+ausearch --escape
+ausearch --extra-keys
+ausearch --extra-labels
+ausearch --extra-obj2
+ausearch --extra-time
+ausearch -f filename
+ausearch -f
+ausearch --format raw
+ausearch --format tty
+ausearch --format shell
+ausearch --format shell_quote
+ausearch --format default
+ausearch --format interpret
+ausearch --format csv
+ausearch --format text
+ausearch --format
+ausearch -ga group ID
+ausearch -ga
+ausearch -ge effective group ID
+ausearch -ge
+ausearch -gi group ID
+ausearch -gi
+ausearch -h
+ausearch -hn host name
+ausearch -hn
+ausearch -i
+ausearch -if file
+ausearch -if directory
+ausearch -if
+ausearch --input-logs
+ausearch --just-one
+ausearch -k key string
+ausearch -k
+ausearch -l
+ausearch -m message type
+ausearch -m comma separated list of message types
+ausearch -m ALL
+ausearch -m
+ausearch -n
+ausearch -o tcontext
+ausearch -o scontext
+ausearch -o /subject
+ausearch -o /object
+ausearch -o
+ausearch -p process ID
+ausearch -p
+ausearch -pp parent process ID
+ausearch -pp
+ausearch -r
+ausearch -sc syscall
+ausearch -sc
+ausearch -se tcontext
+ausearch -se scontext
+ausearch -se /subject
+ausearch -se /object
+ausearch -se
+ausearch -su tcontext
+ausearch -su scontext
+ausearch -su /subject
+ausearch -su /object
+ausearch -su
+ausearch -sv success value
+ausearch -sv yes
+ausearch -sv no
+ausearch -sv
+ausearch -te date '+%x'.
+ausearch -te today
+ausearch -te now
+ausearch -te /03/2009.
+ausearch -te 2009
+ausearch -te 09
+ausearch -te 24
+ausearch -te 03
+ausearch -te 00
+ausearch -te 18
+ausearch -te recent
+ausearch -te boot
+ausearch -te yesterday
+ausearch -te this-week
+ausearch -te week-ago
+ausearch -te this-month
+ausearch -te this-year
+ausearch -te Now
+ausearch -te Recent
+ausearch -te 10
+ausearch -te Boot
+ausearch -te Today
+ausearch -te Yesterday
+ausearch -te This-week
+ausearch -te localtime
+ausearch -te Week-ago
+ausearch -te 7
+ausearch -te This-month
+ausearch -te This-year
+ausearch -te
+ausearch -ts date '+%x'.
+ausearch -ts today
+ausearch -ts midnight
+ausearch -ts /03/2009.
+ausearch -ts 2009
+ausearch -ts 09
+ausearch -ts 24
+ausearch -ts 03
+ausearch -ts 00
+ausearch -ts 18
+ausearch -ts now
+ausearch -ts recent
+ausearch -ts boot
+ausearch -ts yesterday
+ausearch -ts this-week
+ausearch -ts week-ago
+ausearch -ts this-month
+ausearch -ts this-year
+ausearch -ts checkpoint
+ausearch -ts Boot
+ausearch -ts Today
+ausearch -ts Recent
+ausearch -ts 10
+ausearch -ts Yesterday
+ausearch -ts This-week
+ausearch -ts localtime
+ausearch -ts Week-ago
+ausearch -ts 7
+ausearch -ts This-month
+ausearch -ts This-year
+ausearch -ts ausearch
+ausearch -ts 12
+ausearch -ts 11
+ausearch -ts /etc/audit/auditd_checkpoint.txt
+ausearch -ts
+ausearch -ua user ID
+ausearch -ua
+ausearch -ue effective user ID
+ausearch -ue
+ausearch -ui user ID
+ausearch -ui
+ausearch -ul login user ID
+ausearch -ul
+ausearch -uu guest UUID
+ausearch -uu
+ausearch -v
+ausearch -vm guest name
+ausearch -vm
+ausearch -w
+auditctl
+auditctl -b 64
+auditctl -b
+auditctl --backlog_wait_time 60
+auditctl --backlog_wait_time 10
+auditctl --backlog_wait_time
+auditctl -c
+auditctl -D
+auditctl -e
+auditctl -f
+auditctl -h
+auditctl -i
+auditctl --loginuid-immutable
+auditctl -r /sec
+auditctl -r 0
+auditctl -r
+auditctl --reset-lost
+auditctl -R 1
+auditctl -R
+auditctl -t
+auditctl -s
+auditctl -l
+auditctl -v
+auditctl -a always,exit -S all -F pid=1005
+auditctl -a always,exit -S openat -F auid=510
+auditctl -a always,exit -S openat -F success=0
+auditctl -w /etc/shadow -p wa
+auditctl -w /etc/ -p wa
+auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid
+avcstat
+avcstat -c
+avcstat -f
+aureport
+aureport -au
+aureport -a
+aureport --comm
+aureport -c
+aureport -cr
+aureport -e
+aureport --escape raw
+aureport --escape tty
+aureport --escape shell
+aureport --escape shell_quote
+aureport --escape
+aureport -f
+aureport --failed
+aureport -h
+aureport --help
+aureport -i
+aureport -if file
+aureport -if directory
+aureport -if
+aureport --input-logs
+aureport --integrity
+aureport -k
+aureport -l
+aureport -m
+aureport -ma
+aureport -n
+aureport --node node name
+aureport --node
+aureport -nc
+aureport -p
+aureport -r
+aureport -s
+aureport --success
+aureport --summary
+aureport -t
+aureport --tty
+aureport -te today
+aureport -te now
+aureport -te /03/2009.
+aureport -te 2009
+aureport -te 09
+aureport -te 24
+aureport -te 03
+aureport -te 00
+aureport -te 18
+aureport -te recent
+aureport -te boot
+aureport -te yesterday
+aureport -te this-week
+aureport -te week-ago
+aureport -te this-month
+aureport -te this-year
+aureport -te Now
+aureport -te Recent
+aureport -te 10
+aureport -te Boot
+aureport -te Today
+aureport -te Yesterday
+aureport -te This-week
+aureport -te localtime
+aureport -te Week-ago
+aureport -te 7
+aureport -te This-month
+aureport -te This-year
+aureport -te
+aureport -tm
+aureport -ts today
+aureport -ts midnight
+aureport -ts /03/2009.
+aureport -ts 2009
+aureport -ts 09
+aureport -ts 24
+aureport -ts 03
+aureport -ts 00
+aureport -ts 18
+aureport -ts now
+aureport -ts recent
+aureport -ts boot
+aureport -ts yesterday
+aureport -ts this-week
+aureport -ts week-ago
+aureport -ts this-month
+aureport -ts this-year
+aureport -ts Boot
+aureport -ts Today
+aureport -ts Recent
+aureport -ts 10
+aureport -ts Yesterday
+aureport -ts This-week
+aureport -ts localtime
+aureport -ts Week-ago
+aureport -ts 7
+aureport -ts This-month
+aureport -ts This-year
+aureport -ts
+aureport -u
+aureport -v
+aureport --virt
+aureport -x
+automount
+automount -h
+automount -p
+automount -t 5
+automount -t 10
+automount -t 60
+automount -t
+automount -M 5
+automount -M 10
+automount -M 60
+automount -M
+automount -n 5
+automount -n 10
+automount -n 60
+automount -n
+automount -v
+automount -d
+automount -Dvariable=value
+automount -S
+automount -f
+automount -r
+automount -m
+automount -O
+automount -V
+automount -l
+automount -C
+automount -F
+automount -+
+autrace /bin/ls
+autrace /bin/ls -r
+autrace /bin/ls /tmp
+autrace -r /bin/ls
+anacron
+anacron -f
+anacron -u
+anacron -s
+anacron -n
+anacron -d
+anacron -q
+anacron -T
+anacron -V
+anacron -h
+anacron  -u
+arpd
+arpd -h
+arpd -l
+arpd -b /var/lib/arpd/arpd.db
+arpd -b
+arpd -a 1
+arpd -a 3
+arpd -a
+arpd -k
+arpd -n 60
+arpd -n 30
+arpd -n
+arpd -p 60
+arpd -p 30
+arpd -p
+arpd -R 1
+arpd -R
+arpd -B 1
+arpd -B 3
+arpd -B
+arpd -b /var/tmp/arpd.db
+arpd -b /var/tmp/arpd.db -a 1 eth0 eth1
+arpd -b /var/tmp/arpd.db -a 3 -k eth0 eth1
+arp
+arp -v
+arp -n
+arp -H arp
+arp -H ether
+arp -H 802
+arp -H 3
+arp -H arcnet
+arp -H pronet
+arp -H 25
+arp -H ax25
+arp -H /ROM
+arp -H netrom
+arp -H
+arp -a
+arp -e
+arp -D
+arp -i temp
+arp -i pub
+arp -i  NOTE:
+arp -i 2
+arp -i 0
+arp -i arp
+arp -i 7
+arp -i dontpub
+arp -i 4
+arp -i
+arp -f /etc/ethers
+arp -f pub
+arp -f temp
+arp -f netmask
+arp -f hostname
+arp -f IP address
+arp -f C
+arp -f M
+arp -f
+arp -d
+arp -s
+arp -N
+arp -V
+arp -d 127.0.0.1
+arp -d 192.168.119.138
+arp -d 182.61.200.7
+arp -d 10.0.2.10
+arp -s 127.0.0.1 00:0c:29:0d:19:d6
+arp -s 192.168.119.138 00:0c:29:0d:19:d6
+arp -s 182.61.200.7 00:0c:29:0d:19:d6
+arp -s 10.0.2.10 00:0c:29:0d:19:d6
+arp -s 127.0.0.1 00:0c:29:0d:19:d6 pub
+arp -s 192.168.119.138 00:0c:29:0d:19:d6 pub
+arp -s 182.61.200.7 00:0c:29:0d:19:d6 pub
+arp -s 10.0.2.10 00:0c:29:0d:19:d6 pub
+arp -Ds 127.0.0.1 eth0 pub
+arp -Ds 192.168.119.138 eth0 pub
+arp -Ds 182.61.200.7 eth0 pub
+arp -Ds 10.0.2.10 eth0 pub
+arp  -f
+/usr/sbin/arp -i eth0 -Ds 10.0.0.2 eth1 pub
+/usr/sbin/arp -i eth1 -d 10.0.0.1
+agetty 0
+agetty 1
+agetty 63
+agetty 121212
+agetty 65534
+agetty 0 -8
+agetty 1 -8
+agetty 63 -8
+agetty 121212 -8
+agetty 65534 -8
+agetty 0 -a /bin/login
+agetty 1 -a /bin/login
+agetty 63 -a /bin/login
+agetty 121212 -a /bin/login
+agetty 65534 -a /bin/login
+agetty 0 -a
+agetty 1 -a
+agetty 63 -a
+agetty 121212 -a
+agetty 65534 -a
+agetty 0 -c
+agetty 1 -c
+agetty 63 -c
+agetty 121212 -c
+agetty 65534 -c
+agetty 0 -E
+agetty 1 -E
+agetty 63 -E
+agetty 121212 -E
+agetty 65534 -E
+agetty 0 -f file
+agetty 1 -f file
+agetty 63 -f file
+agetty 121212 -f file
+agetty 65534 -f file
+agetty 0 -f /etc/issue
+agetty 1 -f /etc/issue
+agetty 63 -f /etc/issue
+agetty 121212 -f /etc/issue
+agetty 65534 -f /etc/issue
+agetty 0 -f directory
+agetty 1 -f directory
+agetty 63 -f directory
+agetty 121212 -f directory
+agetty 65534 -f directory
+agetty 0 -f
+agetty 1 -f
+agetty 63 -f
+agetty 121212 -f
+agetty 65534 -f
+agetty 0 -h
+agetty 1 -h
+agetty 63 -h
+agetty 121212 -h
+agetty 65534 -h
+agetty 0 -H agetty
+agetty 1 -H agetty
+agetty 63 -H agetty
+agetty 121212 -H agetty
+agetty 65534 -H agetty
+agetty 0 -H
+agetty 1 -H
+agetty 63 -H
+agetty 121212 -H
+agetty 65534 -H
+agetty 0 -i
+agetty 1 -i
+agetty 63 -i
+agetty 121212 -i
+agetty 65534 -i
+agetty 0 -I 012
+agetty 1 -I 012
+agetty 63 -I 012
+agetty 121212 -I 012
+agetty 65534 -I 012
+agetty 0 -I 10
+agetty 1 -I 10
+agetty 63 -I 10
+agetty 121212 -I 10
+agetty 65534 -I 10
+agetty 0 -I
+agetty 1 -I
+agetty 63 -I
+agetty 121212 -I
+agetty 65534 -I
+agetty 0 -J
+agetty 1 -J
+agetty 63 -J
+agetty 121212 -J
+agetty 65534 -J
+agetty 0 -l /bin/login.
+agetty 1 -l /bin/login.
+agetty 63 -l /bin/login.
+agetty 121212 -l /bin/login.
+agetty 65534 -l /bin/login.
+agetty 0 -l
+agetty 1 -l
+agetty 63 -l
+agetty 121212 -l
+agetty 65534 -l
+agetty 0 -L always
+agetty 1 -L always
+agetty 63 -L always
+agetty 121212 -L always
+agetty 65534 -L always
+agetty 0 -L never
+agetty 1 -L never
+agetty 63 -L never
+agetty 121212 -L never
+agetty 65534 -L never
+agetty 0 -L auto
+agetty 1 -L auto
+agetty 63 -L auto
+agetty 121212 -L auto
+agetty 65534 -L auto
+agetty 0 -L agetty
+agetty 1 -L agetty
+agetty 63 -L agetty
+agetty 121212 -L agetty
+agetty 65534 -L agetty
+agetty 0 -L
+agetty 1 -L
+agetty 63 -L
+agetty 121212 -L
+agetty 65534 -L
+agetty 0 -m
+agetty 1 -m
+agetty 63 -m
+agetty 121212 -m
+agetty 65534 -m
+agetty 0 --list-speeds
+agetty 1 --list-speeds
+agetty 63 --list-speeds
+agetty 121212 --list-speeds
+agetty 65534 --list-speeds
+agetty 0 -n
+agetty 1 -n
+agetty 63 -n
+agetty 121212 -n
+agetty 65534 -n
+agetty 0 -N
+agetty 1 -N
+agetty 63 -N
+agetty 121212 -N
+agetty 65534 -N
+agetty 0 -o login
+agetty 1 -o login
+agetty 63 -o login
+agetty 121212 -o login
+agetty 65534 -o login
+agetty 0 -o 1
+agetty 1 -o 1
+agetty 63 -o 1
+agetty 121212 -o 1
+agetty 65534 -o 1
+agetty 0 -o
+agetty 1 -o
+agetty 63 -o
+agetty 121212 -o
+agetty 65534 -o
+agetty 0 -p
+agetty 1 -p
+agetty 63 -p
+agetty 121212 -p
+agetty 65534 -p
+agetty 0 -R
+agetty 1 -R
+agetty 63 -R
+agetty 121212 -R
+agetty 65534 -R
+agetty 0 -s
+agetty 1 -s
+agetty 63 -s
+agetty 121212 -s
+agetty 65534 -s
+agetty 0 -U
+agetty 1 -U
+agetty 63 -U
+agetty 121212 -U
+agetty 65534 -U
+agetty 0 -w
+agetty 1 -w
+agetty 63 -w
+agetty 121212 -w
+agetty 65534 -w
+agetty 0 --nohints
+agetty 1 --nohints
+agetty 63 --nohints
+agetty 121212 --nohints
+agetty 65534 --nohints
+agetty 0 --nohostname
+agetty 1 --nohostname
+agetty 63 --nohostname
+agetty 121212 --nohostname
+agetty 65534 --nohostname
+agetty 0 --long-hostname
+agetty 1 --long-hostname
+agetty 63 --long-hostname
+agetty 121212 --long-hostname
+agetty 65534 --long-hostname
+agetty 0 --erase-chars 2
+agetty 1 --erase-chars 2
+agetty 63 --erase-chars 2
+agetty 121212 --erase-chars 2
+agetty 65534 --erase-chars 2
+agetty 0 --erase-chars 23
+agetty 1 --erase-chars 23
+agetty 63 --erase-chars 23
+agetty 121212 --erase-chars 23
+agetty 65534 --erase-chars 23
+agetty 0 --erase-chars
+agetty 1 --erase-chars
+agetty 63 --erase-chars
+agetty 121212 --erase-chars
+agetty 65534 --erase-chars
+agetty 0 --kill-chars 2
+agetty 1 --kill-chars 2
+agetty 63 --kill-chars 2
+agetty 121212 --kill-chars 2
+agetty 65534 --kill-chars 2
+agetty 0 --kill-chars 23
+agetty 1 --kill-chars 23
+agetty 63 --kill-chars 23
+agetty 121212 --kill-chars 23
+agetty 65534 --kill-chars 23
+agetty 0 --kill-chars
+agetty 1 --kill-chars
+agetty 63 --kill-chars
+agetty 121212 --kill-chars
+agetty 65534 --kill-chars
+agetty 0 --reload
+agetty 1 --reload
+agetty 63 --reload
+agetty 121212 --reload
+agetty 65534 --reload
+agetty 0 --version
+agetty 1 --version
+agetty 63 --version
+agetty 121212 --version
+agetty 65534 --version
+agetty 0 --help
+agetty 1 --help
+agetty 63 --help
+agetty 121212 --help
+agetty 65534 --help
+/sbin/agetty 9600 ttyS1
+/sbin/agetty --local-line 9600 ttyS1 vt100
+/sbin/agetty --extract-baud --timeout 60 ttyS1 9600,2400,1200
+/sbin/agetty --wait-cr --init-string ’ATE0Q1&D2&C1S0=1 15’ 115200 ttyS1
+accton on
+accton on -V
+accton on -h
+accton off
+accton off -V
+accton off -h
+accton filename
+accton filename -V
+accton filename -h
+accton
+accton -V
+accton -h
+***********arguments are:**************
+destination<i>
+device<i>
+partition<i>
+start<i>
+length<i>
+program<i>
+hostname<i>
+hw_addr<i>
+ifname<i>
+port<i>
+
+
+************opt args names are:***********
+count
+source
+deadline
+block_size
+number of blocks
+read delay factor
+max bad block count
+input_file
+output_file
+num_passes
+test_pattern
+<port>,
+<ttl>,
+<num>,
+<sec>,
+audit-event-id
+CPU
+comm-name
+checkpoint-file
+exit-code-or-errno
+option
+file-name
+all-group-id
+effective-group-id
+group-id
+host-name
+file-name 
+key-string
+message-type 
+SE-Linux-context-string
+process-id
+parent-process-id
+syscall-name-or-value
+success-value
+end-date
+start-date
+all-user-id
+effective-user-id
+user-id
+login-id
+guest-uuid
+guest-name
+backlog
+wait_time
+rate
+file
+[
+list
+f
+n
+key
+Syscall name or number
+file 
+node-name
+<seconds>,
+<DATABASE>
+<NUMBER>
+<TIME>
+<RATE>
+type
+If
+filename
+username
+file|directory
+fakehost
+initstring
+login_program
+mode
+login_options
+string
+

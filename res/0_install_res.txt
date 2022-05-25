@@ -1,0 +1,4 @@
+50 cmds already on VM
+64 is installed
+failed to install ['30-systemd-environment-d-generator', 'actions', 'autofs', 'bfifo', 'booleans', 'BPF', 'btrfs-balance', 'btrfs-check', 'btrfs-device', 'btrfs-filesystem', 'btrfs-inspect-internal', 'btrfs-property', 'btrfs-qgroup', 'btrfs-quota', 'btrfs-receive', 'btrfs-replace', 'btrfs-rescue', 'btrfs-restore', 'btrfs-scrub', 'btrfs-send', 'btrfs-subvolume', 'CAKE', 'CBQ', 'CBS', 'cgroup',
+'choke', 'cmirrord', 'CoDel', 'connmark', 'crond', 'cryptsetup-ssh', 'csum', 'csysdig', 'ct']

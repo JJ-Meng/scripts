@@ -1,0 +1,5 @@
+/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+accton on
+accton on -V
+accton on -h
+accton off

@@ -1,0 +1,182 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:28:58 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BLKZONE</title>
+
+</head>
+<body>
+
+<h1 align="center">BLKZONE</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#COMMANDS">COMMANDS</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#AUTHORS">AUTHORS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">blkzone - run
+zone command on a device</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>blkzone</b>
+<i>command</i> [options] <i>device</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>blkzone</b></i>
+is used to run zone command on device that support the Zoned
+Block Commands (ZBC) or Zoned-device ATA Commands (ZAC). The
+zones to operate on can be specified using the offset, count
+and length options.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The
+<i>device</i> argument is the pathname of the block
+device.</p>
+
+<h2>COMMANDS
+<a name="COMMANDS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>report</b>
+<br>
+The command <b>blkzone report</b> is used to report device
+zone information.</p>
+
+<p style="margin-left:11%; margin-top: 1em">By default, the
+command will report all zones from the start of the block
+device. Options may be used to modify this behavior,
+changing the starting zone or the size of the report, as
+explained below.</p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>Report
+output</b></p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>Zone
+conditions</b></p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>reset</b>
+<br>
+The command <b>blkzone reset</b> is used to reset one or
+more zones. Unlike <b>sg_reset_wp</b>(8), this command
+operates from the block layer and can reset a range of
+zones.</p>
+
+<p style="margin-left:11%; margin-top: 1em">By default, the
+command will operate from the zone at device sector 0 and
+reset all zones. Options may be used to modify this behavior
+as well as specify the operation to be performed on the
+zone, as explained below.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The
+<i>offset</i> and <i>length</i> option arguments may be
+followed by the multiplicative suffixes KiB (=1024), MiB
+(=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB
+(the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the
+same meaning as &quot;KiB&quot;) or the suffixes KB (=1000),
+MB (=1000*1000), and so on for GB, TB, PB, EB, ZB and YB.
+Additionally, the 0x prefix can be used to specify
+<i>offset</i> and <i>length</i> in hex. <b><br>
+-o</b>, <b>--offset</b> <i>sector</i></p>
+
+<p style="margin-left:22%;">The starting zone specified as
+a sector offset. The provided offset in sector units (512
+bytes) should match the start of a zone. The default value
+is zero.</p>
+
+<p style="margin-left:11%;"><b>-l</b>, <b>--length</b>
+<i>sectors</i></p>
+
+<p style="margin-left:22%;">The maximum number of sectors
+the command should operate on. The default value is the
+number of sectors remaining after <i>offset</i>. This option
+cannot be used together with the option <b>--count</b>.</p>
+
+<p style="margin-left:11%;"><b>-c</b>, <b>--count</b>
+<i>count</i></p>
+
+<p style="margin-left:22%;">The maximum number of zones the
+command should operate on. The default value is the number
+of zones starting from <i>offset</i>. This option cannot be
+used together with the option <b>--length</b>.</p>
+
+<p style="margin-left:11%;"><b>-v</b>, <b>--verbose</b></p>
+
+<p style="margin-left:22%;">Display the number of zones
+returned in the report or the range of sectors reset..</p>
+
+<p style="margin-left:11%;"><b>-V</b>, <b>--version</b></p>
+
+<p style="margin-left:22%;">Display version information and
+exit.</p>
+
+<p style="margin-left:11%;"><b>-h</b>, <b>--help</b></p>
+
+<p style="margin-left:22%;">Display help text and exit.</p>
+
+<h2>AUTHORS
+<a name="AUTHORS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Shaun Tancheff
+&lt;shaun@tancheff.com&gt; <br>
+Karel Zak &lt;kzak@redhat.com&gt;</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>sg_rep_zones</b>(8)</p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The blkzone
+command is part of the util-linux package and is available
+from
+<a href="https://www.kernel.org/pub/linux/utils/util-linux/">Linux
+Kernel Archive</a>.</p>
+<hr>
+</body>
+</html>

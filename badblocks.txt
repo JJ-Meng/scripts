@@ -1,0 +1,68 @@
+badblocks /dev/sda
+badblocks  /dev/loop0p1
+badblocks /dev/sda -b 1024
+badblocks  /dev/loop0p1 -b 1024
+badblocks /dev/sda -b
+badblocks  /dev/loop0p1 -b
+badblocks /dev/sda -c 64
+badblocks  /dev/loop0p1 -c 64
+badblocks /dev/sda -c
+badblocks  /dev/loop0p1 -c
+badblocks /dev/sda -d 100
+badblocks  /dev/loop0p1 -d 100
+badblocks /dev/sda -d 200
+badblocks  /dev/loop0p1 -d 200
+badblocks /dev/sda -d
+badblocks  /dev/loop0p1 -d
+badblocks /dev/sda -e 0
+badblocks  /dev/loop0p1 -e 0
+badblocks /dev/sda -e
+badblocks  /dev/loop0p1 -e
+badblocks /dev/sda -f
+badblocks  /dev/loop0p1 -f
+badblocks /dev/sda -i Badblocks
+badblocks  /dev/loop0p1 -i Badblocks
+badblocks /dev/sda -i new
+badblocks  /dev/loop0p1 -i new
+badblocks /dev/sda -i dumpe2fs
+badblocks  /dev/loop0p1 -i dumpe2fs
+badblocks /dev/sda -i 8
+badblocks  /dev/loop0p1 -i 8
+badblocks /dev/sda -i
+badblocks  /dev/loop0p1 -i
+badblocks /dev/sda -n
+badblocks  /dev/loop0p1 -n
+badblocks /dev/sda -o badblocks
+badblocks  /dev/loop0p1 -o badblocks
+badblocks /dev/sda -o e2fsck
+badblocks  /dev/loop0p1 -o e2fsck
+badblocks /dev/sda -o 8
+badblocks  /dev/loop0p1 -o 8
+badblocks /dev/sda -o mke2fs
+badblocks  /dev/loop0p1 -o mke2fs
+badblocks /dev/sda -o
+badblocks  /dev/loop0p1 -o
+badblocks /dev/sda -p 0
+badblocks  /dev/loop0p1 -p 0
+badblocks /dev/sda -p badblocks
+badblocks  /dev/loop0p1 -p badblocks
+badblocks /dev/sda -p
+badblocks  /dev/loop0p1 -p
+badblocks /dev/sda -s
+badblocks  /dev/loop0p1 -s
+badblocks /dev/sda -t /write
+badblocks  /dev/loop0p1 -t /write
+badblocks /dev/sda -t 1
+badblocks  /dev/loop0p1 -t 1
+badblocks /dev/sda -t 0
+badblocks  /dev/loop0p1 -t 0
+badblocks /dev/sda -t
+badblocks  /dev/loop0p1 -t
+badblocks /dev/sda -v
+badblocks  /dev/loop0p1 -v
+badblocks /dev/sda -w
+badblocks  /dev/loop0p1 -w
+badblocks /dev/sda -B
+badblocks  /dev/loop0p1 -B
+badblocks /dev/sda -X
+badblocks  /dev/loop0p1 -X

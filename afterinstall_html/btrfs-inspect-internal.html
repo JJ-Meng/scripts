@@ -1,0 +1,432 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:29:51 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BTRFS-INSPECT-INTE</title>
+
+</head>
+<body>
+
+<h1 align="center">BTRFS-INSPECT-INTE</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#SUBCOMMAND">SUBCOMMAND</a><br>
+<a href="#EXIT STATUS">EXIT STATUS</a><br>
+<a href="#AVAILABILITY">AVAILABILITY</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em">btrfs-inspect-internal
+- query various internal information</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>btrfs
+inspect-internal</b> <i>&lt;subcommand&gt;
+&lt;args&gt;</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">This command
+group provides an interface to query internal information.
+The functionality ranges from a simple UI to an ioctl or a
+more complex query that assembles the result from several
+internal structures. The latter usually requires calls to
+privileged ioctls.</p>
+
+<h2>SUBCOMMAND
+<a name="SUBCOMMAND"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>dump-super</b>
+[options] <i>&lt;device&gt;</i> [device...]</p>
+
+<p style="margin-left:17%;">(replaces the standalone tool
+<b>btrfs-show-super</b>)</p>
+
+<p style="margin-left:17%; margin-top: 1em">Show btrfs
+superblock information stored on given devices in textual
+form. By default the first superblock is printed, more
+details about all copies or additional backup data can be
+printed.</p>
+
+<p style="margin-left:17%; margin-top: 1em">Besides
+verification of the filesystem signature, there are no other
+sanity checks. The superblock checksum status is reported,
+the device item and filesystem UUIDs are checked and
+reported.</p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+the meaning of option <i>-s</i> has changed in version 4.8
+to be consistent with other tools to specify superblock copy
+rather the offset. The old way still works, but prints a
+warning. Please update your scripts to use <i>--bytenr</i>
+instead. The option <i>-i</i> has been deprecated.</p>
+
+<p style="margin-left:17%;"><b>Options</b></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-f|--full</big></p>
+
+<p style="margin-left:23%;"><big>print full superblock
+information, including the system chunk array and backup
+roots</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-a|--all</big></p>
+
+<p style="margin-left:23%;"><big>print information about
+all present superblock copies (cannot be used together with
+<i>-s</i> option)</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>-i
+<i>&lt;super&gt;</i></big></p>
+
+<p style="margin-left:23%;"><big>(deprecated since 4.8,
+same behaviour as <i>--super</i>)</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>--bytenr
+<i>&lt;bytenr&gt;</i></big></p>
+
+<p style="margin-left:23%;"><big>specify offset to a
+superblock in a non-standard location at <i>bytenr</i>,
+useful for debugging (disables the <i>-f</i>
+option)</big></p>
+
+<p style="margin-left:23%; margin-top: 1em"><big>If there
+are multiple options specified, only the last one
+applies.</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-F|--force</big></p>
+
+<p style="margin-left:23%;"><big>attempt to print the
+superblock even if a valid BTRFS signature is not found; the
+result may be completely wrong if the data does not resemble
+a superblock</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big>-s|--super
+<i>&lt;bytenr&gt;</i></big></p>
+
+<p style="margin-left:23%;"><big>(see compatibility note
+above)</big></p>
+
+<p style="margin-left:23%; margin-top: 1em"><big>specify
+which mirror to print, valid values are 0, 1 and 2 and the
+superblock must be present on the device with a valid
+signature, can be used together with
+<i>--force</i></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>dump-tree</b>
+[options] <i>&lt;device&gt;</i> [device...]</big></p>
+
+<p style="margin-left:17%;"><big>(replaces the standalone
+tool <b>btrfs-debug-tree</b>)</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>Dump tree
+structures from a given device in textual form, expand keys
+to human readable equivalents where possible. This is useful
+for analyzing filesystem state or inconsistencies and has a
+positive educational effect on understanding the internal
+filesystem structure.</big></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><big><b><big>Note</big></b>
+<br>
+contains file names, consider that if you&rsquo;re asked to
+send the dump for analysis. Does not contain file
+data.</big></p>
+
+<p style="margin-left:17%;"><big><b>Options</b></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-e|--extents</big></big></p>
+
+<p style="margin-left:23%;"><big><big>print only
+extent-related information: extent and device
+trees</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-d|--device</big></big></p>
+
+<p style="margin-left:23%;"><big><big>print only
+device-related information: tree root, chunk and device
+trees</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-r|--roots</big></big></p>
+
+<p style="margin-left:23%;"><big><big>print only short root
+node information, ie. the root tree keys</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-R|--backups</big></big></p>
+
+<p style="margin-left:23%;"><big><big>same as --roots plus
+print backup root info, ie. the backup root keys and the
+respective tree root block offset</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-u|--uuid</big></big></p>
+
+<p style="margin-left:23%;"><big><big>print only the uuid
+tree information, empty output if the tree does not
+exist</big></big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-b
+<i>&lt;block_num&gt;</i></big></big></p>
+
+<p style="margin-left:23%;"><big><big>print info of the
+specified block only, can be specified multiple
+times</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>--follow</big></big></p>
+
+<p style="margin-left:23%;"><big><big>use with <i>-b</i>,
+print all children tree blocks of
+<i>&lt;block_num&gt;</i></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>--dfs</big></big></p>
+
+<p style="margin-left:23%;"><big><big>(default up to
+5.2)</big></big></p>
+
+<p style="margin-left:23%; margin-top: 1em"><big><big>use
+depth-first search to print trees, the nodes and leaves are
+intermixed in the output --bfs:::: (default since
+5.3)</big></big></p>
+
+<p style="margin-left:23%; margin-top: 1em"><big><big>use
+breadth-first search to print trees, the nodes are printed
+before all leaves --noscan:::: do not automatically scan the
+system for other devices from the same filesystem, only use
+the devices provided as the arguments -t
+<i>&lt;tree_id&gt;</i>:::: print only the tree with the
+specified ID, where the ID can be numerical or common name
+in a flexible human readable form</big></big></p>
+
+<p style="margin-left:23%; margin-top: 1em"><big><big>The
+tree id name recognition rules:</big></big></p>
+
+
+<p style="margin-left:29%; margin-top: 1em"><big><big>&bull;
+case does not matter</big></big></p>
+
+
+<p style="margin-left:29%; margin-top: 1em"><big><big>&bull;
+the C source definition, eg.
+BTRFS_ROOT_TREE_OBJECTID</big></big></p>
+
+
+<p style="margin-left:29%; margin-top: 1em"><big><big>&bull;
+short forms without BTRFS_ prefix, without _TREE and
+_OBJECTID suffix, eg. ROOT_TREE, ROOT</big></big></p>
+
+
+<p style="margin-left:29%; margin-top: 1em"><big><big>&bull;
+convenience aliases, eg. DEVICE for the DEV tree, CHECKSUM
+for CSUM</big></big></p>
+
+
+<p style="margin-left:29%; margin-top: 1em"><big><big>&bull;
+unrecognized ID is an error</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>inode-resolve</b>
+[-v] <i>&lt;ino&gt; &lt;path&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>(needs root
+privileges)</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>resolve
+paths to all files with given inode number <i>ino</i> in a
+given subvolume at <i>path</i>, ie. all
+hardlinks</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><b>Options</b></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-v</big></big></p>
+
+<p style="margin-left:23%;"><big><big>verbose mode, print
+count of returned paths and ioctl() return
+value</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>logical-resolve</b>
+[-Pv] [-s <i>&lt;bufsize&gt;</i>] <i>&lt;logical&gt;
+&lt;path&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>(needs root
+privileges)</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>resolve
+paths to all files at given <i>logical</i> address in the
+linear filesystem space</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><b>Options</b></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-P</big></big></p>
+
+<p style="margin-left:23%;"><big><big>skip the path
+resolving and print the inodes instead</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-v</big></big></p>
+
+<p style="margin-left:23%;"><big><big>verbose mode, print
+count of returned paths and all ioctl() return
+values</big></big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>-s
+<i>&lt;bufsize&gt;</i></big></big></p>
+
+<p style="margin-left:23%;"><big><big>set internal buffer
+for storing the file names to <i>bufsize</i>, default is
+4096, maximum 64k</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>min-dev-size</b>
+[options] <i>&lt;path&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>(needs root
+privileges)</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>return
+the minimum size the device can be shrunk to, without
+performing any resize operation, this may be useful before
+executing the actual resize operation</big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><b>Options</b></big></big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big><big>--id
+<i>&lt;id&gt;</i></big></big></p>
+
+<p style="margin-left:23%;"><big><big>specify the device
+<i>id</i> to query, default is 1 if this option is not
+used</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b>rootid</b>
+<i>&lt;path&gt;</i></big></big></p>
+
+<p style="margin-left:17%;"><big><big>for a given file or
+directory, return the containing tree root id, but for a
+subvolume itself return its own tree id (ie. subvol
+id)</big></big></p>
+
+
+<p style="margin-left:23%; margin-top: 1em"><big><big><b><big>Note</big></b>
+<br>
+The result is undefined for the so-called empty subvolumes
+(identified by inode number 2), but such a subvolume does
+not contain any files anyway</big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><b><big>subvolid-resolve</big></b>
+<big><i>&lt;subvolid&gt;
+&lt;path&gt;</i></big></big></big></p>
+
+<p style="margin-left:17%;"><big><big><big>(needs root
+privileges)</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>resolve
+the absolute path of the subvolume id
+<i>subvolid</i></big></big></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>tree-stats</b>
+[options] <i>&lt;device&gt;</i></big></big></big></p>
+
+<p style="margin-left:17%;"><big><big><big>(needs root
+privileges)</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>Print
+sizes and statistics of trees.</big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big><b>Options</b></big></big></big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><big><big>-b</big></big></big></p>
+
+<p style="margin-left:23%;"><big><big><big>Print raw
+numbers in bytes.</big></big></big></p>
+
+<h2>EXIT STATUS
+<a name="EXIT STATUS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>btrfs
+inspect-internal</b> returns a zero exit status if it
+succeeds. Non zero is returned in case of
+failure.</big></big></big></p>
+
+<h2>AVAILABILITY
+<a name="AVAILABILITY"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><b>btrfs</b>
+is part of btrfs-progs. Please refer to the btrfs wiki
+<b><font color="#0000FF">http://btrfs.wiki.kernel.org</font></b>
+<font color="#000000">for further
+details.</font></big></big></big></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><big><big><font color="#000000"><b>mkfs.btrfs</b>(8)</font></big></big></big></p>
+<hr>
+</body>
+</html>

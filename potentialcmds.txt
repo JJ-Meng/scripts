@@ -1,0 +1,27 @@
+astraceroute -v
+out: astraceroute 0.6.8 (Flutternozzle), Git id: (none)
+autonomous system trace route utility
+http://www.netsniff-ng.org
+
+Please report bugs at https://github.com/netsniff-ng/netsniff-ng/issues
+Copyright (C) 2011-2013 Daniel Borkmann <dborkma@tik.ee.ethz.ch>
+Swiss federal institute of technology (ETH Zurich)
+License: GNU GPL version 2.0
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+auditd -f
+out: type=DAEMON_START msg=audit(1651110526.091:5096): op=start ver=3.0 format=enriched kernel=5.14.0+ auid=0 pid=14290 uid=0 ses=28 subj=system_u:system_r:kernel_t:s0 res=successAUID="root" UID="root"
+type=DAEMON_ABORT msg=audit(1651110526.094:5097): op=set-pid auid=0 pid=14290 uid=0 ses=28 subj=system_u:system_r:kernel_t:s0 res=failedAUID="root" UID="root"
+
+aureport -a
+out: 
+AVC Report
+===============================================================
+# date time comm subj syscall class permission obj result event
+===============================================================
+<no events of interest were found>
+
+
+fuzz 1100 commands in total,and 3 commands are privilege
+target cmds:0  priv target cmds:3 non-priv cmds:-3

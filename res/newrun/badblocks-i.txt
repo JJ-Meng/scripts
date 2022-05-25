@@ -1,0 +1,15 @@
+badblocks /dev/sda -i Badblocks:check cap 2 for 2 times,
+
+badblocks /dev/sda -i new:check cap 2 for 2 times,
+
+badblocks /dev/sda -i dumpe2fs:check cap 2 for 2 times,
+
+badblocks /dev/sda -n:check cap 1 for 2 times,check cap 2 for 2 times,
+
+badblocks /dev/sda -w:check cap 1 for 2 times,check cap 2 for 2 times,
+
+non-privilege commands are:
+*****************final results********************************
+fuzz 68 commands in total,and 5 commands are privilege
+target cmds:1  priv target cmds:1 non-priv cmds:0
+target commands are: badblocks

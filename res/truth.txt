@@ -1,0 +1,128 @@
+check cap 20 for 1 times,
+check cap 20 for 1 times,
+check cap 20 for 1 times,check cap 1 for 1 times,
+check cap 21 for 1 times,
+!timeout! cmd: agetty - 9600 linux
+!timeout! cmd: agetty - 9600 linux -8
+!timeout! cmd: agetty - 9600 linux -a test
+!timeout! cmd: agetty - 9600 linux -c
+!timeout! cmd: agetty - 9600 linux -E
+!timeout! cmd: agetty - 9600 linux -f /home/test/cmdfiles/myissue
+!timeout! cmd: agetty - 9600 linux -i
+!timeout! cmd: agetty - 9600 linux -I appleinit
+!timeout! cmd: agetty - 9600 linux -J
+!timeout! cmd: agetty - 9600 linux -l /bin/login
+!timeout! cmd: agetty - 9600 linux -L always
+!timeout! cmd: agetty - 9600 linux -m
+!timeout! cmd: agetty - 9600 linux -n
+!timeout! cmd: agetty - 9600 linux -N
+!timeout! cmd: agetty - 9600 linux -o '-h darkstar -- \u'
+!timeout! cmd: agetty - 9600 linux -p
+!timeout! cmd: agetty - 9600 linux -r /home/test/cmdfiles
+!timeout! cmd: agetty - 9600 linux -R
+!timeout! cmd: agetty - 9600 linux -s
+!timeout! cmd: agetty - 9600 linux -t 3
+!timeout! cmd: agetty - 9600 linux -U
+!timeout! cmd: agetty - 9600 linux -w
+!timeout! cmd: agetty - 9600 linux --nohints
+!timeout! cmd: agetty - 9600 linux --nohostname
+!timeout! cmd: agetty - 9600 linux --long-hostname
+!timeout! cmd: agetty - 9600 linux --erase-chars '#'
+!timeout! cmd: agetty - 9600 linux --kill-chars '@'
+!timeout! cmd: agetty - 9600 linux --chdir /home/test/cmdfiles
+!timeout! cmd: agetty - 9600 linux --delay 1
+!timeout! cmd: agetty - 9600 linux --nice 2
+!timeout! cmd: agetty - 9600 vt100
+check cap 12 for 1 times,
+check cap 12 for 1 times,
+check cap 12 for 1 times,
+check cap 12 for 1 times,
+check cap 12 for 1 times,check cap 16 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+check cap 13 for 1 times,
+!timeout! cmd: arping 10.0.2.10
+!timeout! cmd: arping 10.0.2.10 -A
+!timeout! cmd: arping 10.0.2.10 -b
+!timeout! cmd: arping 10.0.2.10 -c 3
+check cap 18 for 1 times,check cap 7 for 1 times,check cap 6 for 2 times,check cap 13 for 3 times,
+!timeout! cmd: arping 10.0.2.10 -D
+!timeout! cmd: arping 10.0.2.10 -i eth0
+check cap 18 for 1 times,check cap 7 for 1 times,check cap 6 for 2 times,check cap 13 for 3 times,
+!timeout! cmd: arping 10.0.2.10 -W 2
+!timeout! cmd: arping 10.0.2.10 -s 52:54:00:12:34:56
+!timeout! cmd: arping 10.0.2.10 -t 52:54:00:12:34:56
+!timeout! cmd: arping 10.0.2.10 -S 127.0.0.1
+!timeout! cmd: arping 10.0.2.10 -U
+!timeout! cmd: arping 10.0.2.10 -q
+!timeout! cmd: arping 10.0.2.10 -Q 1 -V 802.1Q
+!timeout! cmd: arping 10.0.2.10 -0
+!timeout! cmd: arping 10.0.2.10 -a
+!timeout! cmd: arping 10.0.2.10 -d
+!timeout! cmd: arping 10.0.2.10 -e
+!timeout! cmd: arping 10.0.2.10 -F
+!timeout! cmd: arping 10.0.2.10 -p
+!timeout! cmd: arping 10.0.2.10 -P
+!timeout! cmd: arping 10.0.2.10 -r
+!timeout! cmd: arping 10.0.2.10 -R
+check cap 12 for 1 times,
+check cap 12 for 4 times,check cap 13 for 2 times,
+check cap 12 for 4 times,check cap 13 for 2 times,
+!timeout! cmd: audispd-zos-remote
+!timeout! cmd: audispd-zos-remote /etc/audit/zos-remote.conf
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+file not found!
+check cap 30 for 2 times,
+check cap 30 for 2 times,
+check cap 30 for 2 times,
+file not found!
+check cap 24 for 2 times,check cap 30 for 4 times,check cap 23 for 1 times,
+check cap 23 for 1 times,
+check cap 24 for 2 times,check cap 30 for 4 times,check cap 23 for 1 times,check cap 4 for 10 times,
+check cap 23 for 1 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 21 for 8 times,
+check cap 30 for 6 times,
+check cap 30 for 6 times,
+**********cmd and caps*******
+{'accton on': 'check cap 20 for 1 times,', 'accton off': 'check cap 20 for 1 times,', 'accton /home/test/cmdfiles/normalfile.txt': 'check cap 20 for 1 times,check cap 1 for 1 times,', 'addpart /dev/sda 0 1 1': 'check cap 21 for 1 times,', 'arp -s 10.0.2.200 00:b1:b2:b3:b4:b5': 'check cap 12 for 1 times,', 'arp -d 10.0.2.200': 'check cap 12 for 1 times,', 'arp -s 10.0.2.200 00:b1:b2:b3:b4:b5 pub': 'check cap 12 for 1 times,', 'arp -d 10.0.2.200 pub': 'check cap 12 for 1 times,', 'arp -vnD -H ether -f /home/test/cmdfiles/normalfile.txt': 'check cap 12 for 1 times,check cap 16 for 1 times,', 'arpd -b myarpd.db': 'check cap 13 for 1 times,', 'arpd -k -a 1': 'check cap 13 for 1 times,', 'arpd -n 60': 'check cap 13 for 1 times,', 'arpd -n 3': 'check cap 13 for 1 times,', 'arpd -b /var/lib/arpd/arpd.db': 'check cap 13 for 1 times,', 'arpd -p 30': 'check cap 13 for 1 times,', 'arpd -p 3': 'check cap 13 for 1 times,', 'arpd -R 1': 'check cap 13 for 1 times,', 'arping 10.0.2.10 -C 3': 'check cap 18 for 1 times,check cap 7 for 1 times,check cap 6 for 2 times,check cap 13 for 3 times,', 'arping 10.0.2.10 -w 2': 'check cap 18 for 1 times,check cap 7 for 1 times,check cap 6 for 2 times,check cap 13 for 3 times,', 'arptables-nft-save': 'check cap 12 for 1 times,', 'iptables-save -M /proc/sys/kernel/modprobe': 'check cap 12 for 4 times,check cap 13 for 2 times,', 'iptables-save -c': 'check cap 12 for 4 times,check cap 13 for 2 times,', 'auditctl -a always,exit -F arch=b64 -S openat -F success=0': 'check cap 30 for 2 times,', 'auditctl -w /etc/ -p wa': 'check cap 30 for 2 times,', 'auditctl -a always,exit -F dir=/home/ -F uid=0 -C auid!=obj_uid': 'check cap 30 for 2 times,', 'auditd -f': 'check cap 24 for 2 times,check cap 30 for 4 times,check cap 23 for 1 times,', 'auditd -l': 'check cap 23 for 1 times,', 'auditd -n': 'check cap 24 for 2 times,check cap 30 for 4 times,check cap 23 for 1 times,check cap 4 for 10 times,', 'auditd -c /etc/audit': 'check cap 23 for 1 times,', 'automount -t 10': 'check cap 21 for 8 times,', 'automount -n 30': 'check cap 21 for 8 times,', 'automount -n 60': 'check cap 21 for 8 times,', 'automount -v': 'check cap 21 for 8 times,', 'automount -d': 'check cap 21 for 8 times,', 'automount -S': 'check cap 21 for 8 times,', 'automount -f': 'check cap 21 for 8 times,', 'automount -r': 'check cap 21 for 8 times,', 'automount -C': 'check cap 21 for 8 times,', 'automount -F': 'check cap 21 for 8 times,', 'automount -U': 'check cap 21 for 8 times,', 'autrace -r /bin/ls': 'check cap 30 for 6 times,', 'autrace /bin/ls /tmp': 'check cap 30 for 6 times,'}
+*****************final results********************************
+fuzz 260 commands in total,and 42 commands are privilege
+target cmds:23  priv target cmds:11 non-priv cmds:12
+

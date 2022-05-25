@@ -1,0 +1,165 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:30:20 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>CHECKPOLICY</title>
+
+</head>
+<body>
+
+<h1 align="center">CHECKPOLICY</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">checkpolicy -
+SELinux policy compiler</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>checkpolicy</b>
+<i>[-b[F]] [-C] [-d] [-U handle_unknown (allow,deny,reject)]
+[-M] [-c policyvers] [-o output_file|-] [-S] [-t
+target_platform (selinux,xen)] [-V] [input_file]</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">This manual
+page describes the <b>checkpolicy</b> command.</p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>checkpolicy</b>
+is a program that checks and compiles a SELinux security
+policy configuration into a binary representation that can
+be loaded into the kernel. If no input file name is
+specified, checkpolicy will attempt to read from policy.conf
+or policy, depending on whether the -b flag is
+specified.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>-b,--binary</b></p>
+
+<p style="margin-left:22%;">Read an existing binary policy
+file rather than a source policy.conf file.</p>
+
+<p style="margin-left:11%;"><b>-F,--conf</b></p>
+
+<p style="margin-left:22%;">Write policy.conf file rather
+than binary policy file. Can only be used with binary policy
+file.</p>
+
+<p style="margin-left:11%;"><b>-C,--cil</b></p>
+
+<p style="margin-left:22%;">Write CIL policy file rather
+than binary policy file.</p>
+
+<p style="margin-left:11%;"><b>-d,--debug</b></p>
+
+<p style="margin-left:22%;">Enter debug mode after loading
+the policy.</p>
+
+<p style="margin-left:11%;"><b>-U,--handle-unknown
+&lt;action&gt;</b></p>
+
+<p style="margin-left:22%;">Specify how the kernel should
+handle unknown classes or permissions (deny, allow or
+reject).</p>
+
+<p style="margin-left:11%;"><b>-M,--mls</b></p>
+
+<p style="margin-left:22%;">Enable the MLS policy when
+checking and compiling the policy.</p>
+
+<p style="margin-left:11%;"><b>-c policyvers</b></p>
+
+<p style="margin-left:22%;">Specify the policy version,
+defaults to the latest.</p>
+
+<p style="margin-left:11%;"><b>-o,--output filename</b></p>
+
+<p style="margin-left:22%;">Write a policy file (binary,
+policy.conf, or CIL policy) to the specified filename. If -
+is given as filename, write it to standard output.</p>
+
+<p style="margin-left:11%;"><b>-S,--sort</b></p>
+
+<p style="margin-left:22%;">Sort ocontexts before writing
+out the binary policy. This option makes output of
+checkpolicy consistent with binary policies created by
+semanage and secilc.</p>
+
+<p style="margin-left:11%;"><b>-t,--target</b></p>
+
+<p style="margin-left:22%;">Specify the target platform
+(selinux or xen).</p>
+
+<p style="margin-left:11%;"><b>-O,--optimize</b></p>
+
+<p style="margin-left:22%;">Optimize the final kernel
+policy (remove redundant rules).</p>
+
+<p style="margin-left:11%;"><b>-V,--version</b></p>
+
+<p style="margin-left:22%;">Show version information.</p>
+
+<p style="margin-left:11%;"><b>-h,--help</b></p>
+
+<p style="margin-left:22%;">Show usage information.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">SELinux
+Reference Policy documentation at
+https://github.com/SELinuxProject/refpolicy/wiki</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">This manual
+page was written by Arpad Magosanyi
+&lt;mag@bunuel.tii.matav.hu&gt;, and edited by Stephen
+Smalley &lt;sds@tycho.nsa.gov&gt;. The program was written
+by Stephen Smalley &lt;sds@tycho.nsa.gov&gt;.</p>
+<hr>
+</body>
+</html>

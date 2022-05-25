@@ -1,0 +1,158 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:30:52 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>Connmark retriever action in tc</title>
+
+</head>
+<body>
+
+<h1 align="center">Connmark retriever action in tc</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">connmark -
+netfilter connmark retriever action</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:23%; margin-top: 1em"><b>tc</b> ...
+<b>action connmark</b> [ <b>zone</b> <i>u16_zone_index</i> ]
+[ <i>CONTROL</i> ] [ <b>index</b> <i>u32_index</i> ]</p>
+
+<p style="margin-left:23%; margin-top: 1em"><i>CONTROL</i>
+:= { <i>reclassify</i> | <i>pipe</i> | <i>drop</i> |
+<i>continue</i> | <i>ok</i> }</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The connmark
+action is used to restore the connection&rsquo;s mark value
+into the packet&rsquo;s fwmark.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>zone</b>
+<i>u16_zone_index</i></p>
+
+<p style="margin-left:22%;">Specify the conntrack zone when
+doing conntrack lookups for packets. <i>u16_zone_index</i>
+is a 16bit unsigned decimal value.</p>
+
+<p style="margin-left:11%;"><i>CONTROL</i></p>
+
+<p style="margin-left:22%;">How to continue after executing
+this action. <b><br>
+reclassify</b></p>
+
+<p style="margin-left:32%;">Restarts classification by
+jumping back to the first filter attached to this
+action&rsquo;s parent.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>pipe</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+
+
+<p>Continue with the next action, this is the default.</p></td></tr>
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>drop</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>shot</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+
+
+<p>Packet will be dropped without running further
+actions.</p> </td></tr>
+</table>
+
+<p style="margin-left:22%;"><b>continue</b></p>
+
+<p style="margin-left:32%;">Continue classification with
+next filter in line.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="22%"></td>
+<td width="6%">
+
+
+<p><b>pass</b></p></td>
+<td width="4%"></td>
+<td width="68%">
+
+
+<p>Return to calling qdisc for packet processing. This ends
+the classification process.</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>index</b>
+<i>u32_index</i></p>
+
+<p style="margin-left:22%;">Specify an index for this
+action in order to being able to identify it in later
+commands. <i>u32_index</i> is a 32bit unsigned decimal
+value.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>tc</b>(8)</p>
+<hr>
+</body>
+</html>

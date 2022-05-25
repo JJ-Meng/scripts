@@ -1,0 +1,284 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Wed Apr  6 03:29:50 2022 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>BTRFS-CONVERT</title>
+
+</head>
+<body>
+
+<h1 align="center">BTRFS-CONVERT</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#EXIT STATUS">EXIT STATUS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">btrfs-convert -
+convert from ext2/3/4 or reiserfs filesystem to btrfs
+in-place</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>btrfs-convert</b>
+[options] <i>&lt;device&gt;</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>btrfs-convert</b></i>
+is used to convert existing source filesystem image to a
+btrfs filesystem in-place. The original filesystem image is
+accessible in subvolume named like <i>ext2_saved</i> as file
+<i>image</i>.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Supported
+filesystems:</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; ext2,
+ext3, ext4 &mdash; original feature, always built in</p>
+
+<p style="margin-left:17%; margin-top: 1em">&bull; reiserfs
+&mdash; since version 4.13, optionally built, requires
+libreiserfscore 3.6.27</p>
+
+<p style="margin-left:11%; margin-top: 1em">The list of
+supported source filesystem by a given binary is listed at
+the end of help (option <i>--help</i>).</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Warning</big></b>
+<br>
+If you are going to perform rollback to the original
+filesystem, you should not execute <b>btrfs balance</b>
+command on the converted filesystem. This will change the
+extent layout and make <b>btrfs-convert</b> unable to
+rollback.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The conversion
+utilizes free space of the original filesystem. The exact
+estimate of the required space cannot be foretold. The final
+btrfs metadata might occupy several gigabytes on a
+hundreds-gigabyte filesystem.</p>
+
+<p style="margin-left:11%; margin-top: 1em">If the ability
+to rollback is no longer important, the it is recommended to
+perform a few more steps to transition the btrfs filesystem
+to a more compact layout. This is because the conversion
+inherits the original data blocks' fragmentation, and also
+because the metadata blocks are bound to the original free
+space layout.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Due to
+different constraints, it is only possible to convert
+filesystems that have a supported data block size (ie. the
+same that would be valid for <i>mkfs.btrfs</i>). This is
+typically the system page size (4KiB on x86_64
+machines).</p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><b><big>Note</big></b>
+<br>
+The source filesystem should be clean, you are encouraged to
+run the <i>fsck</i> tool if you&rsquo;re not sure.</p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>REMOVE THE
+ORIGINAL FILESYSTEM METADATA</b></p>
+
+<p style="margin-left:11%; margin-top: 1em">By removing the
+subvolume named like <i>ext2_saved</i> or
+<i>reiserfs_saved</i>, all metadata of the original
+filesystem will be removed:</p>
+
+<p style="margin-left:17%; margin-top: 1em"># btrfs
+subvolume delete /mnt/ext2_saved</p>
+
+<p style="margin-left:11%; margin-top: 1em">At this point
+it is not possible to do a rollback. The filesystem is
+usable but may be impacted by the fragmentation inherited
+from the original filesystem.</p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>MAKE FILE
+DATA MORE CONTIGUOUS</b></p>
+
+<p style="margin-left:11%; margin-top: 1em">An optional but
+recommended step is to run defragmentation on the entire
+filesystem. This will attempt to make file extents more
+contiguous.</p>
+
+<p style="margin-left:17%; margin-top: 1em"># btrfs
+filesystem defrag -v -r -f -t 32M /mnt/btrfs</p>
+
+<p style="margin-left:11%; margin-top: 1em">Verbose
+recursive defragmentation (<i>-v</i>, <i>-r</i>), flush data
+per-file (<i>-f</i>) with target extent size 32MiB
+(<i>-t</i>).</p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>ATTEMPT TO
+MAKE BTRFS METADATA MORE COMPACT</b></p>
+
+<p style="margin-left:11%; margin-top: 1em">Optional but
+recommended step.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The metadata
+block groups after conversion may be smaller than the
+default size (256MiB or 1GiB). Running a balance will
+attempt to merge the block groups. This depends on the free
+space layout (and fragmentation) and may fail due to lack of
+enough work space. This is a soft error leaving the
+filesystem usable but the block group layout may remain
+unchanged.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Note that
+balance operation takes a lot of time, please see also
+<b>btrfs-balance</b>(8).</p>
+
+<p style="margin-left:17%; margin-top: 1em"># btrfs balance
+start -m /mnt/btrfs</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>--csum
+<i>&lt;type&gt;</i>, --checksum
+<i>&lt;type&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>Specify the checksum
+algorithm. Default is <i>crc32c</i>. Valid values are
+<i>crc32c</i>, <i>xxhash</i>, <i>sha256</i> or
+<i>blake2</i>. To mount such filesystem kernel must support
+the checksums as well.</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-d|--no-datasum</big></p>
+
+<p style="margin-left:17%;"><big>disable data checksum
+calculations and set the NODATASUM file flag, this can speed
+up the conversion</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-i|--no-xattr</big></p>
+
+<p style="margin-left:17%;"><big>ignore xattrs and ACLs of
+files</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-n|--no-inline</big></p>
+
+<p style="margin-left:17%;"><big>disable inlining of small
+files to metadata blocks, this will decrease the metadata
+consumption and may help to convert a filesystem with low
+free space</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-N|--nodesize
+<i>&lt;SIZE&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>set filesystem nodesize,
+the tree block size in which btrfs stores its metadata. The
+default value is 16KB (16384) or the page size, whichever is
+bigger. Must be a multiple of the sectorsize, but not larger
+than 65536. See <b>mkfs.btrfs</b>(8) for more
+details.</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-r|--rollback</big></p>
+
+<p style="margin-left:17%;"><big>rollback to the original
+ext2/3/4 filesystem if possible</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-l|--label
+<i>&lt;LABEL&gt;</i></big></p>
+
+<p style="margin-left:17%;"><big>set filesystem label
+during conversion</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-L|--copy-label</big></p>
+
+<p style="margin-left:17%;"><big>use label from the
+converted filesystem</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-O|--features
+<i>&lt;feature1&gt;</i>[,<i>&lt;feature2&gt;</i>...]</big></p>
+
+<p style="margin-left:17%;"><big>A list of filesystem
+features enabled the at time of conversion. Not all features
+are supported by old kernels. To disable a feature, prefix
+it with <i>^</i>. Description of the features is in section
+<i>FILESYSTEM FEATURES</i> of
+<b>mkfs.btrfs</b>(8).</big></p>
+
+<p style="margin-left:17%; margin-top: 1em"><big>To see all
+available features that btrfs-convert supports
+run:</big></p>
+
+
+<p style="margin-left:17%; margin-top: 1em"><big><b>btrfs-convert
+-O list-all</b></big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>-p|--progress</big></p>
+
+<p style="margin-left:17%;"><big>show progress of
+conversion (a heartbeat indicator and number of inodes
+processed), on by default</big></p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><big>--no-progress</big></p>
+
+<p style="margin-left:17%;"><big>disable progress and show
+only the main phases of conversion</big></p>
+
+<h2>EXIT STATUS
+<a name="EXIT STATUS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>btrfs-convert</b>
+will return 0 if no error happened. If any problems
+happened, 1 will be returned.</big></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><big><b>mkfs.btrfs</b>(8)</big></p>
+<hr>
+</body>
+</html>
